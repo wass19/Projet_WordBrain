@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir Poubelle 
+chmod a+rwx Poubelle 
+mv $* Poubelle 

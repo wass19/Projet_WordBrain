@@ -1,0 +1,4 @@
+% !postscript
+0 0 moveto 200 100 lineto stroke
+200 100 moveto 0 100 lineto stroke
+showpage
