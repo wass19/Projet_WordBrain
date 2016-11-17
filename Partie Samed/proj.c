@@ -644,7 +644,7 @@ void fonct_mot4(char* mot4){
 			
 }		
 
-void fonct_mot5(char* mot5){
+void fonc_mot5(char* mot5){
 		int ligne = rand()%113+1;
 		printf("%i",ligne);
 		int i=0; 
@@ -659,7 +659,7 @@ void fonct_mot5(char* mot5){
 }		
 
 
-void fonct_mot6(char* mot6){
+void fonc_mot6(char* mot6){
 		int ligne = rand()%83+1;
 		int i=0; 
 		FILE * fichier;
@@ -674,7 +674,7 @@ void fonct_mot6(char* mot6){
 }		
 
 
-void fonct_mot7(char* mot7){
+void fonc_mot7(char* mot7){
 		int ligne = rand()%165+1;
 		int i=0; 
 		FILE * fichier;
@@ -688,22 +688,30 @@ void fonct_mot7(char* mot7){
 			
 }		
 
-void choisir_mot9(){
+/*int choisir_mot9(){
 	fonc_mot4();
 	fonc_mot5();
-}
+}*/
 
-void choisir_mot16(){
+int choisir_mot16(void fonc_mot6(char* mot6),void fonc_mot7(char* mot7),void fonc_mot5(char* mot5),void fonct_mot4(char* mot4)){
 	int hasard = rand() % 3 + 1;
+	mot4=malloc(1+4);
+	mot5=malloc(1+5);
+	mot6=malloc(1+6);
+	mot7=malloc(1+7);
 	switch(hasard){
-		case 1: fonc_mot4();fonc_mot4();fonc_mot4();break;
-		case 2: fonc_mot6();fonc_mot4();fonc_mot6();break;
-		case 3: fonc_mot7();fonc_mot4();fonc_mot4();break;
-		default :Assert1("choisir_mot16",0);
+		case 1: fonc_mot6(mot6);fonc_mot4(mot4);fonc_mot6(mot6);break;
+		case 2: fonc_mot6(mot6);fonc_mot5(mot5);fonc_mot5(mot5);break;
+		case 3: fonc_mot4(mot4);fonc_mot7(mot7);fonc_mot5(mot5);break;
+	}
+	free(mot4);
+	free(mot5);
+	free(mot6);
+	free(mot7);
 }
 
 
-void choisir_mot25(){
+int choisir_mot25(){
 	int hasard = rand() % 5 + 1;
 	switch(hasard){
 		case 1: fonc_mot6();fonc_mot6();fonc_mot5();fonc_mot4();fonc_mot4();break;
@@ -711,33 +719,30 @@ void choisir_mot25(){
 		case 3: fonc_mot7();fonc_mot5();fonc_mot5();fonc_mot4();fonc_mot4();break;
 		case 4: fonc_mot6();fonc_mot5();fonc_mot5();fonc_mot5();fonc_mot4();break;
 		case 5: fonc_mot5();fonc_mot5();fonc_mot5();fonc_mot5();fonc_mot5();break;
-		default :Assert1("choisir_mot25",0);
+	}
 }
 
 int main(){
 	int mat[5][5];
-	FILE * mot5;
-	FILE * mot4;
-	fopen("mot5.txt","r");		//113 mot5
-	fopen("mot4.txt","r");		//90 mot4
-	int h1=rand() % 113 + 1;
-	int h2=rand() % 90 + 1;
-	char mot1[10]="boissons";
-	char mot2[10]="audience";
-	char mot3[30];
+	char* mot4[10];
+	char* mot5[10];
+	char* mot6[10];
+	char* mot7[10];
+	char mot3[100];
 	int i=0;
 	int j=0;
-	while(mot1[i]!='\0'){
-		mot3[i]=mot1[i];
+	while(*mot4[i]!='\0'){
+		mot3[i]=*mot4[i];
 		i++;
 	}
 	j=i;
 	i=0;
-	while(mot2[i]!='\0'){
-		mot3[j]=mot2[i];
+	while(*mot5[i]!='\0'){
+		mot3[j]=*mot5[i];
 		j++;
 		i++;	
 	}
 	mot3[j]='\0';	
-	
+	//choisir_mot16(mot4,mot5,mot6,mot7);
+	init_fil3(mat,mot3);
 }
