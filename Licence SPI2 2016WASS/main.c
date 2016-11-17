@@ -159,7 +159,21 @@ char *TrouverLeMot(char reponse[20],char mot1[10],char mot2[10],char mot3[10],ch
 
 }
 
+int bsansblanc(char *R){
+	int i=0;
+	int bAvcCaractere=0;
+	int bSansCaractere=1;
+	nChaineLg(R);
+	while(R[i] != '\0'){
+		
+		if(R[i] != ' '){	
+			return bAvcCaractere;
+		}
+		i++;
 
+	}
+	return bSansCaractere;
+}
 int main2(){
 	int mat[N][N];
 	char mot1[10]="comme";
@@ -175,26 +189,26 @@ int main2(){
 	int resultat =0;
 
  	R=sC2(mot1,mot2);
-	t(R);
-
-	schema1(mat,R);
-	printf("\n");
+	int bEspace=0;
+	do{
+		schema2(mat,R);
+		printf("\n");
 	
-	t("ecrivez le mot que vous pensez  avoir trouver ");
-	scanf("%s",reponse);
+		t("ecrivez le mot que vous pensez  avoir trouver ");
+		scanf("%s",reponse);
 
-	resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse, mot1, mot2, mot3, mot4, mot5);
-	if (resultat == 0){
-		t("faux");
-	}
+		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse, mot1, mot2, mot3, mot4, mot5);
+		if (resultat == 0){
+			t("faux");
+		}
 
-	else{ t("vrai");
-		R=TrouverLeMot(reponse,mot1,mot2,mot3,mot4,mot5,mat,R);	
-		schema1(mat,R);
+		else{ t("vrai");
+			R=TrouverLeMot(reponse,mot1,mot2,mot3,mot4,mot5,mat,R);	
+			bEspace=bsansblanc(R);
+		}
 
-	}
-	S=sC3(mot1,mot2,mot3);
-	t(S);
+	}while(bEspace!=1);
+	t("bravo vous avez trouvez");
 
 }
 
