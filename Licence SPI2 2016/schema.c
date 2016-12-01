@@ -795,52 +795,6 @@ void schema5_5(int mat[10][10],char mot3[25]){
 	}
 }
 
-/*void init_fil3(int mat[10][10],char *mot3){
-	int hasard = rand() % 8 + 1;         //entre 1 & 8
-	printf("%i \n",hasard);
-	switch(hasard){
-		case 1: schema3_1(mat,mot3);break;
-		case 2: schema3_2(mat,mot3);break;
-		case 3: schema3_3(mat,mot3);break;
-		case 4: schema3_4(mat,mot3);break;
-		case 5: schema3_5(mat,mot3);break;
-		case 6: schema3_6(mat,mot3);break;
-		case 7: schema3_7(mat,mot3);break;
-		case 8: schema3_8(mat,mot3);break;
-	}
-	
-}
-
-void init_fil4(int mat[10][10],char *mot3){
-	int hasard = rand() % 8 + 1;         //entre 1 & 8
-	printf("%i \n",hasard);
-	switch(hasard){
-		case 1: schema4_1(mat,mot3);break;
-		case 2: schema4_2(mat,mot3);break;
-		case 3: schema4_3(mat,mot3);break;
-		case 4: schema4_4(mat,mot3);break;
-		case 5: schema4_5(mat,mot3);break;
-		case 6: schema4_6(mat,mot3);break;
-		case 7: schema4_7(mat,mot3);break;
-		case 8: schema4_8(mat,mot3);break;
-	}
-}
-
-void init_fil5(int mat[10][10],char *mot3){
-	int hasard = rand() % 5 + 1;         //entre 1 & 8
-	printf("%i \n",hasard);
-	switch(hasard){
-		case 1: schema5_1(mat,mot3);break;
-		case 2: schema5_2(mat,mot3);break;
-		case 3: schema5_3(mat,mot3);break;
-		case 4: schema5_4(mat,mot3);break;
-		case 5: schema5_5(mat,mot3);break;
-		/*case 6: schema5_6(mat,mot3);break;
-		case 7: schema5_7(mat,mot3);break;
-		case 8: schema5_8(mat,mot3);break;*/
-	/*}
-}*/
-
 char *fonc_mot4(char *mot4){
 		int ligne = rand()%90+1;
 		int i=0; 
@@ -899,47 +853,6 @@ char *fonc_mot7(char *mot7){
 char *choisir_mot4(char *mot4){
 	char *R;
 	R = fonc_mot4(mot4);
-	return R;
-}
-
-char *choisir_mot9(char *mot4,char *mot5){
-	char *R;
-	mot4 = fonc_mot4(mot4);		
-	mot5 = fonc_mot5(mot5);	
-	R=sC2(mot4,mot5);
-	return R;
-}
-
-char *choisir_mot16(char *mot4,char *mot5,char *mot6,char *mot7){
-	char *premier;
-	char *deuxieme;
-	char *troisieme;
-	char *R;
-	int hasard = rand() % 3 + 1;
-	switch(hasard){
-		case 1: premier=fonc_mot6(mot6);deuxieme=fonc_mot6(mot7);troisieme=fonc_mot4(mot4);R=sC3(premier,deuxieme,troisieme);break;
-		case 2: premier=fonc_mot6(mot6);deuxieme=fonc_mot5(mot7);troisieme=fonc_mot5(mot5);R=sC3(premier,deuxieme,troisieme);break;
-		case 3: premier=fonc_mot7(mot7);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot4(mot4);R=sC3(premier,deuxieme,troisieme);break;
-	}
-	return R;
-}
-
-
-char *choisir_mot25(char *mot4,char *mot5,char *mot6,char *mot7,char *mot8){
-	char *premier;
-	char *deuxieme;
-	char *troisieme;
-	char *quatrieme;
-	char *cinquieme;
-	char *R;
-	int hasard = rand() % 5 + 1;
-	switch(hasard){
-		case 1: premier=fonc_mot6(mot4);deuxieme=fonc_mot6(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot4(mot7);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
-		case 2: premier=fonc_mot7(mot7);deuxieme=fonc_mot6(mot5);troisieme=fonc_mot4(mot6);quatrieme=fonc_mot4(mot4);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
-		case 3: premier=fonc_mot7(mot7);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot4(mot4);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
-		case 4: premier=fonc_mot6(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot5(mot7);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
-		case 5: premier=fonc_mot5(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot5(mot7);cinquieme=fonc_mot5(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
-	}
 	return R;
 }
 
@@ -1329,7 +1242,7 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	
 	int hasard_schema = rand() % 5 + 1;         //entre 1 & 8
 	do{
-		
+		printf("%s \n",R);
 		switch(hasard_schema){
 			case 1: schema5_1(mat,R);break;
 			case 2: schema5_2(mat,R);break;
