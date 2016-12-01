@@ -1072,7 +1072,6 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 	R = fonc_mot4(mot4);
 	char indice[6]="indice";
 	int hasard = rand() % 8 + 1;
-	printf("%i \n",hasard);
 	do{
 		switch(hasard){
 			case 1: schema2_1(mat,R);break;
@@ -1088,7 +1087,7 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		
 		printf("\n");
 		
-		t("Ecrivez le mot que vous pensez  avoir trouver ");
+		printf("Ecrivez le mot que vous pensez  avoir trouver :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1099,10 +1098,13 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		if (resultat == 0){
 			clear;
 			wb();
-			t("Mot invalide, désolé !");
+			printf("Mot invalide, désolé !\n");
 		}
 		
-		else{ t("vrai");
+		else{ 
+			clear;
+			wb();
+			printf("Le mot est présent !\n");
 			R=TrouverLeMotNiveau1(reponse,mat,R);
 			bEspace=bsansblanc(R);
 			
@@ -1138,8 +1140,8 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 			case 8: schema3_8(mat,R);break;
 		}
 		printf("\n");
-	
-		t("Ecrivez le mot que vous pensez  avoir trouvé :");
+		t(R);
+		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1150,13 +1152,14 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		if (resultat == 0){
 			clear;
 			wb();
-			t("Mot invalide, désolé !");
+			printf("Mot invalide, désolé !\n");
 		}
 		
 		
-		else{ t("vrai");
+		else{ 
 			clear;
 			wb();
+			printf("Le mot est présent !\n");
 			R=TrouverLeMotNiveau2(reponse,mat,premier,deuxieme,R);
 			bEspace=bsansblanc(R);
 			while(i!=5){
@@ -1188,7 +1191,6 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		case 2: premier=fonc_mot6(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);R=sC3(premier,deuxieme,troisieme);break;
 		case 3: premier=fonc_mot7(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot4(mot6);R=sC3(premier,deuxieme,troisieme);break;
 	}
-	t(R);
 	
 	int hasard_schema = rand() % 8 + 1;         //entre 1 & 8
 	do{
@@ -1204,7 +1206,7 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			case 8: schema4_8(mat,R);break;
 		}
 		printf("\n");
-		t("Ecrivez le mot que vous pensez  avoir trouvé :");
+		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1215,10 +1217,10 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		if (resultat == 0){
 			clear;
 			wb();
-			t("Mot invalide, désolé !");
+			printf("Mot invalide, désolé !\n");
 		}
 		
-		else{ t("vrai");
+		else{ printf("Le mot est présent !\n");;
 			clear;
 			wb();		
 			R=TrouverLeMotNiveau3(reponse,mat,premier,deuxieme,troisieme,R);
@@ -1266,12 +1268,9 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			case 3: schema5_3(mat,R);break;
 			case 4: schema5_4(mat,R);break;
 			case 5: schema5_5(mat,R);break;
-			/*case 6: schema5_6(mat,R);break;
-			case 7: schema5_7(mat,R);break;
-			case 8: schema5_8(mat,R);break;*/
 		}
 		printf("\n");
-		t("Ecrivez le mot que vous pensez  avoir trouvé :");
+		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1282,10 +1281,10 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 		if (resultat == 0){
 			clear;
 			wb();
-			t("Mot invalide, désolé !");;
+			printf("Mot invalide, désolé !\n");;
 		}
 		
-		else{ t("vrai");
+		else{ printf("Le mot est présent !\n");
 			clear;
 			wb();		
 			R=TrouverLeMotNiveau4(reponse,mat,mot4,mot5,mot6,mot7,mot8,R);
