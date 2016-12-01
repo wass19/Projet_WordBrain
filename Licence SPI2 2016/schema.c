@@ -39,7 +39,6 @@ void schema2_2(int mat[10][10],char mot3[20]){
 	int i;
 	int j;
 	for(i=0;i<2;i++){
-		clear;
 		printf(" ___   ___ \n");
 		printf("|   | |   |\n");
 		for(j=0;j<2;j++){
