@@ -1,8 +1,9 @@
 #include "Outil.h"
 #include "Tas.h"
 #include "schema.h"
-
+#define clear printf("\e[1;1H\e[2J")
 int main2(){
+	clear;
 	int mat[10][10];
 	char *mot4=malloc(1+4);
 	char *mot5=malloc(1+5);
@@ -20,9 +21,12 @@ int main2(){
     		printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
    		printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
   		printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
-		printf(" 1 - Jouer\n");
-		printf(" 2 - Choisir un niveau\n");
-		printf(" 3 - Quitter\n\n");
+		printf("		 _________________________ \n");
+		printf("		|                         |\n");  
+		printf("		| 1 - Jouer               |\n");
+		printf("		| 2 - Choisir un niveau   |\n");
+		printf("		| 3 - Quitter             |\n");
+		printf("		|_________________________|\n\n");
 		printf("Votre choix : ");
 		scanf("%i",&choix);
 
@@ -30,7 +34,7 @@ int main2(){
 		switch(choix)
 		{	case 1 : break;
 			case 2:  Niveau(); break;
-			case 3:  break;
+			case 3:  clear; break;
 			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");
 		}
 	}
