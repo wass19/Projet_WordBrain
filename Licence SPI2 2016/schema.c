@@ -1159,6 +1159,8 @@ char *tomberNiveau4(int mat[10][10],char *R){//pour 5 cases par lignes.
 }
 
 void game_niveau2(int mat[10][10],char *R){			//2X2
+	FILE * fichier;
+	fichier=fopen("temp.txt","w");
 	int bEspace=0;
 	int i=0;
 	int resultat=0;
@@ -1167,8 +1169,11 @@ void game_niveau2(int mat[10][10],char *R){			//2X2
 	char indice[6]="indice";
 	clear;
 	wb();
-	int hasard = rand() % 8 + 1;         //entre 1 & 8
-	printf("%i \n",hasard);
+	int hasard;
+	fscanf(fichier,"%i",&hasard);
+	if(hasard==0){
+		hasard = rand() % 8 + 1;         //entre 1 & 8
+	}
 	do{
 		switch(hasard){
 			case 1: schema2_1(mat,R);break;
@@ -1208,6 +1213,7 @@ void game_niveau2(int mat[10][10],char *R){			//2X2
  
 	}while(bEspace!=1);
 	t("Bravo");
+	fclose(fichier);
 }
 
 void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
