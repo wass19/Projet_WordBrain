@@ -54,11 +54,6 @@ char *fonc_mot5(char *mot5);
 char *fonc_mot6(char *mot6);
 char *fonc_mot7(char *mot7);
 
-char *choisir_mot4(char *mot4);
-char *choisir_mot9(char *mot4,char *mot5);
-char *choisir_mot16(char *mot4,char *mot5,char *mot6,char *mot7);
-char *choisir_mot25(char *mot4,char *mot5,char *mot6,char *mot7,char *mot8);
-
 void schema(void);
 int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6);//strcmp 1mot avec 5autres.
 int bsansblanc(char *R);//on regarde si il y a que des espaces dans R comme caractère.
@@ -71,6 +66,6 @@ char *TrouverLeMotNiveau2(char reponse[20],int mat[10][10],char *mot1,char *mot2
 char *TrouverLeMotNiveau3(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *R);
 char *TrouverLeMotNiveau4(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,char *R);
 
-void game_niveau2(int mat[10][10],char *R);
+void game_niveau2(int mat[10][10],char *mot4,char *R);
 void game_niveau3(int mat[10][10],char *R,char *mot4,char *mot5);
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R);
