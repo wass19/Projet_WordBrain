@@ -1217,6 +1217,8 @@ void game_niveau2(int mat[10][10],char *R){			//2X2
 }
 
 void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
+	FILE * fichier;
+	fichier=fopen("temp.txt","w");
 	int bEspace=0;
 	int i=0;
 	int resultat=0;
@@ -1228,7 +1230,11 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	char *mot6=" ";
 	char *mot7=" .";
 	char indice[6]="indice";
-	int hasard = rand() % 8 + 1;         //entre 1 & 8
+	int hasard;
+	fscanf(fichier,"%i",&hasard);
+	if(hasard==0){
+		hasard = rand() % 8 + 1;         //entre 1 & 8
+	}
 	do{
 		switch(hasard){
 			case 1: schema3_1(mat,R);break;
@@ -1271,9 +1277,12 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	}while(bEspace!=1);
 	t("Bravo");
 	clear;
+	fclose(fichier);
 }
 
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		//4X4
+	FILE * fichier;
+	fichier=fopen("temp.txt","w");
 	int bEspace=0;
 	int i=0;
 	int n=0;
@@ -1294,8 +1303,11 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		case 3: premier=fonc_mot7(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot4(mot6);R=sC3(premier,deuxieme,troisieme);break;
 	}
 	t(R);
-	
-	int hasard_schema = rand() % 8 + 1;         //entre 1 & 8
+	int hasard;
+	fscanf(fichier,"%i",&hasard);
+	if(hasard==0){
+		hasard = rand() % 8 + 1;         //entre 1 & 8
+	}
 	do{
 		
 		switch(hasard_schema){
@@ -1338,9 +1350,12 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	}while(bEspace!=1);
 	t("Bravo");
 	clear;
+	fclose(fichier);
 }
 
 void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R){		//5x5
+	FILE * fichier;
+	fichier=fopen("temp.txt","w");
 	int bEspace=0;
 	int i=0;
 	int n=0;
@@ -1363,8 +1378,11 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 		case 4: premier=fonc_mot6(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot5(mot7);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
 		case 5: premier=fonc_mot5(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot5(mot7);cinquieme=fonc_mot5(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
 	}
-	
-	int hasard_schema = rand() % 5 + 1;         //entre 1 & 8
+	int hasard;
+	fscanf(fichier,"%i",&hasard);
+	if(hasard==0){
+		hasard = rand() % 5 + 1;         //entre 1 & 8
+	}
 	do{
 		
 		switch(hasard_schema){
@@ -1406,6 +1424,7 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	}while(bEspace!=1);
 	t("Bravo");
 	clear;
+	fclose(fichier);
 }
 
 
