@@ -15,11 +15,9 @@ schema.o: schema.c
 main.o : main.c
 	gcc -c main.c -Wextra
 
-Jouer.o : Jouer.c
-	gcc -c Jouer.c -Wextra
 
 monprog : main.o Outil.o Tas.o schema.o Jouer.o
-	gcc -o monprog Outil.o Tas.o schema.o main.o Jouer.o -Wextra -lm
+	gcc -o monprog Outil.o Tas.o schema.o main.o -Wextra -lm
 
 
 clean :
