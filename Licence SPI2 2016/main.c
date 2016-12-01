@@ -10,7 +10,7 @@ int main2(){
 	char *mot6=malloc(1+6);
 	char *mot7=malloc(1+7);
 	char *mot8=malloc(1+8);
-	char *R;
+	char *R=malloc(1+25);
 	int i=0;
 	int j=0;
 	srand(time(NULL));
@@ -45,6 +45,7 @@ int main2(){
 	free(mot6);
 	free(mot7);
 	free(mot8);
+	free(R);
 	return 0;
 }
 

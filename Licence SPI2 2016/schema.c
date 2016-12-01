@@ -1313,7 +1313,7 @@ void Niveau()
 	char *mot6=malloc(1+6);
 	char *mot7=malloc(1+7);
 	char *mot8=malloc(1+8);
-	char *R;
+	char *R=malloc(1+25);
 	int choix;
 	wb();
 	printf("Choisir une grille :\n");

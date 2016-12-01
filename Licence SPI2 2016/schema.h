@@ -69,3 +69,5 @@ char *TrouverLeMotNiveau4(char reponse[20],int mat[10][10],char *mot1,char *mot2
 void game_niveau2(int mat[10][10],char *mot4,char *R);
 void game_niveau3(int mat[10][10],char *R,char *mot4,char *mot5);
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R);
+
+void Niveau(void);
