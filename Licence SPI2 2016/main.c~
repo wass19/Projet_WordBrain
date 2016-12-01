@@ -4,58 +4,6 @@
 #define clear printf("\e[1;1H\e[2J");
 
 
-void NiveauJeu(){
-	int mat[10][10];
-	char *mot4=malloc(1+4);
-	char *mot5=malloc(1+5);
-	char *mot6=malloc(1+6);
-	char *mot7=malloc(1+7);
-	char *mot8=malloc(1+8);
-	char *R;
-	int choix;	
-	do{
-		printf("\n _ _ _ _____ _____ ____  _____ _____ _____ _____ _____ \n");
-    		printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
-   		printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
-  		printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
-		printf("		 _________________________ \n");
-		printf("		|                         |\n");  
-		printf("		| 1 - Niveau Facile       |\n");//4 2x2 et 2 3x3
-		printf("		| 2 - Niveau Intermediaire|\n");//10 3x3
-		printf("		| 3 - Niveau Difficile    |\n");//2 3x3 et 3 4x4
-		printf("		| 4 - Niveau Hardcore     |\n");//2 4x4 et 3 5x5
-		printf("		| 5 - Quitter             |\n");
-		printf("		|_________________________|\n\n");
-		printf("Votre choix : ");
-		scanf("%i",&choix);
-
-		
-		switch(choix){	
-			case 1 : clear;wb();jouer_facile(mat,mot4,mot5,R);break;
-			case 2 : clear;wb();jouer_moyen(mat,mot4,mot5,R);break;
-			case 3 : clear;wb();jouer_difficile(mat,mot4,mot5,mot6,R); break;
-			case 4 : clear;wb();jouer_hardcore(mat,mot4,mot5,mot6,mot7,mot8,R);break;
-			case 5 : clear; break;
-			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");
-		}
-}
-	while(choix!=5);
-	printf("Au revoir !\n");
-	free(mot4);
-	free(mot5);
-	free(mot6);
-	free(mot7);
-	free(mot8);
-
-}
-
-
-
-
-
-
-
-
 
 int main2(){
 	clear;
@@ -76,19 +24,20 @@ int main2(){
     		printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
    		printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
   		printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
-		printf("		 _________________________ \n");
-		printf("		|                         |\n");  
-		printf("		| 1 - Jouer               |\n");
-		printf("		| 2 - Choisir un niveau   |\n");
-		printf("		| 3 - Quitter             |\n");
-		printf("		|_________________________|\n\n");
+		printf("		 _______________________________\n");
+		printf("		|                         	|\n");  
+		printf("		| 1 - Jouer               	|\n");
+		printf("		| 2 - Choisir un niveau   	|\n");
+		printf("		| 3 - Charger une sauvegarde    |\n");
+		printf("		| 4 - Quitter             	|\n");
+		printf("		|_______________________________|\n\n");
 		printf("Votre choix : ");
 		scanf("%i",&choix);
 
 		
 		switch(choix)
 		{	case 1:  clear;NiveauJeu();break;
-			case 2:  break;
+			case 2:  clear;Niveau();break;
 			case 3:  clear; break;
 			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");
 		}

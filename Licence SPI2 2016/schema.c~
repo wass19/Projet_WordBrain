@@ -860,7 +860,6 @@ char *fonc_mot7(char *mot7){
 }
 
 char *TrouverLeMotNiveau1(char reponse[20],int mat[10][10],char *R){
-
 	int n=0;int i=0;
 	n=strcmp(reponse,R);
 	if(n==0){
@@ -1089,7 +1088,7 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		
 		printf("\n");
 		
-		t("ecrivez le mot que vous pensez  avoir trouver ");
+		t("Ecrivez le mot que vous pensez  avoir trouver ");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1098,7 +1097,9 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		}
 		resultat = bChaineEgale(reponse, R);
 		if (resultat == 0){
-			t("faux");
+			clear;
+			wb();
+			t("Mot invalide, désolé !");
 		}
 		
 		else{ t("vrai");
@@ -1108,7 +1109,8 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		}
  
 	}while(bEspace!=1);
-	t("bravo vous avez trouvez");
+	clear;		 
+	printf("	   ~~Bravo, vous avez fini la grille~~\n");
 }
 
 void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
@@ -1146,15 +1148,15 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		}
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot7,R);
 		if (resultat == 0){
-			t("faux");
 			clear;
 			wb();
+			t("Mot invalide, désolé !");
 		}
 		
 		
 		else{ t("vrai");
 			clear;
-			wb;
+			wb();
 			R=TrouverLeMotNiveau2(reponse,mat,premier,deuxieme,R);
 			bEspace=bsansblanc(R);
 			while(i!=5){
@@ -1164,8 +1166,8 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		}
  
 	}while(bEspace!=1);
-	t("Bravo");
-	clear;
+	clear;		 
+	printf("	   ~~Bravo, vous avez fini la grille~~\n");
 }
 
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		//4X4
@@ -1174,8 +1176,6 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	int n=0;
 	int resultat=0;
 	int aide=0;
-	clear;
-	wb();
 	char reponse[30];
 	char *mot7=".";
 	char indice[6]="indice";
@@ -1213,9 +1213,9 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		}
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,R);
 		if (resultat == 0){
-			t("faux");
 			clear;
 			wb();
+			t("Mot invalide, désolé !");
 		}
 		
 		else{ t("vrai");
@@ -1231,8 +1231,8 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			}			
 		} 
 	}while(bEspace!=1);
-	t("Bravo");
-	clear;
+	clear;		 
+	printf("	   ~~Bravo, vous avez fini la grille~~\n");
 }
 
 void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R){		//5x5
@@ -1242,8 +1242,6 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	int resultat=0;
 	int aide=0;
 	char reponse[30];
-	clear;
-	wb();
 	char indice[6]="indice";
 	int hasard_mot= rand() % 5 + 1;
 	char *premier;
@@ -1282,9 +1280,9 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 		}
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot8);
 		if (resultat == 0){
-			t("faux");
 			clear;
 			wb();
+			t("Mot invalide, désolé !");;
 		}
 		
 		else{ t("vrai");
@@ -1299,8 +1297,7 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			}			
 		} 
 	}while(bEspace!=1);
-	t("Bravo");
-	clear;
+	
 }
 
 
@@ -1328,10 +1325,10 @@ void Niveau()
 	printf("Votre choix : ");
 	scanf("%i",&choix);
 	switch(choix)
-	{	case 1 : game_niveau2(mat,mot4,R); break;
-		case 2:  game_niveau3(mat,mot4,mot5,R); break;
-		case 3:  game_niveau4(mat,mot4,mot5,mot6,R); break;
-		case 4:  game_niveau5(mat,mot4,mot5,mot6,mot7,mot8,R); break;
+	{	case 1 : clear;wb();game_niveau2(mat,mot4,R); break;
+		case 2:  clear;wb();game_niveau3(mat,mot4,mot5,R); break;
+		case 3:  clear;wb();game_niveau4(mat,mot4,mot5,mot6,R); break;
+		case 4:  clear;wb();game_niveau5(mat,mot4,mot5,mot6,mot7,mot8,R); break;
 		case 5:  clear; break;
 		default: printf("Erreur: votre choix doit etre compris entre 1 et 4\n");
 	}

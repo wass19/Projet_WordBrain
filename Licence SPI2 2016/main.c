@@ -24,19 +24,20 @@ int main2(){
     		printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
    		printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
   		printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
-		printf("		 _________________________ \n");
-		printf("		|                         |\n");  
-		printf("		| 1 - Jouer               |\n");
-		printf("		| 2 - Choisir un niveau   |\n");
-		printf("		| 3 - Quitter             |\n");
-		printf("		|_________________________|\n\n");
+		printf("		 _______________________________\n");
+		printf("		|                         	|\n");  
+		printf("		| 1 - Jouer               	|\n");
+		printf("		| 2 - Choisir un niveau   	|\n");
+		printf("		| 3 - Charger une sauvegarde    |\n");
+		printf("		| 4 - Quitter             	|\n");
+		printf("		|_______________________________|\n\n");
 		printf("Votre choix : ");
 		scanf("%i",&choix);
 
 		
 		switch(choix)
 		{	case 1:  clear;NiveauJeu();break;
-			case 2:  break;
+			case 2:  clear;Niveau();break;
 			case 3:  clear; break;
 			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");
 		}
