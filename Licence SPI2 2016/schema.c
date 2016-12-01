@@ -1,6 +1,15 @@
 #include "schema.h"
 #include "Outil.h"
+#define clear printf("\e[1;1H\e[2J")
 
+
+
+void wb(){
+	printf("\n _ _ _ _____ _____ ____  _____ _____ _____ _____ _____ \n");
+    	printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
+   	printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
+  	printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
+}
 
 void schema2_1(int mat[10][10],char mot3[20]){
 	int a;
@@ -30,6 +39,7 @@ void schema2_2(int mat[10][10],char mot3[20]){
 	int i;
 	int j;
 	for(i=0;i<2;i++){
+		clear;
 		printf(" ___   ___ \n");
 		printf("|   | |   |\n");
 		for(j=0;j<2;j++){
@@ -795,6 +805,52 @@ void schema5_5(int mat[10][10],char mot3[25]){
 	}
 }
 
+/*void init_fil3(int mat[10][10],char *mot3){
+	int hasard = rand() % 8 + 1;         //entre 1 & 8
+	printf("%i \n",hasard);
+	switch(hasard){
+		case 1: schema3_1(mat,mot3);break;
+		case 2: schema3_2(mat,mot3);break;
+		case 3: schema3_3(mat,mot3);break;
+		case 4: schema3_4(mat,mot3);break;
+		case 5: schema3_5(mat,mot3);break;
+		case 6: schema3_6(mat,mot3);break;
+		case 7: schema3_7(mat,mot3);break;
+		case 8: schema3_8(mat,mot3);break;
+	}
+	
+}
+
+void init_fil4(int mat[10][10],char *mot3){
+	int hasard = rand() % 8 + 1;         //entre 1 & 8
+	printf("%i \n",hasard);
+	switch(hasard){
+		case 1: schema4_1(mat,mot3);break;
+		case 2: schema4_2(mat,mot3);break;
+		case 3: schema4_3(mat,mot3);break;
+		case 4: schema4_4(mat,mot3);break;
+		case 5: schema4_5(mat,mot3);break;
+		case 6: schema4_6(mat,mot3);break;
+		case 7: schema4_7(mat,mot3);break;
+		case 8: schema4_8(mat,mot3);break;
+	}
+}
+
+void init_fil5(int mat[10][10],char *mot3){
+	int hasard = rand() % 5 + 1;         //entre 1 & 8
+	printf("%i \n",hasard);
+	switch(hasard){
+		case 1: schema5_1(mat,mot3);break;
+		case 2: schema5_2(mat,mot3);break;
+		case 3: schema5_3(mat,mot3);break;
+		case 4: schema5_4(mat,mot3);break;
+		case 5: schema5_5(mat,mot3);break;
+		/*case 6: schema5_6(mat,mot3);break;
+		case 7: schema5_7(mat,mot3);break;
+		case 8: schema5_8(mat,mot3);break;*/
+	/*}
+}*/
+
 char *fonc_mot4(char *mot4){
 		int ligne = rand()%90+1;
 		int i=0; 
@@ -853,6 +909,47 @@ char *fonc_mot7(char *mot7){
 char *choisir_mot4(char *mot4){
 	char *R;
 	R = fonc_mot4(mot4);
+	return R;
+}
+
+char *choisir_mot9(char *mot4,char *mot5){
+	char *R;
+	mot4 = fonc_mot4(mot4);		
+	mot5 = fonc_mot5(mot5);	
+	R=sC2(mot4,mot5);
+	return R;
+}
+
+char *choisir_mot16(char *mot4,char *mot5,char *mot6,char *mot7){
+	char *premier;
+	char *deuxieme;
+	char *troisieme;
+	char *R;
+	int hasard = rand() % 3 + 1;
+	switch(hasard){
+		case 1: premier=fonc_mot6(mot6);deuxieme=fonc_mot6(mot7);troisieme=fonc_mot4(mot4);R=sC3(premier,deuxieme,troisieme);break;
+		case 2: premier=fonc_mot6(mot6);deuxieme=fonc_mot5(mot7);troisieme=fonc_mot5(mot5);R=sC3(premier,deuxieme,troisieme);break;
+		case 3: premier=fonc_mot7(mot7);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot4(mot4);R=sC3(premier,deuxieme,troisieme);break;
+	}
+	return R;
+}
+
+
+char *choisir_mot25(char *mot4,char *mot5,char *mot6,char *mot7,char *mot8){
+	char *premier;
+	char *deuxieme;
+	char *troisieme;
+	char *quatrieme;
+	char *cinquieme;
+	char *R;
+	int hasard = rand() % 5 + 1;
+	switch(hasard){
+		case 1: premier=fonc_mot6(mot4);deuxieme=fonc_mot6(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot4(mot7);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
+		case 2: premier=fonc_mot7(mot7);deuxieme=fonc_mot6(mot5);troisieme=fonc_mot4(mot6);quatrieme=fonc_mot4(mot4);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
+		case 3: premier=fonc_mot7(mot7);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot4(mot4);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
+		case 4: premier=fonc_mot6(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot5(mot7);cinquieme=fonc_mot4(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
+		case 5: premier=fonc_mot5(mot4);deuxieme=fonc_mot5(mot5);troisieme=fonc_mot5(mot6);quatrieme=fonc_mot5(mot7);cinquieme=fonc_mot5(mot8);R=sC5(premier,deuxieme,troisieme,quatrieme,cinquieme);break;
+	}
 	return R;
 }
 
@@ -1069,6 +1166,8 @@ void game_niveau2(int mat[10][10],char *R){			//2X2
 	int aide=0;
 	char reponse[30];
 	char indice[6]="indice";
+	clear;
+	wb();
 	int hasard = rand() % 8 + 1;         //entre 1 & 8
 	printf("%i \n",hasard);
 	do{
@@ -1085,7 +1184,7 @@ void game_niveau2(int mat[10][10],char *R){			//2X2
 		} 
 		printf("\n");
 	
-		t("ecrivez le mot que vous pensez  avoir trouver ");
+		t("Ecrivez le mot que vous pensez  avoir trouvé :");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1095,16 +1194,21 @@ void game_niveau2(int mat[10][10],char *R){			//2X2
 		resultat = bChaineEgale(reponse, R);
 		if (resultat == 0){
 			t("faux");
+			clear;
+			wb();
 		}
 		
 		else{ t("vrai");
+			clear;
+			wb();
 			R=TrouverLeMotNiveau1(reponse,mat,R);
 			bEspace=bsansblanc(R);
+			clear;
 			
 		}
  
 	}while(bEspace!=1);
-	t("bravo vous avez trouvez");
+	t("Bravo");
 }
 
 void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
@@ -1133,20 +1237,25 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		}
 		printf("\n");
 	
-		t("ecrivez le mot que vous pensez  avoir trouver ");
+		t("Ecrivez le mot que vous pensez  avoir trouvé :");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
 			printf("%c \n",R[0]);
 		
 		}
-		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,R);
+		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot7,R);
 		if (resultat == 0){
 			t("faux");
+			clear;
+			wb();
 		}
 		
+		
 		else{ t("vrai");
-			R=TrouverLeMotNiveau2(reponse,mat,mot4,mot5,R);
+			clear;
+			wb;
+			R=TrouverLeMotNiveau2(reponse,mat,premier,deuxieme,R);
 			bEspace=bsansblanc(R);
 			while(i!=5){
 				R=tomberNiveau2(mat,R);
@@ -1155,7 +1264,8 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		}
  
 	}while(bEspace!=1);
-	t("bravo vous avez trouvez");
+	t("Bravo");
+	clear;
 }
 
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		//4X4
@@ -1164,6 +1274,8 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	int n=0;
 	int resultat=0;
 	int aide=0;
+	clear;
+	wb();
 	char reponse[30];
 	char *mot7;
 	char indice[6]="indice";
@@ -1192,7 +1304,7 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			case 8: schema4_8(mat,R);break;
 		}
 		printf("\n");
-		t("ecrivez le mot que vous pensez  avoir trouver ");
+		t("Ecrivez le mot que vous pensez  avoir trouvé :");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1202,9 +1314,13 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,R);
 		if (resultat == 0){
 			t("faux");
+			clear;
+			wb();
 		}
 		
-		else{ t("vrai");		
+		else{ t("vrai");
+			clear;
+			wb();		
 			R=TrouverLeMotNiveau3(reponse,mat,premier,deuxieme,troisieme,R);
 			bEspace=bsansblanc(R);
 			t(R);
@@ -1215,7 +1331,8 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			}			
 		} 
 	}while(bEspace!=1);
-	t("bravo vous avez trouvez");
+	t("Bravo");
+	clear;
 }
 
 void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R){		//5x5
@@ -1225,6 +1342,8 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	int resultat=0;
 	int aide=0;
 	char reponse[30];
+	clear;
+	wb();
 	char indice[6]="indice";
 	int hasard_mot= rand() % 5 + 1;
 	char *premier;
@@ -1242,7 +1361,7 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	
 	int hasard_schema = rand() % 5 + 1;         //entre 1 & 8
 	do{
-		printf("%s \n",R);
+		
 		switch(hasard_schema){
 			case 1: schema5_1(mat,R);break;
 			case 2: schema5_2(mat,R);break;
@@ -1254,7 +1373,7 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			case 8: schema5_8(mat,R);break;*/
 		}
 		printf("\n");
-		t("ecrivez le mot que vous pensez  avoir trouver ");
+		t("Ecrivez le mot que vous pensez  avoir trouvé :");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
 		if(aide==1){
@@ -1264,9 +1383,13 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot8);
 		if (resultat == 0){
 			t("faux");
+			clear;
+			wb();
 		}
 		
-		else{ t("vrai");		
+		else{ t("vrai");
+			clear;
+			wb();		
 			R=TrouverLeMotNiveau4(reponse,mat,mot4,mot5,mot6,mot7,mot8,R);
 			bEspace=bsansblanc(R);
 			i=0;
@@ -1276,12 +1399,14 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			}			
 		} 
 	}while(bEspace!=1);
-	t("bravo vous avez trouvez");
+	t("Bravo");
+	clear;
 }
 
 
 void Niveau()
 {	
+	clear;
 	int mat[10][10];
 	char *mot4=malloc(1+4);
 	char *mot5=malloc(1+5);
@@ -1290,12 +1415,16 @@ void Niveau()
 	char *mot8=malloc(1+8);
 	char *R;
 	int choix;
+	wb();
 	printf("Choisir une grille :\n");
-	printf(" 1 - 2 X 2\n");
-	printf(" 2 - 3 X 3\n");
-	printf(" 3 - 4 X 4\n");
-	printf(" 4 - 5 X 5\n");
-	printf(" 5 - Quitter\n");
+	printf("		 _________________________ \n");
+	printf("		|                         |\n");  
+	printf("		| 1 -2X2                  |\n");
+	printf("		| 2 -3X3                  |\n");
+	printf("		| 3 -4X4                  |\n");
+	printf("		| 4 -5X5                  |\n");
+	printf("		| 5 -Menu Principal       |\n");
+	printf("		|_________________________|\n\n");
 	printf("Votre choix : ");
 	scanf("%i",&choix);
 	switch(choix)
@@ -1303,7 +1432,7 @@ void Niveau()
 		case 2:  game_niveau3(mat,mot4,mot5,R); break;
 		case 3:  game_niveau4(mat,mot4,mot5,mot6,R); break;
 		case 4:  game_niveau5(mat,mot4,mot5,mot6,mot7,mot8,R); break;
-		case 5:  break;
+		case 5:  clear; break;
 		default: printf("Erreur: votre choix doit etre compris entre 1 et 4\n");
 	}
 	
