@@ -1219,8 +1219,8 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	char *premier = fonc_mot4(mot4);		
 	char *deuxieme = fonc_mot5(mot5);
 	R=sC2(premier,deuxieme);
-	char *mot6;
-	char *mot7;
+	char *mot6=" ";
+	char *mot7=" .";
 	char indice[6]="indice";
 	int hasard = rand() % 8 + 1;         //entre 1 & 8
 	do{
@@ -1276,7 +1276,7 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	clear;
 	wb();
 	char reponse[30];
-	char *mot7;
+	char *mot7=".";
 	char indice[6]="indice";
 	int hasard_mot = rand() % 3 + 1;
 	char *premier;
