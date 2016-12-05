@@ -80,3 +80,14 @@ void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7
 void wb();
 void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R);
 
+
+
+
+
+
+void stockage_R(char *R);
+char *lecture_R(char *R); 
+void stockage_schema(int schema);
+int lecture_schema();
+void charger_niveau2(int mat[10][10],char *mot4);
+void save_niveau2(int mat[10][10],char *mot4,char *R);

@@ -94,7 +94,7 @@ void NiveauJeu(){
 
 		
 		switch(choix){	
-			case 1 : clear;wb();jouer_facile(mat,mot4,mot5,R);break;
+			case 1 : clear;wb();jouer_facile(mat,mot4,mot5,R);t(R);break;
 			case 2 : clear;wb();jouer_moyen(mat,mot4,mot5,R);break;
 			case 3 : clear;wb();jouer_difficile(mat,mot4,mot5,mot6,R); break;
 			case 4 : clear;wb();jouer_hardcore(mat,mot4,mot5,mot6,mot7,mot8,R);break;

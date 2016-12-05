@@ -20,10 +20,7 @@ int main2(){
 	int choix;	
 	do
 	{
-		printf("\n _ _ _ _____ _____ ____  _____ _____ _____ _____ _____ \n");
-    		printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
-   		printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
-  		printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
+		wb();
 		printf("		 _______________________________\n");
 		printf("		|                         	|\n");  
 		printf("		| 1 - Jouer               	|\n");
@@ -36,9 +33,10 @@ int main2(){
 
 		
 		switch(choix)
-		{	case 1:  clear;NiveauJeu();break;
-			case 2:  clear;Niveau();break;
-			case 3:  clear; break;
+		{	case 1:clear;NiveauJeu();break;
+			case 2:clear;Niveau();break;
+			case 3:clear;save_niveau2(mat,mot4,R);break;
+			case 4:clear;break;
 			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");
 		}
 	}

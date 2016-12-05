@@ -9,7 +9,8 @@ void wb(){
     	printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
    	printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
   	printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
-}
+}	
+
 
 void schema2_1(int mat[10][10],char mot3[20]){
 	int a;
@@ -30,8 +31,9 @@ void schema2_1(int mat[10][10],char mot3[20]){
 	}
 }
 
-void schema2_2(int mat[10][10],char mot3[20]){
+void schema2_2(int mat[10][10],char *mot3){
 	int a;
+	t(mot3);
 	mat[0][0]=0;
 	mat[0][1]=3;	
 	mat[1][1]=1;
@@ -1068,9 +1070,10 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 	int i=0;
 	int resultat=0;
 	int aide=0;
+	int sauv=0;
 	char reponse[30];
+	char sauvegarde[20]="save";
 	R = fonc_mot4(mot4);
-	char indice[6]="indice";
 	int hasard = rand() % 8 + 1;
 	do{
 		switch(hasard){
@@ -1086,23 +1089,25 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		}
 		
 		printf("\n");
-		
 		printf("Ecrivez le mot que vous pensez  avoir trouver :\n");
 		scanf("%s",reponse);
-		aide=bChaineEgale(reponse,indice);
-		if(aide==1){
-			printf("%c \n",R[0]);
-		
-		}
 		resultat = bChaineEgale(reponse, R);
 		if (resultat == 0){
-			clear;
+		 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			if(sauv==1){
+			stockage_R(R);
+			stockage_schema(hasard);
+			
+		}
+		//Fin récupération sauvegarde
+		else{
 			wb();
 			printf("Mot invalide, désolé !\n");
 		}
+			
+		}
 		
 		else{ 
-			clear;
 			wb();
 			printf("Le mot est présent !\n");
 			R=TrouverLeMotNiveau1(reponse,mat,R);
@@ -1127,6 +1132,8 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	R=sC2(premier,deuxieme);
 	char *mot6=" ";
 	char *mot7=" .";
+	int sauv=0;
+	char sauvegarde[20]="save";
 	char indice[6]="indice";
 	int hasard = rand() % 8 + 1;         //entre 1 & 8
 	do{
@@ -1153,9 +1160,18 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		clear;
 	        wb();
 		if (resultat == 0){
+		 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			if(sauv==1){
+			stockage_R(R);
+			stockage_schema(hasard);
+			
+		}//Fin récupération sauvegarde
+			else{
+			wb();
 			printf("Mot invalide, désolé !\n");
 		}
 		
+		}
 		
 		else{ 
 			printf("Le mot est présent !\n");
@@ -1214,10 +1230,17 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		}
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,R);
 		if (resultat == 0){
-			clear;
+		 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			if(sauv==1){
+			stockage_R(R);
+			stockage_schema(hasard);
+			
+		}//Fin récupération sauvegarde
+			else{
 			wb();
 			printf("Mot invalide, désolé !\n");
 		}
+		
 		
 		else{ 
 			clear;
@@ -1279,10 +1302,17 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 		}
 		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot8);
 		if (resultat == 0){
-			clear;
+		 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			if(sauv==1){
+			stockage_R(R);
+			stockage_schema(hasard);
+			
+		}//Fin récupération sauvegarde
+			else{
 			wb();
-			printf("Mot invalide, désolé !\n");;
+			printf("Mot invalide, désolé !\n");
 		}
+		
 		
 		else{ 
 			clear;

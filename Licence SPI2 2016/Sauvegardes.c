@@ -1,0 +1,176 @@
+#include "Outil.h"
+#include "Tas.h"
+#include "schema.h"
+#define clear printf("\e[1;1H\e[2J")
+
+void stockage_R(char *R){ 
+		FILE * fichier;
+		fichier=fopen("chaine.txt","w");
+				fprintf(fichier,"%s",R);
+		fclose(fichier);
+}	
+	
+
+
+void stockage_schema(int schema){ 
+		FILE * fichier;
+		fichier=fopen("schema.txt","w");
+		fprintf(fichier,"%i",schema);
+		fclose(fichier);
+}
+
+
+char *lecture_R(char *R){
+		FILE * fichier;
+		fichier=fopen("chaine.txt","r");
+		fscanf(fichier,"%s",R);
+		fclose(fichier);
+		return R;
+}	
+
+int lecture_schema(){
+		int schema;		
+		FILE * fichier;
+		fichier=fopen("schema.txt","r");
+		fscanf(fichier,"%i",&schema);
+		fclose(fichier);
+		return schema;
+}
+
+
+
+void sauvegarde(mat,mot4,mot5,mot6,mot7,mot8,R){
+	int schema=lecture_schema();
+	R=lecture_R(R);
+	int lg= strlen(R);
+		switch(lg){
+			case 4: save_niveau2(;break;
+			case 9:	save_niveau3(;break;
+			case 16:save_niveau4(;break;
+			case 25:save_niveau5(;break; 
+
+		}
+
+
+	 
+void save_niveau2(int mat[10][10],char *mot4,char *R){
+	int hasard;			//2X2
+	int bEspace=0;
+	int i=0;
+	int resultat=0;
+	int sauv=0;
+	char reponse[30];
+	char sauvegarde[20]="save";
+	do{		
+		switch(hasard){
+			case 1: schema2_1(mat,R);break;
+			case 2: schema2_2(mat,R);break;
+			case 3: schema2_3(mat,R);break;
+			case 4: schema2_4(mat,R);break; 
+			case 5: schema2_5(mat,R);break;
+			case 6: schema2_6(mat,R);break;
+			case 7: schema2_7(mat,R);break;
+			case 8: schema2_8(mat,R);break;
+
+		}
+		
+		printf("\n");
+		printf("Ecrivez le mot que vous pensez  avoir trouver :\n");
+		scanf("%s",reponse);
+		resultat = bChaineEgale(reponse, R);
+		if (resultat == 0){
+		 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			if(sauv==1){
+			stockage_R(R);
+			stockage_schema(hasard);
+			
+		}
+		//Fin récupération sauvegarde
+		else{
+			wb();
+			printf("Mot invalide, désolé !\n");
+		}
+			
+		}
+		
+		else{ 
+			wb();
+			printf("Le mot est présent !\n");
+			R=TrouverLeMotNiveau1(reponse,mat,R);
+			bEspace=bsansblanc(R);
+			
+		}
+ 
+	}while(bEspace!=1);
+	clear;	 
+	printf("	   ~~Bravo, vous avez fini la grille~~\n");
+
+}
+
+
+void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
+	int bEspace=0;
+	int i=0;
+	int resultat=0;
+	int aide=0;
+	char reponse[30];
+	char *premier = fonc_mot4(mot4);		
+	char *deuxieme = fonc_mot5(mot5);
+	R=sC2(premier,deuxieme);
+	char *mot6=" ";
+	char *mot7=" .";
+	int sauv=0;
+	char sauvegarde[20]="save";
+	char indice[6]="indice";
+	int hasard = rand() % 8 + 1;         //entre 1 & 8
+	do{
+		switch(hasard){
+			case 1: schema3_1(mat,R);break;
+			case 2: schema3_2(mat,R);break;
+			case 3: schema3_3(mat,R);break;
+			case 4: schema3_4(mat,R);break;
+			case 5: schema3_5(mat,R);break;
+			case 6: schema3_6(mat,R);break;
+			case 7: schema3_7(mat,R);break;
+			case 8: schema3_8(mat,R);break;
+		}
+		printf("\n");
+		t(R);
+		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
+		scanf("%s",reponse);
+		aide=bChaineEgale(reponse,indice);
+		if(aide==1){
+			printf("%c \n",R[0]);
+		
+		}
+		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot7,R);
+		clear;
+	        wb();
+		if (resultat == 0){
+		 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			if(sauv==1){
+			stockage_R(R);
+			stockage_schema(hasard);
+			
+		}//Fin récupération sauvegarde
+			else{
+			wb();
+			printf("Mot invalide, désolé !\n");
+		}
+		
+		}
+		
+		else{ 
+			printf("Le mot est présent !\n");
+			R=TrouverLeMotNiveau2(reponse,mat,premier,deuxieme,R);
+			bEspace=bsansblanc(R);
+			while(i!=5){
+				R=tomberNiveau2(mat,R);
+				i++;
+			}			
+		}
+ 
+	}while(bEspace!=1); 
+	clear;
+	printf("	   ~~Bravo, vous avez fini la grille~~\n");
+}

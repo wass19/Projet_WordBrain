@@ -18,8 +18,11 @@ main.o : main.c
 Jouer.o : Jouer.c
 	gcc -c Jouer.c -Wextra
 
-monprog : main.o Outil.o Tas.o schema.o Jouer.o
-	gcc -o monprog Outil.o Tas.o schema.o main.o Jouer.o -Wextra -lm
+Sauvegardes.o : Sauvegardes.c
+	gcc -c Sauvegardes.c -Wextra
+
+monprog : main.o Outil.o Tas.o schema.o Jouer.o Sauvegardes.o
+	gcc -o monprog Outil.o Tas.o schema.o main.o Jouer.o Sauvegardes.o -Wextra -lm
 
 
 clean :
