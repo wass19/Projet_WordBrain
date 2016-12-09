@@ -37,10 +37,10 @@ int main2(){
 			case 2:clear;Niveau();break;
 			case 3:clear;wb();save_niveau2(mat,mot4,R);break;
 			case 4:clear;break;
-			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");
+			default: printf("Erreur: votre choix doit etre compris entre 1 et 4\n");
 		}
 	}
-	while(choix!=3);
+	while(choix!=4);
 	printf("Au revoir !\n");
 	free(mot4);
 	free(mot5);
