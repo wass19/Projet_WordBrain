@@ -1343,7 +1343,7 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 			clear;
 			wb();
 			t("Désolé vous n'avez plus d'indices");
-		}
+		} 
 		if(aide==1 && compteur<2){
 			compteur++;
 			clear;
@@ -1355,12 +1355,14 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		if(aide==0){
 			resultat = bChaineEgale(reponse, R);
 			if (resultat == 0){
-			 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
 				if(sauv==1){
-				stockage_R(R);
-				stockage_schema(hasard);
-				}
-				//Fin récupération sauvegarde
+					remove("chaine.txt");
+					stockage_R(R);
+					stockage_schema(hasard);
+					clear;
+					wb();
+				}			//Fin récupération sauvegarde
 				else{
 					clear;
 					wb();
@@ -1433,14 +1435,19 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 			if (resultat == 0){
 			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
 				if(sauv==1){
-				stockage_R(R);
-				stockage_schema(hasard);
+					remove("chaine.txt");
+					stockage_premier(premier);
+					stockage_deuxieme(deuxieme);
+					stockage_R(R);
+					stockage_schema(hasard);
+					clear;
+					wb();
 			
 				}//Fin récupération sauvegarde
 				else{
-				clear;
-				wb();
-				printf("Mot invalide, désolé !\n");
+					clear;
+					wb();
+					printf("Mot invalide, désolé !\n");
 				}
 		
 			}
@@ -1518,14 +1525,19 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			if (resultat == 0){
 			 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
 				if(sauv==1){
-				stockage_R(R);
-				stockage_schema(hasard_schema);
+					stockage_premier(premier);
+					stockage_deuxieme(deuxieme);
+					stockage_troisieme(troisieme);
+					stockage_R(R);
+					stockage_schema(hasard_schema);
+					clear;
+					wb();
 			
 				}//Fin récupération sauvegarde
 				else{
-				clear;
-				wb();
-				printf("Mot invalide, désolé !\n");
+					clear;
+					wb();
+					printf("Mot invalide, désolé !\n");
 				}
 		
 			}
@@ -1584,7 +1596,6 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			case 4: schema5_4(mat,R);break;
 			case 5: schema5_5(mat,R);break;
 		}
-		t(R);
 		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
@@ -1605,8 +1616,15 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			if (resultat == 0){
 			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
 				if(sauv==1){
+					stockage_premier(premier);
+					stockage_deuxieme(deuxieme);
+					stockage_troisieme(troisieme);
+					stockage_quatrieme(quatrieme);
+					stockage_cinquieme(cinquieme);
 					stockage_R(R);
 					stockage_schema(hasard_schema);
+					clear;
+					wb();
 				}//Fin récupération sauvegarde
 				
 				else{
