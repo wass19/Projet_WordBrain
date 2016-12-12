@@ -69,6 +69,7 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 void game_niveau2(int mat[10][10],char *mot4,char *R);
 void game_niveau3(int mat[10][10],char *R,char *mot4,char *mot5);
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R);
+void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R);
 
 
 void Niveau(void);
@@ -81,14 +82,25 @@ void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7
 void wb();
 void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R);
 
-
-
-
-
-
-void stockage_R(char *R);
-char *lecture_R(char *R); 
+void stockage_premier(char *premier);
+void stockage_deuxieme(char *deuxieme);
+void stockage_troisieme(char *troisieme);
+void stockage_quatrieme(char *quatrieme);
+void stockage_cinquieme(char *cinquieme);
+char *lecture_premier(char *premier,int ligne);
+char *lecture_deuxieme(char *deuxieme, int ligne);
+char *lecture_troisieme(char *troisieme,int ligne);
+char *lecture_quatrieme(char *quatrieme,int ligne);
+char *lecture_cinquieme(char *cinquieme,int ligne);
+char *lecture_R(char *R,int ligne);
 void stockage_schema(int schema);
+void stockage_R(char *R);
 int lecture_schema();
+int lecture_combi();
 void charger_niveau2(int mat[10][10],char *mot4);
 void save_niveau2(int mat[10][10],char *mot4,char *R);
+void save_niveau3(int mat[10][10],char *premier, char *deuxieme,char *R);
+void save_niveau4(int mat[10][10],char *mot4, char *mot5, char *mot6,char *R);
+void save_niveau5(int mat[10][10],char *premier, char *deuxieme,char *troisieme,char *quatrieme,char *cinquieme,char *R);
+int nombre_ligne(int ligne);
+void sauvegarde(int mat[10][10],char *mot4,char *mot5,char *mot6,char *mot7,char *mot8,char *R);

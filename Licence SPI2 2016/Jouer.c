@@ -77,7 +77,7 @@ void NiveauJeu(){
 	char *mot6=malloc(1+6);
 	char *mot7=malloc(1+7);
 	char *mot8=malloc(1+8);
-	char *R;
+	char *R=" ";
 	int choix;	
 	do{
 		wb();
@@ -94,12 +94,12 @@ void NiveauJeu(){
 
 		
 		switch(choix){	
-			case 1 : clear;wb();jouer_facile(mat,mot4,mot5,R);t(R);break;
+			case 1 : clear;wb();jouer_facile(mat,mot4,mot5,R);break;
 			case 2 : clear;wb();jouer_moyen(mat,mot4,mot5,R);break;
 			case 3 : clear;wb();jouer_difficile(mat,mot4,mot5,mot6,R); break;
 			case 4 : clear;wb();jouer_hardcore(mat,mot4,mot5,mot6,mot7,mot8,R);break;
 			case 5 : clear; break;
-			default: printf("Erreur: votre choix doit etre compris entre 1 et 3\n");//Erreur menu//
+			default: printf("Erreur: votre choix doit etre compris entre 1 et 5\n");//Erreur menu//
 		}
 }
 	while(choix!=5);

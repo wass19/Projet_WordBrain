@@ -26,4 +26,4 @@ monprog : main.o Outil.o Tas.o schema.o Jouer.o Sauvegardes.o
 
 
 clean :
-	rm -i *.o
+	rm -f *.o

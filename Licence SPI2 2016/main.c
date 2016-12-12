@@ -35,7 +35,7 @@ int main2(){
 		switch(choix)
 		{	case 1:clear;NiveauJeu();break;
 			case 2:clear;Niveau();break;
-			case 3:clear;wb();save_niveau2(mat,mot4,R);break;
+			case 3:clear;wb();sauvegarde(mat,mot4,mot5,mot6,mot7,mot8,R);break;
 			case 4:clear;break;
 			default: printf("Erreur: votre choix doit etre compris entre 1 et 4\n");
 		}
