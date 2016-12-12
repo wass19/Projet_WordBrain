@@ -39,6 +39,7 @@ void schema5_2(int mat[10][10],char mot3[25]);
 void schema5_3(int mat[10][10],char mot3[25]);
 void schema5_4(int mat[10][10],char mot3[25]);
 void schema5_4(int mat[10][10],char mot3[25]);
+void schema5_5(int mat[10][10],char mot3[25]);
 
 char *fonc_mot4(char *mot4);
 char *fonc_mot5(char *mot5);

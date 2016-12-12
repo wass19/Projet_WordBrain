@@ -159,15 +159,6 @@ int lecture_schema(){
 		return schema;
 }
 
-int lecture_combi(){
-		int schema;		
-		FILE * fichier;
-		fichier=fopen("combi.txt","r");
-		fscanf(fichier,"%i",&schema);
-		fclose(fichier);
-		return schema;
-}
-
 void sauvegarde(int mat[10][10],char *mot4,char *mot5,char *mot6,char *mot7,char *mot8,char *R){
 	int schema=lecture_schema();
 	int nb=0;
@@ -248,6 +239,7 @@ void save_niveau3(int mat[10][10],char *premier, char *deuxieme,char *R){		//3X3
 	char sauvegarde[20]="save";
 	char indice[6]="indice";
 	premier=lecture_premier(premier,ligne);
+	t(premier);
 	deuxieme=lecture_deuxieme(deuxieme,ligne);
 	do{
 		switch(hasard){
@@ -301,8 +293,7 @@ void save_niveau3(int mat[10][10],char *premier, char *deuxieme,char *R){		//3X3
 }
 
 void save_niveau4(int mat[10][10],char *premier, char *deuxieme, char *troisieme,char *R){		//4X4
-	int hasard_schema=lecture_schema();
-	int hasard_mot=lecture_combi();			
+	int hasard_schema=lecture_schema();		
 	int bEspace=0;
 	int i=0;
 	int ligne=1;
@@ -372,7 +363,6 @@ void save_niveau4(int mat[10][10],char *premier, char *deuxieme, char *troisieme
 
 void save_niveau5(int mat[10][10],char *premier, char *deuxieme,char *troisieme,char *quatrieme,char *cinquieme,char *R){		//5x5
 	int hasard_schema=lecture_schema();
-	int hasard_mot=lecture_combi();	
 	int bEspace=0;
 	int i=0;
 	int compteur=0;
@@ -416,22 +406,10 @@ void save_niveau5(int mat[10][10],char *premier, char *deuxieme,char *troisieme,
 		if(aide==0){
 			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,troisieme,quatrieme,cinquieme);
 			if (resultat == 0){
-			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
-				if(sauv==1){
-					stockage_premier(premier);
-					stockage_schema(hasard_schema);
-					clear;
-					wb();
-				}//Fin récupération sauvegarde
-				
-				else{
-					clear;
-					wb();
-					printf("Mot invalide, désolé !\n");
-				}
-			}
-			
-			else{ 
+				clear;
+				wb();
+				printf("Mot invalide, désolé !\n");
+			}else{ 
 				clear;
 				wb();
 				printf("Le mot est présent !\n");	
