@@ -1206,9 +1206,18 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 	C5=sC5(mot1,mot2,mot3,mot4,mot5);
 	int Egale_R_mot1_2_3_4_5=nChaineLg(R)==nChaineLg(C5);	
 	if (Egale_R_mot1_2_3_4_5==1 && compteur<=10){
-
-										//printf("%i	",compteur);
-		if((compteur%5)==0){						//printf("%i	",compteur);
+										//printf("test 1 \n");
+										//printf("%i	",compteur);  //compteur doit être sup à 1
+										/*if(compteur>0){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
+		if((compteur%5)==0){						//printf("test 2 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 5 ou 10
+										/*if(compteur==5||compteur==10){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
 			printf("mot5: ");
 			while(n < (compteur/5)){
 				printf("%c",mot5[n]);
@@ -1228,8 +1237,18 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 		
 		else if((compteur%5)!=0){
 												
-			if(((compteur+4)%5)==0){				//printf("%i	",compteur);
-				compteur=(compteur/5)+1;			//printf("%i	",compteur);
+			if(((compteur+4)%5)==0){				//printf("test 3 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 1 ou 6
+										/*if(compteur==1||compteur==6){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
+				compteur=(compteur/5)+1;			//printf("test 4 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 1 ou 2
+										/*if(compteur==1||compteur==2){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
 				printf("mot1: ");
 				while(n < compteur){
 					printf("%c",mot1[n]);
@@ -1247,8 +1266,18 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 				printf("\n");
 			}
 						
-			else if(((compteur+3)%5)==0){				//printf("%i	",compteur);
-				compteur=(compteur/5)+1;			//printf("%i	",compteur);	
+			else if(((compteur+3)%5)==0){				//printf("test 5 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 2 ou 7	
+										/*if(compteur==2||compteur==7){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
+				compteur=(compteur/5)+1;			//printf("test 6 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 1 ou 2
+										/*if(compteur==1||compteur==2){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
 				printf("mot2: ");			
 				while(n < compteur){
 					printf("%c",mot2[n]);
@@ -1266,8 +1295,18 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 				printf("\n");
 			}
 			
-			else if(((compteur+2)%5)==0){				//printf("%i	",compteur);
-				compteur=(compteur/5)+1;			//printf("%i	",compteur);
+			else if(((compteur+2)%5)==0){				//printf("test 7 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 3 ou 8
+										/*if(compteur==3||compteur==8){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
+				compteur=(compteur/5)+1;			//printf("test 8 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 1 ou 2
+										/*if(compteur==1||compteur==2){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
 				printf("mot3: ");				
 				while(n < compteur){
 					printf("%c",mot3[n]);
@@ -1285,8 +1324,19 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 				printf("\n");
 			}
 			
-			else if(((compteur+1)%5)==0){				//printf("%i	",compteur);
-				compteur=(compteur/5)+1;			//printf("%i	",compteur);
+			else if(((compteur+1)%5)==0){				//printf("test 9 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 4 ou 9 
+										/*if(compteur==4||compteur==9){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
+
+				compteur=(compteur/5)+1;			//printf("test 10 \n");
+										//printf("%i	",compteur);  //compteur doit être = à 1 ou 2
+										/*if(compteur==1||compteur==2){
+											printf("le test est bon \n",compteur);
+										}
+										else printf("erreur \n");*/
 				printf("mot4: ");
 				while(n < compteur){
 					printf("%c",mot4[n]);
