@@ -1367,10 +1367,14 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 	int resultat=0;
 	int aide=0;
 	int sauv=0;
-	char *mot1=" ",*mot2=" ",*mot3=" ";
+	int quitter=0;
+	int triche=0;
+	char *mot1=" ";
 	char reponse[30];
 	char sauvegarde[20]="save";
 	char indice[6]="indice";
+	char *exit="exit";
+	char *Ishit="Ishit";
 	R = fonc_mot4(mot4);
 	int hasard = rand() % 8 + 1;
 	do{
@@ -1385,10 +1389,18 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 			case 8: schema2_8(mat,R);break;
 
 		}
-		t(R);
+		if(compteur == 0){
+			printf("~~~vous avez 2 indices.~~~\n");
+		}
+		if(compteur != 0){
+			printf("~~~Il vous reste %i indice(s).~~~\n",2-compteur);
+		}
+		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
 		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
+		quitter=bChaineEgale(reponse,exit);
+		triche=bChaineEgale(reponse,Ishit);
 		if(compteur>=2){
 			clear;
 			wb();
@@ -1398,11 +1410,19 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 			compteur++;
 			clear;
 			wb();
-			Indice(R,R,mot4,mot1,mot2,mot3,compteur);
+			Indice(R,mot4,mot1,mot1,mot1,mot1,compteur);
 		
 		}
+		if(quitter==1){
+			break;
+		}
+		if(triche==1){
+			clear;
+			wb();
+			printf("mot:%s \n",R);
+		}
 		printf("\n");
-		if(aide==0){
+		if(aide==0 && triche!=1){
 			resultat = bChaineEgale(reponse, R);
 			if (resultat == 0){
 			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
@@ -1442,13 +1462,16 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	int resultat=0;
 	int aide=0;
 	int sauv=0;
+	int quitter=0;
+	int triche=0;
 	char reponse[30];
 	char *premier = fonc_mot4(mot4);		
 	char *deuxieme = fonc_mot5(mot5);
 	char *mot6=" ";
-	char *mot7=" .";
 	char sauvegarde[20]="save";
 	char indice[6]="indice";
+	char *exit="exit";
+	char *Ishit="Ishit";
 	
 	R=sC2(premier,deuxieme);
 	int hasard = rand() % 8 + 1;         //entre 1 & 8
@@ -1463,25 +1486,45 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 			case 7: schema3_7(mat,R);break;
 			case 8: schema3_8(mat,R);break;
 		}
-		t(R);
+		if(compteur == 0){
+			printf("~~~vous avez 4 indices.~~~\n");
+		}
+		if(compteur != 0){
+			printf("~~~Il vous reste %i indice(s).~~~\n",4-compteur);
+		}
+		
+		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
+		
 		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
-		if(compteur>=5){
+		quitter=bChaineEgale(reponse,exit);
+		triche=bChaineEgale(reponse,Ishit);
+		if(compteur>=4){
 			clear;
 			wb();
 			t("Désolé vous n'avez plus d'indices");
 			
 		}
-		if(aide==1 && compteur<5){
+		if(aide==1 && compteur<4){
 			compteur++;
 			clear;
 			wb();
-			Indice(R,premier,deuxieme,mot6,mot7,mot5,compteur);
+			Indice(R,premier,deuxieme,mot6,mot6,mot6,compteur);
 			
 		}
-		if(aide==0){
-			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot7,R);
+		if(quitter==1){
+			break;
+		}
+		if(triche==1){
+			clear;
+			wb();
+			printf("mot1:%s \n",premier);
+			printf("mot2:%s \n",deuxieme);
+			
+		}
+		if(aide==0 && triche==0){
+			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot6,mot6);
 			if (resultat == 0){
 			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
 				if(sauv==1){
@@ -1526,6 +1569,8 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	int resultat=0;
 	int aide=0;
 	int sauv=0;
+	int quitter=0;
+	int triche=0;
 	char reponse[30];
 	char *mot7=".";
 	char indice[6]="indice";
@@ -1533,6 +1578,8 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	char *deuxieme;
 	char *troisieme;
 	char sauvegarde[20]="save";
+	char *exit="exit";
+	char *Ishit="Ishit";
 
 	int hasard_mot = rand() % 3 + 1;
 	switch(hasard_mot){
@@ -1554,10 +1601,18 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			case 7: schema4_7(mat,R);break;
 			case 8: schema4_8(mat,R);break;
 		}
-		t(R);
+		if(compteur == 0){
+			printf("~~~vous avez 6 indices.~~~\n");
+		}
+		if(compteur != 0){
+			printf("~~~Il vous reste %i indice(s).~~~\n",6-compteur);
+		}
+		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
 		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
+		quitter=bChaineEgale(reponse,exit);
+		triche=bChaineEgale(reponse,Ishit);
 		if(compteur>=10){
 			clear;
 			wb();
@@ -1570,8 +1625,18 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 			Indice(R,premier,deuxieme,troisieme,mot7,reponse,compteur);
 		
 		}
-		if(aide==0){
-		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,R);
+		if(quitter==1){
+			break;
+		}
+		if(triche==1){
+			clear;
+			wb();
+			printf("mot1:%s \n",premier);
+			printf("mot2:%s \n",deuxieme);
+			printf("mot3:%s \n",troisieme);
+		}
+		if(aide==0 && triche==0){
+		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot7);
 			if (resultat == 0){
 			 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
 				if(sauv==1){
@@ -1618,14 +1683,19 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	int resultat=0;
 	int aide=0;
 	int sauv=0;
+	int quitter=0;
+	int triche=0;
 	char reponse[30];
 	char indice[6]="indice";
 	char sauvegarde[20]="save";
+	char *exit="exit";
+	char *Ishit="Ishit";
 	char *premier;
 	char *deuxieme;
 	char *troisieme;
 	char *quatrieme;
 	char *cinquieme;
+	
 
 	int hasard_mot= rand() % 5 + 1;
 	switch(hasard_mot){
@@ -1646,9 +1716,18 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			case 4: schema5_4(mat,R);break;
 			case 5: schema5_5(mat,R);break;
 		}
+		if(compteur == 0){
+			printf("~~~vous avez 10 indices.~~~\n");
+		}
+		if(compteur != 0){
+			printf("~~~Il vous reste %i indice(s).~~~\n",10-compteur);
+		}
+		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
 		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
 		scanf("%s",reponse);
 		aide=bChaineEgale(reponse,indice);
+		quitter=bChaineEgale(reponse,exit);
+		triche=bChaineEgale(reponse,Ishit);
 		if(compteur>=10){
 			clear;
 			wb();
@@ -1661,7 +1740,19 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 			Indice(R,premier,deuxieme,troisieme,quatrieme,cinquieme,compteur);
 		
 		}
-		if(aide==0){
+		if(quitter==1){
+			break;
+		}
+		if(triche==1){
+			clear;
+			wb();
+			printf("mot1:%s \n",premier);
+			printf("mot2:%s \n",deuxieme);
+			printf("mot3:%s \n",troisieme);
+			printf("mot4:%s \n",quatrieme);
+			printf("mot5:%s \n",cinquieme);
+		}
+		if(aide==0 && triche==0){
 			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot8);
 			if (resultat == 0){
 			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
