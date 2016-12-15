@@ -165,8 +165,6 @@ char *sC8p(char *sA,char *sB,char *sC,char *sD,char *sE,char *sF,char *sG,char *
 long yBorner(long yBorneInf,long yValeur,long yBorneSup);//rend yValeur si yBorneInf≤yValeur≤yBorneSup, ou la borne la plus proche de yValeur
 int nCaractere(char *sTexte);//rend le nombre de caractères (1 pour "é") contrairement à strlen() qui rend le nombre de CODES caractères (2 pour "é"). 
 char *sChaine(char cCaractere);//convertit cCaractere en char *; synonyme de sC()
-int bChaineEgale(char *sTexte1,char *sTexte2);//strcmp(sTexte) 
-int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6);//strcmp 1mot avec 5autres
 int nChaineLg(char *sTexte);//strlen(sTexte) dans [0..kuIntegerMax]
 char *sChainon(char *sChaine,int nDebutInclus,int nFinIncluse);//rend sChaine[nDebutInclus,nFinIncluse],ou une chaîne vide si non défini
 int mChainePos(char cQuoi,char *sDansQuoi);//rend le rang0, c'est-à-dire la position en commençant par 0, de cQuoi dans sDansQuoi;rend -1 si échec.

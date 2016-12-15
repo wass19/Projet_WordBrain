@@ -1358,7 +1358,39 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 
 	}
 }
+int bChaineEgale(char *sTexte1,char *sTexte2){//strcmp(sTexte) 
+	int nC;
+	int bEgale=nChaineLg(sTexte1)==nChaineLg(sTexte2);
+	if(bEgale){
+		for (nC=0;nC<nChaineLg(sTexte1);nC++)
+			bEgale=bEgale && sTexte1[nC] == sTexte2[nC];
+		
+	}
+	Assert1("bChaineEgale",bBool(bEgale));
+	return bEgale;
+}//bChaineEgale
 
+int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6){//strcmp(sTexte) 
+	int nC;
+	int bEgales=(nChaineLg(TexteAcomparer)==nChaineLg(sTexte2) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte3) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte4) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte5) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte6) );
+	
+	if(bEgales){
+		bEgales=bChaineEgale(TexteAcomparer,sTexte2) || bChaineEgale(TexteAcomparer,sTexte3) || bChaineEgale(TexteAcomparer,sTexte4) || bChaineEgale(TexteAcomparer,sTexte5) || bChaineEgale(TexteAcomparer,sTexte6);
+				
+	}
+	Assert1("bChaineEgale",bBool(bEgales));
+	return bEgales;
+}//bChaineEgale
+
+void upper_string(char *s){
+	int c = 0;
+	while (s[c] != '\0') {
+		if (s[c] >= 'a' && s[c] <= 'z') {
+			s[c] = s[c] - 32;
+		}
+		c++;
+	}   
+}
 
 void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 	int bEspace=0;
@@ -1369,89 +1401,109 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 	int sauv=0;
 	int quitter=0;
 	int triche=0;
+	int reset=1;
 	char *mot1=" ";
 	char reponse[30];
-	char sauvegarde[20]="save";
-	char indice[6]="indice";
-	char *exit="exit";
-	char *Ishit="Ishit";
+	char sauvegarde[20]="SAVE";
+	char indice[6]="INDICE";
+	char *exit="EXIT";
+	char *Ishit="ISHIT";
+	char *RESET="RESET";
 	R = fonc_mot4(mot4);
-	int hasard = rand() % 8 + 1;
-	do{
-		switch(hasard){
-			case 1: schema2_1(mat,R);break;
-			case 2: schema2_2(mat,R);break;
-			case 3: schema2_3(mat,R);break;
-			case 4: schema2_4(mat,R);break; 
-			case 5: schema2_5(mat,R);break;
-			case 6: schema2_6(mat,R);break;
-			case 7: schema2_7(mat,R);break;
-			case 8: schema2_8(mat,R);break;
-
-		}
-		if(compteur == 0){
-			printf("~~~vous avez 2 indices.~~~\n");
-		}
-		if(compteur != 0){
-			printf("~~~Il vous reste %i indice(s).~~~\n",2-compteur);
-		}
-		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
-		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
-		scanf("%s",reponse);
-		aide=bChaineEgale(reponse,indice);
-		quitter=bChaineEgale(reponse,exit);
-		triche=bChaineEgale(reponse,Ishit);
-		if(compteur>=2){
-			clear;
-			wb();
-			t("Désolé vous n'avez plus d'indices");
-		} 
-		if(aide==1 && compteur<2){
-			compteur++;
-			clear;
-			wb();
-			Indice(R,mot4,mot1,mot1,mot1,mot1,compteur);
+	int hasard = rand() % 8 + 1;	
 		
-		}
+	do{	
+		clear;
+		wb();
+		reset=0;
+		compteur=0;
 		if(quitter==1){
 			break;
 		}
-		if(triche==1){
-			clear;
-			wb();
-			printf("mot:%s \n",R);
-		}
-		printf("\n");
-		if(aide==0 && triche!=1){
-			resultat = bChaineEgale(reponse, R);
-			if (resultat == 0){
-			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
-				if(sauv==1){
-					remove("chaine.txt");
-					stockage_R(R);
-					stockage_schema(hasard);
-					clear;
-					wb();
-				}			//Fin récupération sauvegarde
-				else{
-					clear;
-					wb();
-					printf("Mot invalide, désolé !\n");
-				}
+		do{
+			switch(hasard){
+				case 1: schema2_1(mat,R);break;
+				case 2: schema2_2(mat,R);break;
+				case 3: schema2_3(mat,R);break;
+				case 4: schema2_4(mat,R);break; 
+				case 5: schema2_5(mat,R);break;
+				case 6: schema2_6(mat,R);break;
+				case 7: schema2_7(mat,R);break;
+				case 8: schema2_8(mat,R);break;
+
 			}
-			
-			else{ 
+			if(compteur == 0){
+				printf("~~~vous avez 2 indices.~~~\n");
+			}
+			if(compteur != 0){
+				printf("~~~Il vous reste %i indice(s).~~~\n",2-compteur);
+			}
+			printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
+			printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
+			scanf("%s",reponse);
+			upper_string(reponse);
+
+			aide=bChaineEgale(reponse,indice);
+			quitter=bChaineEgale(reponse,exit);
+			triche=bChaineEgale(reponse,Ishit);
+			reset=bChaineEgale(reponse,RESET);
+
+			if(compteur>=2){
 				clear;
 				wb();
-				printf("Le mot est présent !\n");
-				R=TrouverLeMotNiveau1(reponse,mat,R);
-				bEspace=bsansblanc(R);
+				t("Désolé vous n'avez plus d'indices");
+			} 
+			if(aide==1 && compteur<2){
+				compteur++;
+				clear;
+				wb();
+				Indice(R,mot4,mot1,mot1,mot1,mot1,compteur);
+		
 			}
-		}
+			if(triche==1){
+				clear;
+				wb();
+				printf("mot:%s .\n",R); 
+			}
+			if(quitter==1){
+				break;
+			}
+			printf("\n");
+			if(aide==0 && triche!=1){
+				resultat = bChaineEgale(reponse, R);
+				if (resultat == 0){
+				 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+					if(sauv==1){
+						remove("chaine.txt");
+						stockage_R(R);
+						stockage_schema(hasard);
+						clear;
+						wb();
+					}			//Fin récupération sauvegarde
+					else{
+						clear;
+						wb();
+						printf("Mot invalide, désolé !\n");
+					}
+				}
+			
+				else{ 
+					clear;
+					wb();
+					printf("Le mot est présent !\n");
+					R=TrouverLeMotNiveau1(reponse,mat,R);
+					bEspace=bsansblanc(R);
+				}
+			}
  
-	}while(bEspace!=1);
-	clear;	 
-	printf("	   ~~Bravo, vous avez fini la grille~~\n");
+		}while(bEspace!=1 && reset!=1);
+		
+	}while(reset==1 || bEspace!=1);
+	clear;
+	if(quitter==0){		 
+		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+	}	 
+	
 
 }
 
@@ -1464,101 +1516,122 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	int sauv=0;
 	int quitter=0;
 	int triche=0;
+	int reset=0;
 	char reponse[30];
 	char *premier = fonc_mot4(mot4);		
 	char *deuxieme = fonc_mot5(mot5);
 	char *mot6=" ";
-	char sauvegarde[20]="save";
-	char indice[6]="indice";
-	char *exit="exit";
-	char *Ishit="Ishit";
+	char sauvegarde[20]="SAVE";
+	char indice[6]="INDICE";
+	char *exit="EXIT";
+	char *Ishit="ISHIT";
+	char *RESET="RESET";
 	
 	R=sC2(premier,deuxieme);
 	int hasard = rand() % 8 + 1;         //entre 1 & 8
-	do{
-		switch(hasard){
-			case 1: schema3_1(mat,R);break;
-			case 2: schema3_2(mat,R);break;
-			case 3: schema3_3(mat,R);break;
-			case 4: schema3_4(mat,R);break;
-			case 5: schema3_5(mat,R);break;
-			case 6: schema3_6(mat,R);break;
-			case 7: schema3_7(mat,R);break;
-			case 8: schema3_8(mat,R);break;
-		}
-		if(compteur == 0){
-			printf("~~~vous avez 4 indices.~~~\n");
-		}
-		if(compteur != 0){
-			printf("~~~Il vous reste %i indice(s).~~~\n",4-compteur);
-		}
-		
-		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
-		
-		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
-		scanf("%s",reponse);
-		aide=bChaineEgale(reponse,indice);
-		quitter=bChaineEgale(reponse,exit);
-		triche=bChaineEgale(reponse,Ishit);
-		if(compteur>=4){
-			clear;
-			wb();
-			t("Désolé vous n'avez plus d'indices");
-			
-		}
-		if(aide==1 && compteur<4){
-			compteur++;
-			clear;
-			wb();
-			Indice(R,premier,deuxieme,mot6,mot6,mot6,compteur);
-			
-		}
+	stockage_premier(premier);
+	stockage_deuxieme(deuxieme);
+	stockage_R(R);
+	do{	i=0;
+		premier=lecture_premier(premier,1);
+		deuxieme=lecture_deuxieme(deuxieme,2);
+		R=lecture_R(R,3);
+		clear;
+		wb();
+		reset=0;
+		compteur=0;
 		if(quitter==1){
 			break;
 		}
-		if(triche==1){
-			clear;
-			wb();
-			printf("mot1:%s \n",premier);
-			printf("mot2:%s \n",deuxieme);
-			
-		}
-		if(aide==0 && triche==0){
-			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot6,mot6);
-			if (resultat == 0){
-			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
-				if(sauv==1){
-					remove("chaine.txt");
-					stockage_premier(premier);
-					stockage_deuxieme(deuxieme);
-					stockage_R(R);
-					stockage_schema(hasard);
-					clear;
-					wb();
-			
-				}//Fin récupération sauvegarde
-				else{
-					clear;
-					wb();
-					printf("Mot invalide, désolé !\n");
-				}
-		
+		do{
+			switch(hasard){
+				case 1: schema3_1(mat,R);break;
+				case 2: schema3_2(mat,R);break;
+				case 3: schema3_3(mat,R);break;
+				case 4: schema3_4(mat,R);break;
+				case 5: schema3_5(mat,R);break;
+				case 6: schema3_6(mat,R);break;
+				case 7: schema3_7(mat,R);break;
+				case 8: schema3_8(mat,R);break;
 			}
-			else{ 
+			if(compteur == 0){
+				printf("~~~vous avez 4 indices.~~~\n");
+			}
+			if(compteur != 0){
+				printf("~~~Il vous reste %i indice(s).~~~\n",4-compteur);
+			}
+		
+			printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
+		
+			printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
+			scanf("%s",reponse);
+			upper_string(reponse);
+			aide=bChaineEgale(reponse,indice);
+			quitter=bChaineEgale(reponse,exit);
+			triche=bChaineEgale(reponse,Ishit);
+			reset=bChaineEgale(reponse,RESET);
+			if(compteur>=4){
 				clear;
 				wb();
-				printf("Le mot est présent !\n");
-				R=TrouverLeMotNiveau2(reponse,mat,premier,deuxieme,R);
-				bEspace=bsansblanc(R);
-				while(i!=5){
-					R=tomberNiveau2(mat,R);
-					i++;
-				}			
+				t("Désolé vous n'avez plus d'indices");
+			
 			}
- 		}
-	}while(bEspace!=1); 
+			if(aide==1 && compteur<4){
+				compteur++;
+				clear;
+				wb();
+				Indice(R,premier,deuxieme,mot6,mot6,mot6,compteur);
+			
+			}
+			if(triche==1){
+				clear;
+				wb();
+				printf("mot1:%s .\n",premier);
+				printf("mot2:%s .\n",deuxieme);
+			
+			}
+			if(quitter==1){
+				break;
+			}
+			if(aide==0 && triche==0){
+				resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,premier,deuxieme,mot6,mot6,mot6);
+				if (resultat == 0){
+				 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+					if(sauv==1){
+						remove("chaine.txt");
+						stockage_premier(premier);
+						stockage_deuxieme(deuxieme);
+						stockage_R(R);
+						stockage_schema(hasard);
+						clear;
+						wb();
+			
+					}//Fin récupération sauvegarde
+					else{
+						clear;
+						wb();
+						printf("Mot invalide, désolé !\n");
+					}
+		
+				}
+				else{ 
+					clear;
+					wb();
+					printf("Le mot est présent !\n");
+					R=TrouverLeMotNiveau2(reponse,mat,premier,deuxieme,R);
+					bEspace=bsansblanc(R);
+					while(i!=5){
+						R=tomberNiveau2(mat,R);
+						i++;
+					}			
+				}
+	 		}
+		}while(bEspace!=1 && reset!=1);
+	}while(reset==1 || bEspace!=1);
 	clear;
-	printf("	   ~~Bravo, vous avez fini la grille~~\n");
+	if(quitter==0){		 
+		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+	}
 }
 
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		//4X4
@@ -1571,16 +1644,17 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	int sauv=0;
 	int quitter=0;
 	int triche=0;
+	int reset=0;
 	char reponse[30];
 	char *mot7=".";
-	char indice[6]="indice";
+	char indice[6]="INDICE";
 	char *premier;
 	char *deuxieme;
 	char *troisieme;
-	char sauvegarde[20]="save";
-	char *exit="exit";
-	char *Ishit="Ishit";
-
+	char sauvegarde[20]="SAVE";
+	char *exit="EXIT";
+	char *Ishit="ISHIT";
+	char *RESET="RESET";
 	int hasard_mot = rand() % 3 + 1;
 	switch(hasard_mot){
 		case 1: premier=fonc_mot6(mot4);deuxieme=fonc_mot6(mot5);troisieme=fonc_mot4(mot6);R=sC3(premier,deuxieme,troisieme);break;
@@ -1589,90 +1663,112 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	}
 	
 	int hasard_schema = rand() % 8 + 1;         //entre 1 & 8
-	do{
-		
-		switch(hasard_schema){
-			case 1: schema4_1(mat,R);break;
-			case 2: schema4_2(mat,R);break;
-			case 3: schema4_3(mat,R);break;
-			case 4: schema4_4(mat,R);break;
-			case 5: schema4_5(mat,R);break;
-			case 6: schema4_6(mat,R);break;
-			case 7: schema4_7(mat,R);break;
-			case 8: schema4_8(mat,R);break;
-		}
-		if(compteur == 0){
-			printf("~~~vous avez 6 indices.~~~\n");
-		}
-		if(compteur != 0){
-			printf("~~~Il vous reste %i indice(s).~~~\n",6-compteur);
-		}
-		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
-		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
-		scanf("%s",reponse);
-		aide=bChaineEgale(reponse,indice);
-		quitter=bChaineEgale(reponse,exit);
-		triche=bChaineEgale(reponse,Ishit);
-		if(compteur>=10){
-			clear;
-			wb();
-			t("Désolé vous n'avez plus d'indices");
-		}
-		if(aide==1 && compteur<10){
-			compteur++;
-			clear;
-			wb();
-			Indice(R,premier,deuxieme,troisieme,mot7,reponse,compteur);
-		
-		}
+	stockage_premier(premier);
+	stockage_deuxieme(deuxieme);
+	stockage_troisieme(troisieme);
+	stockage_R(R);
+	do{			
+		i=0;
+		premier=lecture_premier(premier,1);
+		deuxieme=lecture_deuxieme(deuxieme,2);
+		troisieme=lecture_troisieme(troisieme,3);
+		R=lecture_R(R,4);
+		clear;
+		wb();
+		reset=0;
+		compteur=0;
 		if(quitter==1){
 			break;
 		}
-		if(triche==1){
-			clear;
-			wb();
-			printf("mot1:%s \n",premier);
-			printf("mot2:%s \n",deuxieme);
-			printf("mot3:%s \n",troisieme);
-		}
-		if(aide==0 && triche==0){
-		resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot7);
-			if (resultat == 0){
-			 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
-				if(sauv==1){
-					stockage_premier(premier);
-					stockage_deuxieme(deuxieme);
-					stockage_troisieme(troisieme);
-					stockage_R(R);
-					stockage_schema(hasard_schema);
-					clear;
-					wb();
-			
-				}//Fin récupération sauvegarde
-				else{
-					clear;
-					wb();
-					printf("Mot invalide, désolé !\n");
-				}
+		do{
 		
+			switch(hasard_schema){
+				case 1: schema4_1(mat,R);break;
+				case 2: schema4_2(mat,R);break;
+				case 3: schema4_3(mat,R);break;
+				case 4: schema4_4(mat,R);break;
+				case 5: schema4_5(mat,R);break;
+				case 6: schema4_6(mat,R);break;
+				case 7: schema4_7(mat,R);break;
+				case 8: schema4_8(mat,R);break;
 			}
-			else{ 
+			if(compteur == 0){
+				printf("~~~vous avez 6 indices.~~~\n");
+			}
+			if(compteur != 0){
+				printf("~~~Il vous reste %i indice(s).~~~\n",6-compteur);
+			}
+			printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
+			printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
+			scanf("%s",reponse);
+			upper_string(reponse);
+			aide=bChaineEgale(reponse,indice);
+			quitter=bChaineEgale(reponse,exit);
+			triche=bChaineEgale(reponse,Ishit);
+			reset=bChaineEgale(reponse,RESET);
+			if(compteur>=6){
 				clear;
 				wb();
-				printf("Le mot est présent !\n");
-				R=TrouverLeMotNiveau3(reponse,mat,premier,deuxieme,troisieme,R);
-				bEspace=bsansblanc(R);
-				t(R);
-				i=0;
-				while(i<10){
-					R=tomberNiveau3(mat,R);
-					i++;
-				}			
-			} 
-		}
-	}while(bEspace!=1);
-	clear;	 
-	printf("	   ~~Bravo, vous avez fini la grille~~\n");
+				t("Désolé vous n'avez plus d'indices");
+			}
+			if(aide==1 && compteur<6){
+				compteur++;
+				clear;
+				wb();
+				Indice(R,premier,deuxieme,troisieme,mot7,reponse,compteur);
+		
+			}
+			if(quitter==1){
+				break;
+			}
+			if(triche==1){
+				clear;
+				wb();
+				printf("mot1:%s .\n",premier);
+				printf("mot2:%s .\n",deuxieme);
+				printf("mot3:%s .\n",troisieme);
+			}
+			if(aide==0 && triche==0){
+			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot7);
+				if (resultat == 0){
+				 sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+					if(sauv==1){
+						stockage_premier(premier);
+						stockage_deuxieme(deuxieme);
+						stockage_troisieme(troisieme);
+						stockage_R(R);
+						stockage_schema(hasard_schema);
+						clear;
+						wb();
+			
+					}//Fin récupération sauvegarde
+					else{
+						clear;
+						wb();
+						printf("Mot invalide, désolé !\n");
+					}
+		
+				}
+				else{ 
+					clear;
+					wb();
+					printf("Le mot est présent !\n");
+					R=TrouverLeMotNiveau3(reponse,mat,premier,deuxieme,troisieme,R);
+					bEspace=bsansblanc(R);
+					t(R);
+					i=0;
+					while(i<10){
+						R=tomberNiveau3(mat,R);
+						i++;
+					}			
+				} 
+			}
+		}while(bEspace!=1 && reset!=1);
+	}while(reset==1 || bEspace!=1);
+	clear;
+	if(quitter==0){		 
+		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+	}
 }
 
 void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R){		//5x5
@@ -1685,11 +1781,13 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	int sauv=0;
 	int quitter=0;
 	int triche=0;
+	int reset=0;
 	char reponse[30];
-	char indice[6]="indice";
-	char sauvegarde[20]="save";
-	char *exit="exit";
-	char *Ishit="Ishit";
+	char indice[6]="INDICE";
+	char sauvegarde[20]="SAVE";
+	char *exit="EXIT";
+	char *Ishit="ISHIT";
+	char *RESET="RESET";
 	char *premier;
 	char *deuxieme;
 	char *troisieme;
@@ -1707,90 +1805,116 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	}
 	
 	int hasard_schema = rand() % 5 + 1;         //entre 1 & 8
-	do{
-		
-		switch(hasard_schema){
-			case 1: schema5_1(mat,R);break;
-			case 2: schema5_2(mat,R);break;
-			case 3: schema5_3(mat,R);break;
-			case 4: schema5_4(mat,R);break;
-			case 5: schema5_5(mat,R);break;
-		}
-		if(compteur == 0){
-			printf("~~~vous avez 10 indices.~~~\n");
-		}
-		if(compteur != 0){
-			printf("~~~Il vous reste %i indice(s).~~~\n",10-compteur);
-		}
-		printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
-		printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
-		scanf("%s",reponse);
-		aide=bChaineEgale(reponse,indice);
-		quitter=bChaineEgale(reponse,exit);
-		triche=bChaineEgale(reponse,Ishit);
-		if(compteur>=10){
-			clear;
-			wb();
-			t("Désolé vous n'avez plus d'indices");
-		}
-		if(aide==1 && compteur<10){
-			compteur++;
-			clear;
-			wb();
-			Indice(R,premier,deuxieme,troisieme,quatrieme,cinquieme,compteur);
-		
-		}
+	stockage_premier(premier);
+	stockage_deuxieme(deuxieme);
+	stockage_troisieme(troisieme);
+	stockage_quatrieme(quatrieme);
+	stockage_cinquieme(cinquieme);
+	stockage_R(R);
+	do{			
+		i=0;
+		premier=lecture_premier(premier,1);
+		deuxieme=lecture_deuxieme(deuxieme,2);
+		troisieme=lecture_troisieme(troisieme,3);
+		quatrieme=lecture_quatrieme(quatrieme,4);
+		cinquieme=lecture_cinquieme(cinquieme,5);
+		R=lecture_R(R,6);
+		clear;
+		wb();
+		reset=0;
+		compteur=0;
 		if(quitter==1){
 			break;
 		}
-		if(triche==1){
-			clear;
-			wb();
-			printf("mot1:%s \n",premier);
-			printf("mot2:%s \n",deuxieme);
-			printf("mot3:%s \n",troisieme);
-			printf("mot4:%s \n",quatrieme);
-			printf("mot5:%s \n",cinquieme);
-		}
-		if(aide==0 && triche==0){
-			resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot8);
-			if (resultat == 0){
-			 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
-				if(sauv==1){
-					stockage_premier(premier);
-					stockage_deuxieme(deuxieme);
-					stockage_troisieme(troisieme);
-					stockage_quatrieme(quatrieme);
-					stockage_cinquieme(cinquieme);
-					stockage_R(R);
-					stockage_schema(hasard_schema);
-					clear;
-					wb();
-				}//Fin récupération sauvegarde
-				
-				else{
-					clear;
-					wb();
-					printf("Mot invalide, désolé !\n");
-				}
+		do{
+	
+			switch(hasard_schema){
+				case 1: schema5_1(mat,R);break;
+				case 2: schema5_2(mat,R);break;
+				case 3: schema5_3(mat,R);break;
+				case 4: schema5_4(mat,R);break;
+				case 5: schema5_5(mat,R);break;
 			}
-			
-			else{ 
+			if(compteur == 0){
+				printf("~~~vous avez 10 indices.~~~\n");
+			}
+			if(compteur != 0){
+				printf("~~~Il vous reste %i indice(s).~~~\n",10-compteur);
+			}
+			printf("~~~Si vous voulez quitter ecrivez \"exit\"~~~\n");
+			printf("Ecrivez le mot que vous pensez  avoir trouvé :\n");
+			scanf("%s",reponse);
+			upper_string(reponse);
+			aide=bChaineEgale(reponse,indice);
+			quitter=bChaineEgale(reponse,exit);
+			triche=bChaineEgale(reponse,Ishit);
+			reset=bChaineEgale(reponse,RESET);
+			if(compteur>=10){
 				clear;
 				wb();
-				printf("Le mot est présent !\n");	
-				R=TrouverLeMotNiveau4(reponse,mat,mot4,mot5,mot6,mot7,mot8,R);
-				bEspace=bsansblanc(R);
-				i=0;
-				while(i<10){
-					R=tomberNiveau4(mat,R);
-					i++;
-				}			
-			} 
-		}
-	}while(bEspace!=1);
-	clear;		 
-	printf("	   ~~Bravo, vous avez fini la grille~~\n");
+				t("Désolé vous n'avez plus d'indices");
+			}
+			if(aide==1 && compteur<10){
+				compteur++;
+				clear;
+				wb();
+				Indice(R,premier,deuxieme,troisieme,quatrieme,cinquieme,compteur);
+	
+			}
+			if(triche==1){
+				clear;
+				wb();
+				printf("mot1:%s .\n",premier);
+				printf("mot2:%s .\n",deuxieme);
+				printf("mot3:%s .\n",troisieme);
+				printf("mot4:%s .\n",quatrieme);
+				printf("mot5:%s .\n",cinquieme);
+			}
+			if(quitter==1){
+				break;
+			}
+			if(aide==0 && triche==0){
+				resultat = bChainesEgalesCompare1MotsAvec5Autres(reponse,mot4,mot5,mot6,mot7,mot8);
+				if (resultat == 0){
+				 	sauv = bChaineEgale(reponse, sauvegarde);//Debut récupération sauvegarde
+					if(sauv==1){
+						stockage_premier(premier);
+						stockage_deuxieme(deuxieme);
+						stockage_troisieme(troisieme);
+						stockage_quatrieme(quatrieme);
+						stockage_cinquieme(cinquieme);
+						stockage_R(R);
+						stockage_schema(hasard_schema);
+						clear;
+						wb();
+					}//Fin récupération sauvegarde
+			
+					else{
+						clear;
+						wb();
+						printf("Mot invalide, désolé !\n");
+					}
+				}
+		
+				else{ 
+					clear;
+					wb();
+					printf("Le mot est présent !\n");	
+					R=TrouverLeMotNiveau4(reponse,mat,mot4,mot5,mot6,mot7,mot8,R);
+					bEspace=bsansblanc(R);
+					i=0;
+					while(i<10){
+						R=tomberNiveau4(mat,R);
+						i++;
+					}			
+				} 
+			}
+		}while(bEspace!=1 && reset!=1);
+	}while(reset==1 || bEspace!=1);
+	clear;
+	if(quitter==0){		 
+		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+	}
 }
 
 

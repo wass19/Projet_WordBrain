@@ -502,29 +502,6 @@ char *sChaine(char cCaractere){
 	return(sC(cCaractere));
 }//sChaine
 
-int bChaineEgale(char *sTexte1,char *sTexte2){//strcmp(sTexte) 
-	int nC;
-	int bEgale=nChaineLg(sTexte1)==nChaineLg(sTexte2);
-	if(bEgale){
-		for (nC=0;nC<nChaineLg(sTexte1);nC++)
-			bEgale=bEgale && sTexte1[nC] == sTexte2[nC];
-		
-	}
-	Assert1("bChaineEgale",bBool(bEgale));
-	return bEgale;
-}//bChaineEgale
-
-int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6){//strcmp(sTexte) 
-	int nC;
-	int bEgales=(nChaineLg(TexteAcomparer)==nChaineLg(sTexte2) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte3) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte4) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte5) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte6) );
-	
-	if(bEgales){
-		bEgales=bChaineEgale(TexteAcomparer,sTexte2) || bChaineEgale(TexteAcomparer,sTexte3) || bChaineEgale(TexteAcomparer,sTexte4) || bChaineEgale(TexteAcomparer,sTexte5) || bChaineEgale(TexteAcomparer,sTexte6);
-				
-	}
-	Assert1("bChaineEgale",bBool(bEgales));
-	return bEgales;
-}//bChaineEgale
 
 
 int nChaineLg(char *sTexte){
