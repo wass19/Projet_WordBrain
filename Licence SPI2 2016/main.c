@@ -3,9 +3,23 @@
 #include "schema.h"
 #define clear printf("\e[1;1H\e[2J");
 
+/**
+ * \file main.c
+ * \brief Wordbrain
+ * \author OKTAY Samed / LARMIGNAT Thomas / MESSAGIER Thomas
+ * \version 2.0
+ * \date 16 decembre 2016
+ *
+ * Menu du jeu.
+ *
+ */
 
+/**
+ * \fn main()
+ * \brief Menu permettant de choisir une des différentes propositions
+*/
 
-int main2(){
+void main2(){
 	clear;
 	int mat[10][10];
 	char *mot4=malloc(1+4);
@@ -48,7 +62,6 @@ int main2(){
 	free(mot7);
 	free(mot8);
 	free(R);
-	return 0;
 }
 
 void ModuleAmorceR(){
@@ -65,4 +78,4 @@ int main(int argc, const char * argv[]) {
 	Appel1("");//NE PAS TOUCHER; ce code doit toujours être placé à la fin du main, juste avant le return()
     return 0;
 }
-//main
+

@@ -3,6 +3,24 @@
 #include "schema.h"
 
 #define clear printf("\e[1;1H\e[2J")
+
+/**
+	* \file Jouer.c
+	* \brief Jouer de façon continu
+	* \author OKTAY Samed / MESSAGIER Ouassim / LARMIGNAT Thomas
+	* \version 2.0
+	* \date 16 decembre 2016 
+	*/
+/**
+ * \fn jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R)
+ * \brief niveau de difficulté facile 4 grilles de 2x2 et 6 grilles de 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot 
+ * \param mot5 Deuxieme mot
+ * \param R Concatenation des deux mots
+ */
+
 void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R){//niveau de difficulté facile 4 grilles de 2x2 et 6 grilles de 3x3////
 	int i;
 	for(i=1;i<4;i++){//4 grilles 2x2//
@@ -22,7 +40,18 @@ void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R){//niveau de di
 	NiveauJeu();	
 		
 }
-//
+
+
+/**
+ * \fn jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R)
+ * \brief niveau de difficulté moyen
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot 
+ * \param mot5 Deuxieme mot
+ * \param R Concatenation des deux mots
+ */
+
 void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R){//niveau moyen//
 	int i;
 	for(i=1;i<11;i++){// 10 grilles de 3x3
@@ -35,7 +64,18 @@ void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R){//niveau moyen/
 	
 		
 }
-//
+
+/**
+ * \fn jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R)
+ * \brief niveau de difficulté difficile
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot 
+ * \param mot5 Deuxieme mot
+ * \param mot6 Troisieme mot
+ * \param R Concatenation des trois mots
+ */
+
 void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){//niveau difficile//
 	int i;
 	for(i=1;i<3;i++){//2 nvx 3x3//
@@ -52,7 +92,20 @@ void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){
 	
 		
 }
-//
+
+/**
+ * \fn jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R)
+ * \brief niveau de difficulté hardcore
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot 
+ * \param mot5 Deuxieme mot
+ * \param mot6 Troisieme mot
+ * \param mot7 Quatrième mot
+ * \param mot8 Cinquième mot
+ * \param R Concatenation de tout les mots
+ */
+
 void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R){//niveau hardcore//
 	int i;
 	for(i=1;i<3;i++){//2 niveaux 4x4//
@@ -68,7 +121,10 @@ void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7
 	NiveauJeu();
 }
 
-
+/**
+ * \fn NiveauJeu
+ * \brief Menu qui permet de choisir entre les differents niveaux
+ */
 
 void NiveauJeu(){
 	int mat[10][10];
@@ -101,8 +157,7 @@ void NiveauJeu(){
 			case 5 : clear; break;
 			default: printf("Erreur: votre choix doit etre compris entre 1 et 5\n");//Erreur menu//
 		}
-}
-	while(choix!=5);
+	}while(choix!=5);
 	free(mot4);
 	free(mot5);
 	free(mot6);
