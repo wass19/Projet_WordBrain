@@ -4,6 +4,19 @@
 #include <string.h>
 #define clear printf("\e[1;1H\e[2J")
 
+/**
+	* \file Sauvegarde.c
+	* \brief Charger une partie deja sauvegardée
+	* \author OKTAY Samed / MESSAGIER Ouassim / LARMIGNAT Thomas
+	* \version 2.0
+	* \date 16 decembre 2016 
+	*/
+/**
+ * \fn int nombre_ligne(int ligne)
+ * \brief Retourne le nombre de ligne du fichier "chaine.txt"
+ *
+ * \param ligne Nombre de lignes
+ */
 int nombre_ligne(int ligne){
 	char mot[26];
 	FILE * fichier;
@@ -18,6 +31,12 @@ int nombre_ligne(int ligne){
 	return ligne;
 }
 
+/**
+ * \fn void stockage_R(char *R)
+ * \brief Ecrit dans le fichier "chaine.txt" la chaîne concatenée
+ *
+ * \param R Chaîne concatenée
+ */
 void stockage_R(char *R){ 
 		FILE * fichier;
 		fichier=fopen("chaine.txt","a");
@@ -25,6 +44,13 @@ void stockage_R(char *R){
 		fclose(fichier);
 }	
 	
+/**
+ * \fn void stockage_premier(char *premier)
+ * \brief Ecrit dans le fichier "chaine.txt" le premier mot
+ *
+ * \param premier Premier mot
+ */
+ 
 void stockage_premier(char *premier){ 
 		FILE * fichier;
 		fichier=fopen("chaine.txt","w");
@@ -32,6 +58,13 @@ void stockage_premier(char *premier){
 		fclose(fichier);
 }
 
+/**
+ * \fn void stockage_deuxieme(char *deuxieme)
+ * \brief Ecrit dans le fichier "chaine.txt" le deuxième mot
+ *
+ * \param deuxieme Deuxième mot
+ */
+ 
 void stockage_deuxieme(char *deuxieme){ 
 		FILE * fichier;
 		fichier=fopen("chaine.txt","a");
@@ -39,6 +72,13 @@ void stockage_deuxieme(char *deuxieme){
 		fclose(fichier);
 }
 
+/**
+ * \fn void stockage_troisieme(char *troisieme)
+ * \brief Ecrit dans le fichier "chaine.txt" le troisième mot
+ *
+ * \param troisieme Troisième mot
+ */
+ 
 void stockage_troisieme(char *troisieme){ 
 		FILE * fichier;
 		fichier=fopen("chaine.txt","a");
@@ -46,12 +86,26 @@ void stockage_troisieme(char *troisieme){
 		fclose(fichier);
 }
 
+/**
+ * \fn void stockage_quatrieme(char *quatrieme)
+ * \brief Ecrit dans le fichier "chaine.txt" le quatrième mot
+ *
+ * \param quatrieme Quatrième mot
+ */
+ 
 void stockage_quatrieme(char *quatrieme){ 
 		FILE * fichier;
 		fichier=fopen("chaine.txt","a");
 		fprintf(fichier,"%s \n",quatrieme);
 		fclose(fichier);
 }
+
+/**
+ * \fn void stockage_cinquieme(char *cinquieme)
+ * \brief Ecrit dans le fichier "chaine.txt" le cinquième mot
+ *
+ * \param cinquieme Cinquième mot
+ */
 
 void stockage_cinquieme(char *cinquieme){ 
 		FILE * fichier;
@@ -60,6 +114,13 @@ void stockage_cinquieme(char *cinquieme){
 		fclose(fichier);
 }
 
+/**
+ * \fn void stockage_schema(int schema)
+ * \brief Ecrit dans le fichier "schema.txt" le numéro du schéma
+ *
+ * \param schema Numéro du schéma
+ */
+ 
 void stockage_schema(int schema){ 
 		FILE * fichier;
 		fichier=fopen("schema.txt","w");
@@ -67,6 +128,16 @@ void stockage_schema(int schema){
 		fclose(fichier);
 }
 
+/**
+ * \fn char *lecture_premier(char *premier,int ligne)
+ * \brief Lis le premier mot du fichier "chaine.txt"
+ *
+ * \param premier Premier mot
+ * \param ligne Numéro de ligne du mot dans le fichier
+ *
+ *\return Retourne le premier mot
+ */
+ 
 char *lecture_premier(char *premier,int ligne){
 		FILE * fichier;
 		fichier=fopen("chaine.txt","r");
@@ -81,6 +152,16 @@ char *lecture_premier(char *premier,int ligne){
 		return premier;
 }
 
+/**
+ * \fn char *lecture_deuxieme(char *deuxieme,int ligne)
+ * \brief Lis le deuxieme mot du fichier "chaine.txt"
+ *
+ * \param deuxieme Deuxième mot
+ * \param ligne Numéro de ligne du mot dans le fichier
+ *
+ * \return Retourne le deuxième mot
+ */
+ 
 char *lecture_deuxieme(char *deuxieme,int ligne){
 		FILE * fichier;
 		fichier=fopen("chaine.txt","r");
@@ -95,6 +176,16 @@ char *lecture_deuxieme(char *deuxieme,int ligne){
 		return deuxieme;
 }
 
+/**
+ * \fn char *lecture_troisieme(char *troisieme,int ligne)
+ * \brief Lis le troisième mot du fichier "chaine.txt"
+ *
+ * \param troisieme Troisième mot
+ * \param ligne Numéro de ligne du mot dans le fichier
+ *
+ * \return Retourne le troisième mot
+ */
+ 
 char *lecture_troisieme(char *troisieme,int ligne){
 		FILE * fichier;
 		fichier=fopen("chaine.txt","r");
@@ -109,6 +200,16 @@ char *lecture_troisieme(char *troisieme,int ligne){
 		return troisieme;
 }
 
+/**
+ * \fn char *lecture_quatrieme(char *quatrieme,int ligne)
+ * \brief Lis le quatrième mot du fichier "chaine.txt"
+ *
+ * \param quatrieme Quatrième mot
+ * \param ligne Numéro de ligne du mot dans le fichier
+ *
+ * \return Retourne le quatrième mot
+ */
+ 
 char *lecture_quatrieme(char *quatrieme,int ligne){
 		FILE * fichier;
 		fichier=fopen("chaine.txt","r");
@@ -123,6 +224,16 @@ char *lecture_quatrieme(char *quatrieme,int ligne){
 		return quatrieme;
 }
 
+/**
+ * \fn char *lecture_cinquieme(char *cinquieme,int ligne)
+ * \brief Lis le cinquieme mot du fichier "chaine.txt"
+ *
+ * \param cinquieme Cinquième mot
+ * \param ligne Numéro de ligne du mot dans le fichier
+ *
+ * \return Retourne le cinquième mot
+ */
+ 
 char *lecture_cinquieme(char *cinquieme,int ligne){
 		FILE * fichier;
 		fichier=fopen("chaine.txt","r");
@@ -137,6 +248,16 @@ char *lecture_cinquieme(char *cinquieme,int ligne){
 		return cinquieme;
 }
 
+/**
+ * \fn char *lecture_R(char *R,int ligne)
+ * \brief Lis la chaine concatenée dans le fichier "chaine.txt"
+ *
+ * \param R Chaîne concatenée
+ * \param ligne Numéro de ligne du mot dans le fichier
+ *
+ * \return Retourne la chaine concatenée
+ */
+ 
 char *lecture_R(char *R,int ligne){
 		FILE * fichier;
 		fichier=fopen("chaine.txt","r");
@@ -150,6 +271,13 @@ char *lecture_R(char *R,int ligne){
 		return R;
 }	
 
+/**
+ * \fn int lecture_schema()
+ * \brief Lis le numéro du schema dans le fichier "schema.txt"
+ *
+ * \return Retourne le numéro du schema
+ */
+ 
 int lecture_schema(){
 		int schema;		
 		FILE * fichier;
@@ -158,6 +286,19 @@ int lecture_schema(){
 		fclose(fichier);
 		return schema;
 }
+
+/**
+ * \fn void sauvegarde(int mat[10][10],char *mot4,char *mot5,char *mot6,char *mot7,char *mot8,char *R)
+ * \brief Affecte les valeurs en lisant les fichier puis charge une partie
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot 
+ * \param mot5 Deuxieme mot
+ * \param mot6 Troisieme mot
+ * \param mot7 Quatrième mot
+ * \param mot8 Cinquième mot
+ * \param R Concatenation de tout les mots
+ */
 
 void sauvegarde(int mat[10][10],char *mot4,char *mot5,char *mot6,char *mot7,char *mot8,char *R){
 	int schema=lecture_schema();
@@ -181,6 +322,15 @@ void sauvegarde(int mat[10][10],char *mot4,char *mot5,char *mot6,char *mot7,char
 	remove("chaine.txt");
 }
 	 
+/**
+ * \fn void save_niveau2(int mat[10][10],char *mot4,char *R)
+ * \brief Charge une partie avec une grille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot
+ * \param R Concatenation de tout les mots
+ */
+ 
 void save_niveau2(int mat[10][10],char *mot4,char *R){
 	int hasard=lecture_schema();			//2X2
 	int bEspace=0;
@@ -280,7 +430,16 @@ void save_niveau2(int mat[10][10],char *mot4,char *R){
 
 }
 
-
+/**
+ * \fn void save_niveau3(int mat[10][10],char *premier, char *deuxieme,char *R)
+ * \brief Charge une partie avec une grille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param premier Premier mot
+ * \param deuxieme Deuxième mot
+ * \param R Concatenation de tout les mots
+ */
+ 
 void save_niveau3(int mat[10][10],char *premier, char *deuxieme,char *R){		//3X3
 	int hasard=lecture_schema();			//3X3
 	int bEspace=0;
@@ -387,6 +546,18 @@ void save_niveau3(int mat[10][10],char *premier, char *deuxieme,char *R){		//3X3
 	}
 }
 
+/**
+ * \fn void save_niveau4(int mat[10][10],char *premier, char *deuxieme, char *troisieme,char *R)
+ * \brief Charge une partie avec une grille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param premier Premier mot
+ * \param deuxieme Deuxième mot
+ * \param troisieme Troisième mot
+ * \param R Concatenation de tout les mots
+ */
+ 
+ 
 void save_niveau4(int mat[10][10],char *premier, char *deuxieme, char *troisieme,char *R){		//4X4
 	int hasard_schema=lecture_schema();		
 	int bEspace=0;
@@ -495,6 +666,19 @@ void save_niveau4(int mat[10][10],char *premier, char *deuxieme, char *troisieme
 	}
 }
 
+/**
+ * \fn void save_niveau5(int mat[10][10],char *premier, char *deuxieme,char *troisieme,char *quatrieme,char *cinquieme,char *R)
+ * \brief Charge une partie avec une grille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param premier Premier mot
+ * \param deuxieme Deuxième mot
+ * \param troisieme Troisième mot
+ * \param quatrieme Quatrième mot
+ * \param cinquieme Cinquième mot
+ * \param R Concatenation de tout les mots
+ */
+ 
 void save_niveau5(int mat[10][10],char *premier, char *deuxieme,char *troisieme,char *quatrieme,char *cinquieme,char *R){		//5x5
 	int hasard_schema=lecture_schema();
 	int bEspace=0;

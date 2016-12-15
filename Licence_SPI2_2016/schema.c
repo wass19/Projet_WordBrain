@@ -2,15 +2,34 @@
 #include "Outil.h"
 #define clear printf("\e[1;1H\e[2J")
 
-
+/**
+	* \file schema.c
+	* \brief Jouer librement avec choix de la taille de la grille
+	* \author OKTAY Samed / MESSAGIER Ouassim / LARMIGNAT Thomas
+	* \version 2.0
+	* \date 16 decembre 2016 
+	*/
+	
+/**
+ * \fn wb()
+ * \brief affichage 
+ */
 
 void wb(){
 	printf("\n _ _ _ _____ _____ ____  _____ _____ _____ _____ _____ \n");
-    	printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
+    printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
    	printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
   	printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
 }	
 
+
+/**
+ * \fn void schema2_1(int mat[10][10],char mot3[20])
+ * \brief premier schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 
 void schema2_1(int mat[10][10],char mot3[20]){
 	int a;
@@ -30,7 +49,13 @@ void schema2_1(int mat[10][10],char mot3[20]){
 		printf("\n|___| |___|\n");
 	}
 }
-
+/**
+ * \fn void schema2_2(int mat[10][10],char mot3[20])
+ * \brief deuxieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 void schema2_2(int mat[10][10],char *mot3){
 	int a;
 	t(mot3);
@@ -51,6 +76,13 @@ void schema2_2(int mat[10][10],char *mot3){
 	}
 }
 
+/**
+ * \fn void schema2_3(int mat[10][10],char mot3[20])
+ * \brief troisieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 void schema2_3(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=3;
@@ -70,6 +102,13 @@ void schema2_3(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema2_4(int mat[10][10],char mot3[20])
+ * \brief quatrieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 void schema2_4(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=2;
@@ -89,6 +128,13 @@ void schema2_4(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema2_5(int mat[10][10],char mot3[20])
+ * \brief cinquieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 void schema2_5(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=0;
@@ -108,6 +154,14 @@ void schema2_5(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema2_6(int mat[10][10],char mot3[20])
+ * \brief sixieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema2_6(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=2;
@@ -127,6 +181,14 @@ void schema2_6(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema2_7(int mat[10][10],char mot3[20])
+ * \brief septieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema2_7(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=3;
@@ -146,6 +208,14 @@ void schema2_7(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema2_8(int mat[10][10],char mot3[20])
+ * \brief huitieme schema de taille 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema2_8(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=1;
@@ -165,6 +235,13 @@ void schema2_8(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema3_1(int mat[10][10],char mot3[20])
+ * \brief premier schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 void schema3_1(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=0;
@@ -189,6 +266,14 @@ void schema3_1(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema3_2(int mat[10][10],char mot3[20])
+ * \brief deuxieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema3_2(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=0;
@@ -212,6 +297,14 @@ void schema3_2(int mat[10][10],char mot3[20]){
 		printf("\n|___| |___| |___|\n");
 	}
 }
+
+/**
+ * \fn void schema3_3(int mat[10][10],char mot3[20])
+ * \brief troisieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 
 void schema3_3(int mat[10][10],char mot3[20]){
 	int a;
@@ -237,6 +330,14 @@ void schema3_3(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema3_4(int mat[10][10],char mot3[20])
+ * \brief quatrieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema3_4(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=6;
@@ -261,6 +362,14 @@ void schema3_4(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema3_5(int mat[10][10],char mot3[20])
+ * \brief cinquieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema3_5(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=7;
@@ -284,6 +393,14 @@ void schema3_5(int mat[10][10],char mot3[20]){
 		printf("\n|___| |___| |___|\n");
 	}
 }
+
+/**
+ * \fn void schema3_6(int mat[10][10],char mot3[20])
+ * \brief sixieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
 
 void schema3_6(int mat[10][10],char mot3[20]){
 	int a;
@@ -309,6 +426,14 @@ void schema3_6(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema3_7(int mat[10][10],char mot3[20])
+ * \brief septieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema3_7(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=2;
@@ -333,6 +458,14 @@ void schema3_7(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema3_8(int mat[10][10],char mot3[20])
+ * \brief huitieme schema de taille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema3_8(int mat[10][10],char *mot3){
 	int a;
 	mat[0][0]=6;
@@ -357,6 +490,14 @@ void schema3_8(int mat[10][10],char *mot3){
 	}
 }
 
+/**
+ * \fn void schema4_1(int mat[10][10],char mot3[20])
+ * \brief premier schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_1(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=0;
@@ -388,6 +529,14 @@ void schema4_1(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_2(int mat[10][10],char mot3[20])
+ * \brief deuxieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_2(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=14;
@@ -419,6 +568,14 @@ void schema4_2(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_3(int mat[10][10],char mot3[20])
+ * \brief troisieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_3(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=12;
@@ -450,6 +607,14 @@ void schema4_3(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_4(int mat[10][10],char mot3[20])
+ * \brief quatrieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_4(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=15;
@@ -481,6 +646,14 @@ void schema4_4(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_5(int mat[10][10],char mot3[20])
+ * \brief cinquieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_5(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=15;
@@ -512,6 +685,14 @@ void schema4_5(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_6(int mat[10][10],char mot3[20])
+ * \brief sixieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_6(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=2;
@@ -543,6 +724,14 @@ void schema4_6(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_7(int mat[10][10],char mot3[20])
+ * \brief septieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_7(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=9;
@@ -574,6 +763,14 @@ void schema4_7(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema4_8(int mat[10][10],char mot3[20])
+ * \brief huitieme schema de taille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema4_8(int mat[10][10],char mot3[20]){
 	int a;
 	mat[0][0]=12;
@@ -605,6 +802,14 @@ void schema4_8(int mat[10][10],char mot3[20]){
 	}
 }
 
+/**
+ * \fn void schema5_1(int mat[10][10],char mot3[20])
+ * \brief premier schema de taille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema5_1(int mat[10][10],char mot3[25]){
 	int a;
 	mat[0][0]=11;
@@ -645,6 +850,14 @@ void schema5_1(int mat[10][10],char mot3[25]){
 	}
 }
 
+/**
+ * \fn void schema5_2(int mat[10][10],char mot3[20])
+ * \brief deuxieme schema de taille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema5_2(int mat[10][10],char mot3[25]){
 	int a;
 	mat[0][0]=17;
@@ -685,6 +898,14 @@ void schema5_2(int mat[10][10],char mot3[25]){
 	}
 }
 
+/**
+ * \fn void schema5_3(int mat[10][10],char mot3[20])
+ * \brief troisieme schema de taille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema5_3(int mat[10][10],char mot3[25]){
 	int a;
 	mat[0][0]=24;
@@ -725,7 +946,14 @@ void schema5_3(int mat[10][10],char mot3[25]){
 	}
 }
 
-
+/**
+ * \fn void schema5_4(int mat[10][10],char mot3[20])
+ * \brief quatrieme schema de taille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema5_4(int mat[10][10],char mot3[25]){
 	int a;
 	mat[0][0]=15;
@@ -766,6 +994,14 @@ void schema5_4(int mat[10][10],char mot3[25]){
 	}
 }
 
+/**
+ * \fn void schema5_5(int mat[10][10],char mot3[20])
+ * \brief cinquieme schema de taille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot3 Chaîne concatenée
+ */
+ 
 void schema5_5(int mat[10][10],char mot3[25]){
 	int a;
 	mat[0][0]=3;
@@ -806,6 +1042,14 @@ void schema5_5(int mat[10][10],char mot3[25]){
 	}
 }
 
+/**
+ * \fn char *fonc_mot4(char *mot4)
+ * \brief Prend un mot de 4 lettres du fichier "mot4.txt"
+ *
+ * \param mot4 Mot choisit
+ * \return Retourne le mot choisit au hasard
+ */
+ 
 char *fonc_mot4(char *mot4){
 		int ligne = rand()%90+1;
 		int i=0; 
@@ -820,6 +1064,14 @@ char *fonc_mot4(char *mot4){
 			
 }		
 
+/**
+ * \fn char *fonc_mot5(char *mot5)
+ * \brief Prend un mot de 5 lettres du fichier "mot5.txt"
+ *
+ * \param mot5 Mot choisit
+ * \return Retourne le mot choisit au hasard
+ */
+ 
 char *fonc_mot5(char *mot5){
 		int ligne = rand()%113+1;
 		int i=0; 
@@ -833,7 +1085,14 @@ char *fonc_mot5(char *mot5){
 		return mot5;
 }		
 
-
+/**
+ * \fn char *fonc_mot6(char *mot6)
+ * \brief Prend un mot de 6 lettres du fichier "mot4.txt"
+ *
+ * \param mot6 Mot choisit
+ * \return Retourne le mot choisit au hasard
+ */
+ 
 char *fonc_mot6(char *mot6){
 		int ligne = rand()%83+1;
 		int i=0; 
@@ -847,6 +1106,13 @@ char *fonc_mot6(char *mot6){
 		return mot6;	
 }		
 
+/**
+ * \fn char *fonc_mot7(char *mot7)
+ * \brief Prend un mot de 7 lettres du fichier "mot7.txt"
+ *
+ * \param mot7 Mot choisit
+ * \return Retourne le mot choisit au hasard
+ */
 
 char *fonc_mot7(char *mot7){
 		int ligne = rand()%165+1;
@@ -861,6 +1127,16 @@ char *fonc_mot7(char *mot7){
 		return mot7;
 }
 
+/**
+ * \fn char *TrouverLeMotNiveau1(char reponse[20],int mat[10][10],char *R)
+ * \brief Compare le mot entré à la réponse sur une grille 2x2
+ *
+ * \param reponse[20] Proposition / mot entré
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param R La réponse
+ * \return Remplace la réponse par des espaces si la proposition est correcte
+ */
+ 
 char *TrouverLeMotNiveau1(char reponse[20],int mat[10][10],char *R){
 	int n=0;int i=0;
 	n=strcmp(reponse,R);
@@ -873,6 +1149,17 @@ char *TrouverLeMotNiveau1(char reponse[20],int mat[10][10],char *R){
 	return R;
 }
 
+/**
+ * \fn char *TrouverLeMotNiveau2(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *R)
+ * \brief Compare le mot entré à la réponse sur une grille 3x3
+ *
+ * \param reponse[20] Proposition / mot entré
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot1 Premier mot de la réponse
+ * \param mot2 Deuxième mot de la réponse
+ * \param R Réponse / Chaîne concatenée des 2 mots
+ * \return Renvoie le mot trouvé par des espaces si la proposition est correcte
+ */
 
 char *TrouverLeMotNiveau2(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *R){
 
@@ -897,6 +1184,19 @@ char *TrouverLeMotNiveau2(char reponse[20],int mat[10][10],char *mot1,char *mot2
 	}
 }
 
+/**
+ * \fn char *TrouverLeMotNiveau3(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *R)
+ * \brief Compare le mot entré à la réponse sur une grille 4x4
+ *
+ * \param reponse[20] Proposition / mot entré
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot1 Premier mot de la réponse
+ * \param mot2 Deuxième mot de la réponse
+ * \param mot3 Troisième mot de la réponse
+ * \param R Réponse / Chaîne concatenée des 3 mots
+ * \return Renvoie la chaîne de concatenée avec le mot trouvé remplacé par des espaces si la proposition est correcte
+ */
+ 
 char *TrouverLeMotNiveau3(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *R){
 	int n=0;int i=0;
 	n=strcmp(reponse,mot1);
@@ -927,6 +1227,22 @@ char *TrouverLeMotNiveau3(char reponse[20],int mat[10][10],char *mot1,char *mot2
 		return R;
 	}
 }
+
+/**
+ * \fn char *TrouverLeMotNiveau4(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,char *R)
+ * \brief Compare le mot entré à la réponse sur une grille 5x5
+ *
+ * \param reponse[20] Proposition / mot entré
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot1 Premier mot de la réponse
+ * \param mot2 Deuxième mot de la réponse
+ * \param mot3 Troisième mot de la réponse
+ * \param mot4 Quatrième mot de la réponse
+ * \param mot5 Cinquième mot de la réponse 
+ * \param R Réponse / Chaîne concatenée des 5 mots
+ * \return Renvoie la chaîne de concatenée avec le mot trouvé remplacé par des espaces si la proposition est correcte
+ */
+ 
 char *TrouverLeMotNiveau4(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,char *R){
 
 	int n=0;int i=0;
@@ -977,8 +1293,13 @@ char *TrouverLeMotNiveau4(char reponse[20],int mat[10][10],char *mot1,char *mot2
 	}
 }
 
-
-
+/**
+ * \fn int bsansblanc(char *R)
+ * \brief Regarde si la chaîne de caractère possède des espaces
+ *
+ * \param R Chaîne concatenée
+ * \return Retourne 0 si la chaîne concatenée est composée seulement d'espace si non retourne 1
+ */
 
 int bsansblanc(char *R){
 	int i=0;
@@ -996,6 +1317,15 @@ int bsansblanc(char *R){
 	return bSansCaractere;
 }
 
+/**
+ * \fn char *tomberNiveau2(int mat[10][10],char *R)
+ * \brief Faire tomber les lettres si la case du dessous est vide pour une grille 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param R Chaîne concatenée
+ * \return Retourne la chaîne concatenée 
+ */
+ 
 char *tomberNiveau2(int mat[10][10],char *R){//pour 3 cases par ligne
 	int n=2;
 	int m=2;
@@ -1019,6 +1349,15 @@ char *tomberNiveau2(int mat[10][10],char *R){//pour 3 cases par ligne
 	return R;
 }
 
+/**
+ * \fn char *tomberNiveau3(int mat[10][10],char *R)
+ * \brief Faire tomber les lettres si la case du dessous est vide pour une grille 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param R Chaîne concatenée
+ * \return Retourne la chaîne concatenée 
+ */
+ 
 char *tomberNiveau3(int mat[10][10],char *R){//pour 4 cases par ligne
 	int n=3;
 	int m=3;
@@ -1042,6 +1381,15 @@ char *tomberNiveau3(int mat[10][10],char *R){//pour 4 cases par ligne
 	return R;
 }
 
+/**
+ * \fn char *tomberNiveau4(int mat[10][10],char *R)
+ * \brief Faire tomber les lettres si la case du dessous est vide pour une grille 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param R Chaîne concatenée
+ * \return Retourne la chaîne concatenée 
+ */
+ 
 char *tomberNiveau4(int mat[10][10],char *R){//pour 5 cases par lignes.
 	int n=4;
 	int m=4;
@@ -1064,6 +1412,20 @@ char *tomberNiveau4(int mat[10][10],char *R){//pour 5 cases par lignes.
 	}
 	return R;
 }
+
+/**
+ * \fn void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int compteur)
+ * \brief Donne un indice d'un des mots
+ *
+ * \param R Chaîne concatenée
+ * \param mot1 Premier mot de la réponse
+ * \param mot2 Deuxième mot de la réponse
+ * \param mot3 Troisième mot de la réponse
+ * \param mot4 Quatrième mot de la réponse
+ * \param mot5 Cinquième mot de la réponse 
+ * \param compteur Compteur d'indice 
+ */
+ 
 void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int compteur){
 	int n=0;
 	int i=0;
@@ -1358,6 +1720,17 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
 
 	}
 }
+
+/**
+ * \fn int bChaineEgale(char *sTexte1,char *sTexte2)
+ * \brief Compare 2 chaîne de caractères
+ *
+ * \param sTexte1 première chaîne de caractère
+ * \param sTexte2 Deuxième chaîne de caractère
+ * \return 
+ */
+ 
+ 
 int bChaineEgale(char *sTexte1,char *sTexte2){//strcmp(sTexte) 
 	int nC;
 	int bEgale=nChaineLg(sTexte1)==nChaineLg(sTexte2);
@@ -1370,6 +1743,19 @@ int bChaineEgale(char *sTexte1,char *sTexte2){//strcmp(sTexte)
 	return bEgale;
 }//bChaineEgale
 
+/**
+ * \fn int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6){
+ * \brief Compare 1 chaîne de caractère avec 5 autres
+ *
+ * \param sTexteAcomparer Chaîne à comparer
+ * \param sTexte2 Deuxième chaîne de caractère
+ * \param sTexte3 Troisième chaîne de caractère
+ * \param sTexte4 Quatrième chaîne de caractère
+ * \param sTexte5 Cinquième chaîne de caractère
+ * \param sTexte6 Sixième chaîne de caractère
+ * \return 
+ */
+ 
 int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6){//strcmp(sTexte) 
 	int nC;
 	int bEgales=(nChaineLg(TexteAcomparer)==nChaineLg(sTexte2) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte3) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte4) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte5) || nChaineLg(TexteAcomparer)==nChaineLg(sTexte6) );
@@ -1381,6 +1767,13 @@ int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,cha
 	Assert1("bChaineEgale",bBool(bEgales));
 	return bEgales;
 }//bChaineEgale
+
+/**
+ * \fn void upper_string(char *s)
+ * \brief Transforme une chaîne de caractère en majuscule
+ *
+ * \param s Chaîne à transformer
+ */
 
 void upper_string(char *s){
 	int c = 0;
@@ -1917,6 +2310,10 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	}
 }
 
+/**
+ * \fn void Niveau()
+ * \brief Menu qui permet de choisir entre les differentes grilles
+ */
 
 void Niveau()
 {	

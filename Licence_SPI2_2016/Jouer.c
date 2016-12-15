@@ -12,7 +12,7 @@
 	* \date 16 decembre 2016 
 	*/
 /**
- * \fn jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R)
+ * \fn void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R)
  * \brief niveau de difficulté facile 4 grilles de 2x2 et 6 grilles de 3x3
  *
  * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
@@ -43,7 +43,7 @@ void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R){//niveau de di
 
 
 /**
- * \fn jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R)
+ * \fn void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R)
  * \brief niveau de difficulté moyen
  *
  * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
@@ -66,7 +66,7 @@ void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R){//niveau moyen/
 }
 
 /**
- * \fn jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R)
+ * \fn void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R)
  * \brief niveau de difficulté difficile
  *
  * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
@@ -94,7 +94,7 @@ void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){
 }
 
 /**
- * \fn jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R)
+ * \fn void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R)
  * \brief niveau de difficulté hardcore
  *
  * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
@@ -122,7 +122,7 @@ void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7
 }
 
 /**
- * \fn NiveauJeu
+ * \fn void NiveauJeu()
  * \brief Menu qui permet de choisir entre les differents niveaux
  */
 
