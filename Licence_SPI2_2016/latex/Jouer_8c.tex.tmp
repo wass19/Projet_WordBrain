@@ -1,0 +1,161 @@
+\hypertarget{Jouer_8c}{}\section{Jouer.\+c File Reference}
+\label{Jouer_8c}\index{Jouer.\+c@{Jouer.\+c}}
+
+
+Jouer de façon continu.  
+
+
+{\ttfamily \#include \char`\"{}Outil.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tas.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}schema.\+h\char`\"{}}\\*
+Include dependency graph for Jouer.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries clear}~printf(\char`\"{}\textbackslash{}e\mbox{[}1;1\+H\textbackslash{}e\mbox{[}2\+J\char`\"{})\hypertarget{Jouer_8c_a4d8dc9a7843467eb8f3d806c3b5a36f3}{}\label{Jouer_8c_a4d8dc9a7843467eb8f3d806c3b5a36f3}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Jouer_8c_acfa96d9f8d282e762bacbde61df6a21b}{jouer\+\_\+facile} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em niveau de difficulté facile 4 grilles de 2x2 et 6 grilles de 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{Jouer_8c_a222ee0baf64915ea87fdcdb2d0de61cb}{jouer\+\_\+moyen} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em niveau de difficulté moyen \end{DoxyCompactList}\item 
+void \hyperlink{Jouer_8c_a5dfb4724127ef8a62d0e47f871f7a464}{jouer\+\_\+difficile} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em niveau de difficulté difficile \end{DoxyCompactList}\item 
+void \hyperlink{Jouer_8c_a2835a7edb5e29d2d3330289ba04b2f9a}{jouer\+\_\+hardcore} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em niveau de difficulté hardcore \end{DoxyCompactList}\item 
+void \hyperlink{Jouer_8c_a49a9e28e4d9a017c510d347ce0b30b86}{Niveau\+Jeu} ()\hypertarget{Jouer_8c_a49a9e28e4d9a017c510d347ce0b30b86}{}\label{Jouer_8c_a49a9e28e4d9a017c510d347ce0b30b86}
+
+\begin{DoxyCompactList}\small\item\em Menu qui permet de choisir entre les differents niveaux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Jouer de façon continu. 
+
+\begin{DoxyAuthor}{Author}
+O\+K\+T\+AY Samed / M\+E\+S\+S\+A\+G\+I\+ER Ouassim / L\+A\+R\+M\+I\+G\+N\+AT Thomas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 decembre 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{Jouer.\+c@{Jouer.\+c}!jouer\+\_\+difficile@{jouer\+\_\+difficile}}
+\index{jouer\+\_\+difficile@{jouer\+\_\+difficile}!Jouer.\+c@{Jouer.\+c}}
+\subsubsection[{\texorpdfstring{jouer\+\_\+difficile(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$\+R)}{jouer_difficile(int mat[10][10], char *mot4, char *mot5, char *mot6, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}jouer\+\_\+difficile (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{mot6, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Jouer_8c_a5dfb4724127ef8a62d0e47f871f7a464}{}\label{Jouer_8c_a5dfb4724127ef8a62d0e47f871f7a464}
+
+
+niveau de difficulté difficile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em mot6} & Troisieme mot \\
+\hline
+{\em R} & Concatenation des trois mots \\
+\hline
+\end{DoxyParams}
+\index{Jouer.\+c@{Jouer.\+c}!jouer\+\_\+facile@{jouer\+\_\+facile}}
+\index{jouer\+\_\+facile@{jouer\+\_\+facile}!Jouer.\+c@{Jouer.\+c}}
+\subsubsection[{\texorpdfstring{jouer\+\_\+facile(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$\+R)}{jouer_facile(int mat[10][10], char *mot4, char *mot5, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}jouer\+\_\+facile (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Jouer_8c_acfa96d9f8d282e762bacbde61df6a21b}{}\label{Jouer_8c_acfa96d9f8d282e762bacbde61df6a21b}
+
+
+niveau de difficulté facile 4 grilles de 2x2 et 6 grilles de 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em R} & Concatenation des deux mots \\
+\hline
+\end{DoxyParams}
+\index{Jouer.\+c@{Jouer.\+c}!jouer\+\_\+hardcore@{jouer\+\_\+hardcore}}
+\index{jouer\+\_\+hardcore@{jouer\+\_\+hardcore}!Jouer.\+c@{Jouer.\+c}}
+\subsubsection[{\texorpdfstring{jouer\+\_\+hardcore(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$\+R)}{jouer_hardcore(int mat[10][10], char *mot4, char *mot5, char *mot6, char *mot7, char *mot8, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}jouer\+\_\+hardcore (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{mot6, }
+\item[{char $\ast$}]{mot7, }
+\item[{char $\ast$}]{mot8, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Jouer_8c_a2835a7edb5e29d2d3330289ba04b2f9a}{}\label{Jouer_8c_a2835a7edb5e29d2d3330289ba04b2f9a}
+
+
+niveau de difficulté hardcore 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em mot6} & Troisieme mot \\
+\hline
+{\em mot7} & Quatrième mot \\
+\hline
+{\em mot8} & Cinquième mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+\end{DoxyParams}
+\index{Jouer.\+c@{Jouer.\+c}!jouer\+\_\+moyen@{jouer\+\_\+moyen}}
+\index{jouer\+\_\+moyen@{jouer\+\_\+moyen}!Jouer.\+c@{Jouer.\+c}}
+\subsubsection[{\texorpdfstring{jouer\+\_\+moyen(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$\+R)}{jouer_moyen(int mat[10][10], char *mot4, char *mot5, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}void jouer\+\_\+moyen (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Jouer_8c_a222ee0baf64915ea87fdcdb2d0de61cb}{}\label{Jouer_8c_a222ee0baf64915ea87fdcdb2d0de61cb}
+
+
+niveau de difficulté moyen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em R} & Concatenation des deux mots \\
+\hline
+\end{DoxyParams}
