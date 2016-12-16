@@ -1,4 +1,5 @@
 #include "schema.h"
+#include <unistd.h>
 #include "Outil.h"
 #define clear printf("\e[1;1H\e[2J")
 
@@ -1893,8 +1894,11 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 		
 	}while(reset==1 || bEspace!=1);
 	clear;
-	if(quitter==0){		 
+	if(quitter==0){	
+		printf("\n\n\n\n\n\n\n"); 
 		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+		sleep(2);
+		clear;
 	}	 
 	
 
@@ -2023,7 +2027,10 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	}while(reset==1 || bEspace!=1);
 	clear;
 	if(quitter==0){		 
+		printf("\n\n\n\n\n\n\n"); 
 		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+		sleep(2);
+		clear;
 	}
 }
 
@@ -2160,7 +2167,10 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	}while(reset==1 || bEspace!=1);
 	clear;
 	if(quitter==0){		 
+		printf("\n\n\n\n\n\n\n"); 
 		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+		sleep(2);
+		clear;
 	}
 }
 
@@ -2306,7 +2316,10 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 	}while(reset==1 || bEspace!=1);
 	clear;
 	if(quitter==0){		 
+		printf("\n\n\n\n\n\n\n"); 
 		printf("	   ~~Bravo, vous avez fini la grille~~\n");
+		sleep(2);
+		clear;
 	}
 }
 
