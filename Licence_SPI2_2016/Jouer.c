@@ -38,8 +38,10 @@ void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R,int continu){//
 		stage++;
 	}
 	clear;
+	printf("\n\n\n\n\n\n\n"); 
 	printf("	   ~~Bravo, vous avez fini le niveau facile !~~\n");//retour menu "jouer"//
-	NiveauJeu();	
+	sleep(2);
+	clear;	
 		
 }
 
@@ -64,8 +66,10 @@ void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R,int continu){//n
 		stage++;
 	}
 	clear;
+	printf("\n\n\n\n\n\n\n"); 
 	printf("	   ~~Bravo, vous avez fini le niveau intermédiaire !~~\n");//retour menu "jouer"//
-	NiveauJeu();
+	sleep(2);
+	clear;	
 }
 
 /**
@@ -93,9 +97,10 @@ void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,i
 		stage++;
 	}
 	clear;
+	printf("\n\n\n\n\n\n\n"); 
 	printf("	   ~~Bravo, vous avez fini le niveau difficile !~~\n");//retour menu "jouer"//
-	NiveauJeu();
-	
+	sleep(2);
+	clear;
 		
 }
 
@@ -125,8 +130,10 @@ void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7
 		stage++;
 	}
 	clear;
+	printf("\n\n\n\n\n\n\n"); 
 	printf("	   ~~Bravo, vous avez fini le niveau Hardcore ! (vraiment bien joué !)~~\n");//retour menu "jouer"//
-	NiveauJeu();
+	sleep(2);
+	clear;
 }
 
 /**

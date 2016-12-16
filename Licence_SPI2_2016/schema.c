@@ -1,5 +1,4 @@
 #include "schema.h"
-#include <unistd.h>
 #include "Outil.h"
 #define clear printf("\e[1;1H\e[2J")
 
@@ -18,7 +17,7 @@
 
 void wb(){
 	printf("\n _ _ _ _____ _____ ____  _____ _____ _____ _____ _____ \n");
-    printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
+    	printf("| | | |     | __  |    || __  | __  |  _  |_   _|   | |\n");
    	printf("| | | |  |  |    -|  | || __ -|    -|     |_| |_| | | |\n");
   	printf("|_____|_____|__|__|____||_____|__|__|__|__|_____|_|___|\n\n\n");
 }	
@@ -59,7 +58,6 @@ void schema2_1(int mat[10][10],char mot3[20]){
  */
 void schema2_2(int mat[10][10],char *mot3){
 	int a;
-	t(mot3);
 	mat[0][0]=0;
 	mat[0][1]=3;	
 	mat[1][1]=1;
@@ -1786,7 +1784,10 @@ void upper_string(char *s){
 	}   
 }
 
-
+/**
+ * \fn void help()
+ * \brief Execute la commande "more" sur le terminal afin d'afficher les règles du jeu 
+ */
 
 void help(){
 	wb();

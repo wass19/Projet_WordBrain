@@ -6,6 +6,7 @@
 #include <limits.h>
 #include <assert.h>
 #include <time.h>
+#include <unistd.h>
 
 void schema2_1(int mat[10][10],char mot3[20]);
 void schema2_2(int mat[10][10],char mot3[20]);
