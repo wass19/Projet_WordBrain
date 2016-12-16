@@ -1,0 +1,15 @@
+---HELP---
+
+Le but du jeu WordBrain est de trouver des mots cachés dans une grille de lettres, quand un mot est trouvé, il faut l'écrire, les mots peuvent être formés vers le haut, le bas, à gauche, à droite mais aussi en diagonale.
+Il faut trouver des mots en particulier pour résoudre une grille de WordBrain. Lorsqu'on utilise l'indice, la taille des mots est indiquée et aussi la première lettre du mot.
+2 est le nombre maximum de lettres que vous pouvez avoir par mot grâce aux indices.
+Vous pouvez avoir au maximum 2 lettres par mot grâce aux indices.
+Le nombre d'indice que vous avez est indiquer sur l'écran.
+Si vous voulez refaire le niveau, il suffit d'écrire "reset".
+Si vous voulez enregistrer le niveau, il suffit d'écrire "save".
+Pour générer la sauvegarde, il faut être dans le menu de base et choisir "charger une sauvegarde".
+Si vous voulez jouez plusieurs niveaux à la suite choisissez "jouer".
+Si vous voulez quitter le jeu pendant un niveau écrivez "exit".
+Si vous n'arrivez pas à trouver les mots, écrivez "ishit".
+
+---Pour sortir du HELP tapez "q"---

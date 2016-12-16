@@ -40,7 +40,8 @@ void main2(){
 		printf("		| 1 - Jouer               	|\n");
 		printf("		| 2 - Choisir un niveau   	|\n");
 		printf("		| 3 - Charger une sauvegarde    |\n");
-		printf("		| 4 - Quitter             	|\n");
+		printf("		| 4 - Help	            	|\n");		
+		printf("		| 5 - Quitter             	|\n");
 		printf("		|_______________________________|\n\n");
 		printf("Votre choix : ");
 		scanf("%i",&choix);
@@ -50,11 +51,12 @@ void main2(){
 		{	case 1:clear;NiveauJeu();break;
 			case 2:clear;Niveau();break;
 			case 3:clear;wb();sauvegarde(mat,mot4,mot5,mot6,mot7,mot8,R);break;
-			case 4:clear;break;
-			default: printf("Erreur: votre choix doit etre compris entre 1 et 4\n");
+			case 4:clear;help();		
+			case 5:clear;break;
+			default: printf("Erreur: votre choix doit etre compris entre 1 et 5\n");
 		}
 	}
-	while(choix!=4);
+	while(choix!=5);
 	printf("Au revoir !\n");
 	free(mot4);
 	free(mot5);

@@ -1786,6 +1786,23 @@ void upper_string(char *s){
 	}   
 }
 
+
+
+void help(){
+	wb();
+	char command[50];
+	char q;
+	char retourner[1]=" ";
+	int system(const char *command);
+	strcpy( command, "more help.txt" );
+	system(command);
+	scanf("%s",retourner);
+	if(retourner == "q"){
+		main2();
+	}
+}
+
+
 void game_niveau2(int mat[10][10],char *mot4,char *R,int continu,int niveau,int stage){			//2X2
 	int bEspace=0;
 	int i=0;

@@ -60,6 +60,7 @@ int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,cha
 int bsansblanc(char *R);//on regarde si il y a que des espaces dans R comme caractère.
 int bChaineEgale(char *sTexte1,char *sTexte2);//strcmp(sTexte) 
 void upper_string(char *s);//str lower to upper
+void help();
 char *tomberNiveau2(int mat[10][10],char *R);//faire tomber les lettres pour le niveau 2 (3 cases par ligne et par colonne).
 char *tomberNiveau3(int mat[10][10],char *R);//faire tomber les lettres pour le niveau 3 (4 cases par ligne et par colonne).
 char *tomberNiveau4(int mat[10][10],char *R);//faire tomber les lettres pour le niveau 4 (5 cases par ligne et par colonne). 	
