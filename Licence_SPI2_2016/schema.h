@@ -69,21 +69,20 @@ char *TrouverLeMotNiveau2(char reponse[20],int mat[10][10],char *mot1,char *mot2
 char *TrouverLeMotNiveau3(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *R);
 char *TrouverLeMotNiveau4(char reponse[20],int mat[10][10],char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,char *R);
 void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int compteur);
-void game_niveau2(int mat[10][10],char *mot4,char *R);
-void game_niveau3(int mat[10][10],char *R,char *mot4,char *mot5);
-void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R);
-void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R);
+void game_niveau2(int mat[10][10],char *mot4,char *R,int continu,int niveau,int stage);
+void game_niveau3(int mat[10][10],char *R,char *mot4,char *mot5,int continu,int niveau,int stage);
+void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,int continu,int niveau,int stage);
+void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R,int continu,int niveau,int stage);
 
 
 void Niveau(void);
 void NiveauJeu(void);
 
-void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R);
-void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R);
-void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R);
-void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R);
+void jouer_facile(int mat[10][10],char *mot4, char *mot5,char *R,int continu);
+void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R,int continu);
+void jouer_difficile(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,int continu);
+void jouer_hardcore(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R,int continu);
 void wb();
-void jouer_moyen(int mat[10][10],char *mot4, char *mot5,char *R);
 
 void stockage_premier(char *premier);
 void stockage_deuxieme(char *deuxieme);

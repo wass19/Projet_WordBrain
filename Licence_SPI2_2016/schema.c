@@ -1786,7 +1786,7 @@ void upper_string(char *s){
 	}   
 }
 
-void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
+void game_niveau2(int mat[10][10],char *mot4,char *R,int continu,int niveau,int stage){			//2X2
 	int bEspace=0;
 	int i=0;
 	int compteur=0;
@@ -1805,10 +1805,14 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 	char *RESET="RESET";
 	R = fonc_mot4(mot4);
 	int hasard = rand() % 8 + 1;	
-		
+	
 	do{	
 		clear;
 		wb();
+		if(continu==1){
+			printf("Niveau facile: %i/10\n",stage);
+		}
+		stage++;
 		reset=0;
 		compteur=0;
 		if(quitter==1){
@@ -1904,7 +1908,7 @@ void game_niveau2(int mat[10][10],char *mot4,char *R){			//2X2
 
 }
 
-void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
+void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R,int continu,int niveau,int stage){		//3X3
 	int bEspace=0;
 	int i=0;
 	int compteur=0;
@@ -1935,6 +1939,16 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 		R=lecture_R(R,3);
 		clear;
 		wb();
+		if((continu==1)&&(niveau==1)){
+			printf("Niveau facile: %i/10\n",stage);
+		}
+		if((continu==1)&&(niveau==2)){
+			printf("Niveau intermédiaire: %i/10\n",stage);
+		}
+		if((continu==1)&&(niveau==3)){
+			printf("Niveau difficile: %i/5\n",stage);
+		}
+		stage++;
 		reset=0;
 		compteur=0;
 		if(quitter==1){
@@ -2034,7 +2048,7 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R){		//3X3
 	}
 }
 
-void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		//4X4
+void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,int continu,int niveau,int stage){		//4X4
 	int bEspace=0;
 	int i=0;
 	int compteur=0;
@@ -2075,6 +2089,18 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 		R=lecture_R(R,4);
 		clear;
 		wb();
+		if((continu==1)&&(niveau==1)){
+			printf("Niveau facile: %i/10\n",stage);
+		}
+		if((continu==1)&&(niveau==2)){
+			printf("Niveau intermédiaire: %i/10\n",stage);
+		}
+		if((continu==1)&&(niveau==3)){
+			printf("Niveau difficile: %i/5\n",stage);
+		}
+		if((continu==1)&&(niveau==4)){
+			printf("Niveau hardcore: %i/5\n",stage);
+		}	
 		reset=0;
 		compteur=0;
 		if(quitter==1){
@@ -2174,7 +2200,7 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R){		/
 	}
 }
 
-void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R){		//5x5
+void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R,int continu,int niveau,int stage){		//5x5
 	int bEspace=0;
 	int i=0;
 	int compteur=0;
@@ -2224,6 +2250,19 @@ void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,c
 		R=lecture_R(R,6);
 		clear;
 		wb();
+		if((continu==1)&&(niveau==1)){
+			printf("Niveau facile: %i/10\n",stage);
+		}
+		if((continu==1)&&(niveau==2)){
+			printf("Niveau intermédiaire: %i/10\n",stage);
+		}
+		if((continu==1)&&(niveau==3)){
+			printf("Niveau difficile: %i/5\n",stage);
+		}
+		if((continu==1)&&(niveau==4)){
+			printf("Niveau hardcore: %i/5\n",stage);
+		}
+		stage++;
 		reset=0;
 		compteur=0;
 		if(quitter==1){
@@ -2339,6 +2378,9 @@ void Niveau()
 	char *mot8=malloc(1+8);
 	char *R=malloc(1+25);
 	int choix;
+	int continu=0;
+	int niveau=0;
+	int stage;
 	wb();
 	printf("Choisir une grille :\n");
 	printf("		 _________________________ \n");
@@ -2352,10 +2394,10 @@ void Niveau()
 	printf("Votre choix : ");
 	scanf("%i",&choix);
 	switch(choix)
-	{	case 1 : clear;wb();game_niveau2(mat,mot4,R); break;
-		case 2:  clear;wb();game_niveau3(mat,mot4,mot5,R); break;
-		case 3:  clear;wb();game_niveau4(mat,mot4,mot5,mot6,R); break;
-		case 4:  clear;wb();game_niveau5(mat,mot4,mot5,mot6,mot7,mot8,R); break;
+	{	case 1 : clear;wb();game_niveau2(mat,mot4,R,continu,niveau,stage); break;
+		case 2:  clear;wb();game_niveau3(mat,mot4,mot5,R,continu,niveau,stage); break;
+		case 3:  clear;wb();game_niveau4(mat,mot4,mot5,mot6,R,continu,niveau,stage); break;
+		case 4:  clear;wb();game_niveau5(mat,mot4,mot5,mot6,mot7,mot8,R,continu,niveau,stage); break;
 		case 5:  clear; break;
 		default: printf("Erreur: votre choix doit etre compris entre 1 et 4\n");
 	}
