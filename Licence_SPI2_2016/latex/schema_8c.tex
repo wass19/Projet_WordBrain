@@ -1,0 +1,968 @@
+\hypertarget{schema_8c}{}\section{schema.\+c File Reference}
+\label{schema_8c}\index{schema.\+c@{schema.\+c}}
+
+
+Jouer librement avec choix de la taille de la grille.  
+
+
+{\ttfamily \#include \char`\"{}schema.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Outil.\+h\char`\"{}}\\*
+Include dependency graph for schema.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries clear}~printf(\char`\"{}\textbackslash{}e\mbox{[}1;1\+H\textbackslash{}e\mbox{[}2\+J\char`\"{})\hypertarget{schema_8c_a4d8dc9a7843467eb8f3d806c3b5a36f3}{}\label{schema_8c_a4d8dc9a7843467eb8f3d806c3b5a36f3}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{schema_8c_abbbef10ec3dfdd214a6a3bc2b9d78507}{wb} ()\hypertarget{schema_8c_abbbef10ec3dfdd214a6a3bc2b9d78507}{}\label{schema_8c_abbbef10ec3dfdd214a6a3bc2b9d78507}
+
+\begin{DoxyCompactList}\small\item\em affichage \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a51cdcc74e4fcb8c9e207100c99a59cd9}{schema2\+\_\+1} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em premier schema de taille 2x2 \end{DoxyCompactList}\item 
+void {\bfseries schema2\+\_\+2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot3)\hypertarget{schema_8c_a700294e5abb999e54b427d24619812d1}{}\label{schema_8c_a700294e5abb999e54b427d24619812d1}
+
+\item 
+void \hyperlink{schema_8c_a6c92ef34365e9b07b846c41e84db2b26}{schema2\+\_\+3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em troisieme schema de taille 2x2 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_afa83ac2a6cfb5355821329d34c3f597d}{schema2\+\_\+4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em quatrieme schema de taille 2x2 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a4f6b8a3e97a571021a6aa56b729f8422}{schema2\+\_\+5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em cinquieme schema de taille 2x2 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a02a38cd7d8e7f6730fdd9832cef14476}{schema2\+\_\+6} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em sixieme schema de taille 2x2 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a9b3b45088a00580b72bc66415668d5dc}{schema2\+\_\+7} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em septieme schema de taille 2x2 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a81bab4f6b214678a9b05b2e95eab9d50}{schema2\+\_\+8} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em huitieme schema de taille 2x2 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a5c6efe7b14c63a718aac145d3b2d804d}{schema3\+\_\+1} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em premier schema de taille 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a2015ad85b3e903a24d52f7aded0ae6df}{schema3\+\_\+2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em deuxieme schema de taille 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_aca18a29e215b4e879a005c1a1af32622}{schema3\+\_\+3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em troisieme schema de taille 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a338f6c283494830d77ce648d102fe6aa}{schema3\+\_\+4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em quatrieme schema de taille 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a952bc49dc137302ae62f7f3c02ae5192}{schema3\+\_\+5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em cinquieme schema de taille 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_aca55e4a3c910e22d609bc4eba9df8276}{schema3\+\_\+6} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em sixieme schema de taille 3x3 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_ad7b48d92efe62619615345abfd32da15}{schema3\+\_\+7} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em septieme schema de taille 3x3 \end{DoxyCompactList}\item 
+void {\bfseries schema3\+\_\+8} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot3)\hypertarget{schema_8c_a5248b24bdbdd1713f515d59e98967c30}{}\label{schema_8c_a5248b24bdbdd1713f515d59e98967c30}
+
+\item 
+void \hyperlink{schema_8c_a4e64dafd088e0348535b9fa9192162da}{schema4\+\_\+1} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em premier schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_aeedb49d9c14b8e2b89331f5f114871d8}{schema4\+\_\+2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em deuxieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_abbb7031b3dd5c92702f507c905721674}{schema4\+\_\+3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em troisieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a8a7786655e5d4f923329a24f30fd5e8c}{schema4\+\_\+4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em quatrieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a4499f0ab1a66f5279d29695491f20b41}{schema4\+\_\+5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em cinquieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_afaf119bbe7ae0594f7990b86dae6ef57}{schema4\+\_\+6} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em sixieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a5c8e17b41b11e5c2cf9568a2cba3e06e}{schema4\+\_\+7} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em septieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_aa1168d4846102b506226f202e1359b44}{schema4\+\_\+8} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em huitieme schema de taille 4x4 \end{DoxyCompactList}\item 
+void {\bfseries schema5\+\_\+1} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}25\mbox{]})\hypertarget{schema_8c_af4427f28972773e9577c5d6ba1f58645}{}\label{schema_8c_af4427f28972773e9577c5d6ba1f58645}
+
+\item 
+void {\bfseries schema5\+\_\+2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}25\mbox{]})\hypertarget{schema_8c_af73913a4bd8d96afd032cacf013affc8}{}\label{schema_8c_af73913a4bd8d96afd032cacf013affc8}
+
+\item 
+void {\bfseries schema5\+\_\+3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}25\mbox{]})\hypertarget{schema_8c_ae2f936196b8caa235808eb6d1e5165b4}{}\label{schema_8c_ae2f936196b8caa235808eb6d1e5165b4}
+
+\item 
+void {\bfseries schema5\+\_\+4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}25\mbox{]})\hypertarget{schema_8c_af26f0520b218c43f9bffb4a0b2100c7f}{}\label{schema_8c_af26f0520b218c43f9bffb4a0b2100c7f}
+
+\item 
+void {\bfseries schema5\+\_\+5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char mot3\mbox{[}25\mbox{]})\hypertarget{schema_8c_a4a63dd1a006da02ea439d64824325825}{}\label{schema_8c_a4a63dd1a006da02ea439d64824325825}
+
+\item 
+char $\ast$ \hyperlink{schema_8c_a52c4a33543bfa0c361fbb9e0b125f189}{fonc\+\_\+mot4} (char $\ast$mot4)
+\begin{DoxyCompactList}\small\item\em Prend un mot de 4 lettres du fichier \char`\"{}mot4.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_aa92825e8a2496bc50dbd30f146b2138b}{fonc\+\_\+mot5} (char $\ast$mot5)
+\begin{DoxyCompactList}\small\item\em Prend un mot de 5 lettres du fichier \char`\"{}mot5.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_ac9a46ec35615f81e6d72cdea5265bb52}{fonc\+\_\+mot6} (char $\ast$mot6)
+\begin{DoxyCompactList}\small\item\em Prend un mot de 6 lettres du fichier \char`\"{}mot4.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_a53073eb985cf58c6547f5baa16a62296}{fonc\+\_\+mot7} (char $\ast$mot7)
+\begin{DoxyCompactList}\small\item\em Prend un mot de 7 lettres du fichier \char`\"{}mot7.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_acbf30ea5a11b0a58165aa459d32ffbb5}{Trouver\+Le\+Mot\+Niveau1} (char reponse\mbox{[}20\mbox{]}, int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Compare le mot entré à la réponse sur une grille 2x2. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_aaaa583aeda237621a6df6b21a8435772}{Trouver\+Le\+Mot\+Niveau2} (char reponse\mbox{[}20\mbox{]}, int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot1, char $\ast$mot2, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Compare le mot entré à la réponse sur une grille 3x3. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_a53bef00f7d2251e011bc30d8faeedd6e}{Trouver\+Le\+Mot\+Niveau3} (char reponse\mbox{[}20\mbox{]}, int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Compare le mot entré à la réponse sur une grille 4x4. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_a35967c6e53eb86cb49bf048adb178906}{Trouver\+Le\+Mot\+Niveau4} (char reponse\mbox{[}20\mbox{]}, int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$mot4, char $\ast$mot5, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Compare le mot entré à la réponse sur une grille 5x5. \end{DoxyCompactList}\item 
+int \hyperlink{schema_8c_ad62fb51daabfd5d53dfeab075a78f2bb}{bsansblanc} (char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Regarde si la chaîne de caractère possède des espaces. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_a4ff7e1f4ce9aee14c1b3edbba63a2333}{tomber\+Niveau2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Faire tomber les lettres si la case du dessous est vide pour une grille 3x3. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_ab428b81e5016f699eea1aa7fd1d66656}{tomber\+Niveau3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Faire tomber les lettres si la case du dessous est vide pour une grille 4x4. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{schema_8c_a601ed93ae70bb4fffa7555b6f3e6d7bb}{tomber\+Niveau4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Faire tomber les lettres si la case du dessous est vide pour une grille 5x5. \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_ac7d4b3523e8f110e92bb83a4c85bfb56}{Indice} (char $\ast$R, char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$mot4, char $\ast$mot5, int compteur)
+\begin{DoxyCompactList}\small\item\em Donne un indice d\textquotesingle{}un des mots. \end{DoxyCompactList}\item 
+int \hyperlink{schema_8c_a799f92c238252f5e9bce1eb271cac023}{b\+Chaine\+Egale} (char $\ast$s\+Texte1, char $\ast$s\+Texte2)
+\begin{DoxyCompactList}\small\item\em Compare 2 chaîne de caractères. \end{DoxyCompactList}\item 
+int \hyperlink{schema_8c_a96f2719cc33fb39dc270c26dc1fa9bc8}{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres} (char $\ast$Texte\+Acomparer, char $\ast$s\+Texte2, char $\ast$s\+Texte3, char $\ast$s\+Texte4, char $\ast$s\+Texte5, char $\ast$s\+Texte6)
+\begin{DoxyCompactList}\small\item\em Compare 1 chaîne de caractère avec 5 autres. \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a9f8b35d1879b287550dc9f3f02718adb}{upper\+\_\+string} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Transforme une chaîne de caractère en majuscule. \end{DoxyCompactList}\item 
+void {\bfseries game\+\_\+niveau2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}{}\label{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}
+
+\item 
+void {\bfseries game\+\_\+niveau3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_a46b74bdbc126e8b858108630965f9968}{}\label{schema_8c_a46b74bdbc126e8b858108630965f9968}
+
+\item 
+void {\bfseries game\+\_\+niveau4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}{}\label{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}
+
+\item 
+void {\bfseries game\+\_\+niveau5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_ae9823dea15fc36330e746378fefe460f}{}\label{schema_8c_ae9823dea15fc36330e746378fefe460f}
+
+\item 
+void \hyperlink{schema_8c_a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30}{Niveau} ()\hypertarget{schema_8c_a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30}{}\label{schema_8c_a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30}
+
+\begin{DoxyCompactList}\small\item\em Menu qui permet de choisir entre les differentes grilles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Jouer librement avec choix de la taille de la grille. 
+
+\begin{DoxyAuthor}{Author}
+O\+K\+T\+AY Samed / M\+E\+S\+S\+A\+G\+I\+ER Ouassim / L\+A\+R\+M\+I\+G\+N\+AT Thomas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 decembre 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{schema.\+c@{schema.\+c}!b\+Chaine\+Egale@{b\+Chaine\+Egale}}
+\index{b\+Chaine\+Egale@{b\+Chaine\+Egale}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{b\+Chaine\+Egale(char $\ast$s\+Texte1, char $\ast$s\+Texte2)}{bChaineEgale(char *sTexte1, char *sTexte2)}}]{\setlength{\rightskip}{0pt plus 5cm}int b\+Chaine\+Egale (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s\+Texte1, }
+\item[{char $\ast$}]{s\+Texte2}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a799f92c238252f5e9bce1eb271cac023}{}\label{schema_8c_a799f92c238252f5e9bce1eb271cac023}
+
+
+Compare 2 chaîne de caractères. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Texte1} & première chaîne de caractère \\
+\hline
+{\em s\+Texte2} & Deuxième chaîne de caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres@{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres}}
+\index{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres@{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres(char $\ast$\+Texte\+Acomparer, char $\ast$s\+Texte2, char $\ast$s\+Texte3, char $\ast$s\+Texte4, char $\ast$s\+Texte5, char $\ast$s\+Texte6)}{bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer, char *sTexte2, char *sTexte3, char *sTexte4, char *sTexte5, char *sTexte6)}}]{\setlength{\rightskip}{0pt plus 5cm}int b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Texte\+Acomparer, }
+\item[{char $\ast$}]{s\+Texte2, }
+\item[{char $\ast$}]{s\+Texte3, }
+\item[{char $\ast$}]{s\+Texte4, }
+\item[{char $\ast$}]{s\+Texte5, }
+\item[{char $\ast$}]{s\+Texte6}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a96f2719cc33fb39dc270c26dc1fa9bc8}{}\label{schema_8c_a96f2719cc33fb39dc270c26dc1fa9bc8}
+
+
+Compare 1 chaîne de caractère avec 5 autres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Texte\+Acomparer} & Chaîne à comparer \\
+\hline
+{\em s\+Texte2} & Deuxième chaîne de caractère \\
+\hline
+{\em s\+Texte3} & Troisième chaîne de caractère \\
+\hline
+{\em s\+Texte4} & Quatrième chaîne de caractère \\
+\hline
+{\em s\+Texte5} & Cinquième chaîne de caractère \\
+\hline
+{\em s\+Texte6} & Sixième chaîne de caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!bsansblanc@{bsansblanc}}
+\index{bsansblanc@{bsansblanc}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{bsansblanc(char $\ast$\+R)}{bsansblanc(char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}int bsansblanc (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_ad62fb51daabfd5d53dfeab075a78f2bb}{}\label{schema_8c_ad62fb51daabfd5d53dfeab075a78f2bb}
+
+
+Regarde si la chaîne de caractère possède des espaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne 0 si la chaîne concatenée est composée seulement d\textquotesingle{}espace si non retourne 1 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!fonc\+\_\+mot4@{fonc\+\_\+mot4}}
+\index{fonc\+\_\+mot4@{fonc\+\_\+mot4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{fonc\+\_\+mot4(char $\ast$mot4)}{fonc_mot4(char *mot4)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fonc\+\_\+mot4 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mot4}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a52c4a33543bfa0c361fbb9e0b125f189}{}\label{schema_8c_a52c4a33543bfa0c361fbb9e0b125f189}
+
+
+Prend un mot de 4 lettres du fichier \char`\"{}mot4.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot4} & Mot choisit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le mot choisit au hasard 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!fonc\+\_\+mot5@{fonc\+\_\+mot5}}
+\index{fonc\+\_\+mot5@{fonc\+\_\+mot5}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{fonc\+\_\+mot5(char $\ast$mot5)}{fonc_mot5(char *mot5)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fonc\+\_\+mot5 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mot5}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_aa92825e8a2496bc50dbd30f146b2138b}{}\label{schema_8c_aa92825e8a2496bc50dbd30f146b2138b}
+
+
+Prend un mot de 5 lettres du fichier \char`\"{}mot5.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot5} & Mot choisit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le mot choisit au hasard 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!fonc\+\_\+mot6@{fonc\+\_\+mot6}}
+\index{fonc\+\_\+mot6@{fonc\+\_\+mot6}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{fonc\+\_\+mot6(char $\ast$mot6)}{fonc_mot6(char *mot6)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fonc\+\_\+mot6 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mot6}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_ac9a46ec35615f81e6d72cdea5265bb52}{}\label{schema_8c_ac9a46ec35615f81e6d72cdea5265bb52}
+
+
+Prend un mot de 6 lettres du fichier \char`\"{}mot4.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot6} & Mot choisit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le mot choisit au hasard 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!fonc\+\_\+mot7@{fonc\+\_\+mot7}}
+\index{fonc\+\_\+mot7@{fonc\+\_\+mot7}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{fonc\+\_\+mot7(char $\ast$mot7)}{fonc_mot7(char *mot7)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ fonc\+\_\+mot7 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{mot7}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a53073eb985cf58c6547f5baa16a62296}{}\label{schema_8c_a53073eb985cf58c6547f5baa16a62296}
+
+
+Prend un mot de 7 lettres du fichier \char`\"{}mot7.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mot7} & Mot choisit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le mot choisit au hasard 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!Indice@{Indice}}
+\index{Indice@{Indice}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{Indice(char $\ast$\+R, char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$mot4, char $\ast$mot5, int compteur)}{Indice(char *R, char *mot1, char *mot2, char *mot3, char *mot4, char *mot5, int compteur)}}]{\setlength{\rightskip}{0pt plus 5cm}void Indice (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{R, }
+\item[{char $\ast$}]{mot1, }
+\item[{char $\ast$}]{mot2, }
+\item[{char $\ast$}]{mot3, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{int}]{compteur}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_ac7d4b3523e8f110e92bb83a4c85bfb56}{}\label{schema_8c_ac7d4b3523e8f110e92bb83a4c85bfb56}
+
+
+Donne un indice d\textquotesingle{}un des mots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Chaîne concatenée \\
+\hline
+{\em mot1} & Premier mot de la réponse \\
+\hline
+{\em mot2} & Deuxième mot de la réponse \\
+\hline
+{\em mot3} & Troisième mot de la réponse \\
+\hline
+{\em mot4} & Quatrième mot de la réponse \\
+\hline
+{\em mot5} & Cinquième mot de la réponse \\
+\hline
+{\em compteur} & Compteur d\textquotesingle{}indice \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+1@{schema2\+\_\+1}}
+\index{schema2\+\_\+1@{schema2\+\_\+1}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+1(int mat[10][10], char mot3[20])}{schema2_1(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a51cdcc74e4fcb8c9e207100c99a59cd9}{}\label{schema_8c_a51cdcc74e4fcb8c9e207100c99a59cd9}
+
+
+premier schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+3@{schema2\+\_\+3}}
+\index{schema2\+\_\+3@{schema2\+\_\+3}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+3(int mat[10][10], char mot3[20])}{schema2_3(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a6c92ef34365e9b07b846c41e84db2b26}{}\label{schema_8c_a6c92ef34365e9b07b846c41e84db2b26}
+
+
+troisieme schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+4@{schema2\+\_\+4}}
+\index{schema2\+\_\+4@{schema2\+\_\+4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+4(int mat[10][10], char mot3[20])}{schema2_4(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+4 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_afa83ac2a6cfb5355821329d34c3f597d}{}\label{schema_8c_afa83ac2a6cfb5355821329d34c3f597d}
+
+
+quatrieme schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+5@{schema2\+\_\+5}}
+\index{schema2\+\_\+5@{schema2\+\_\+5}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+5(int mat[10][10], char mot3[20])}{schema2_5(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+5 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a4f6b8a3e97a571021a6aa56b729f8422}{}\label{schema_8c_a4f6b8a3e97a571021a6aa56b729f8422}
+
+
+cinquieme schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+6@{schema2\+\_\+6}}
+\index{schema2\+\_\+6@{schema2\+\_\+6}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+6(int mat[10][10], char mot3[20])}{schema2_6(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+6 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a02a38cd7d8e7f6730fdd9832cef14476}{}\label{schema_8c_a02a38cd7d8e7f6730fdd9832cef14476}
+
+
+sixieme schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+7@{schema2\+\_\+7}}
+\index{schema2\+\_\+7@{schema2\+\_\+7}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+7(int mat[10][10], char mot3[20])}{schema2_7(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+7 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a9b3b45088a00580b72bc66415668d5dc}{}\label{schema_8c_a9b3b45088a00580b72bc66415668d5dc}
+
+
+septieme schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema2\+\_\+8@{schema2\+\_\+8}}
+\index{schema2\+\_\+8@{schema2\+\_\+8}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema2\+\_\+8(int mat[10][10], char mot3[20])}{schema2_8(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema2\+\_\+8 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a81bab4f6b214678a9b05b2e95eab9d50}{}\label{schema_8c_a81bab4f6b214678a9b05b2e95eab9d50}
+
+
+huitieme schema de taille 2x2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+1@{schema3\+\_\+1}}
+\index{schema3\+\_\+1@{schema3\+\_\+1}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+1(int mat[10][10], char mot3[20])}{schema3_1(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a5c6efe7b14c63a718aac145d3b2d804d}{}\label{schema_8c_a5c6efe7b14c63a718aac145d3b2d804d}
+
+
+premier schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+2@{schema3\+\_\+2}}
+\index{schema3\+\_\+2@{schema3\+\_\+2}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+2(int mat[10][10], char mot3[20])}{schema3_2(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a2015ad85b3e903a24d52f7aded0ae6df}{}\label{schema_8c_a2015ad85b3e903a24d52f7aded0ae6df}
+
+
+deuxieme schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+3@{schema3\+\_\+3}}
+\index{schema3\+\_\+3@{schema3\+\_\+3}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+3(int mat[10][10], char mot3[20])}{schema3_3(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_aca18a29e215b4e879a005c1a1af32622}{}\label{schema_8c_aca18a29e215b4e879a005c1a1af32622}
+
+
+troisieme schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+4@{schema3\+\_\+4}}
+\index{schema3\+\_\+4@{schema3\+\_\+4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+4(int mat[10][10], char mot3[20])}{schema3_4(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+4 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a338f6c283494830d77ce648d102fe6aa}{}\label{schema_8c_a338f6c283494830d77ce648d102fe6aa}
+
+
+quatrieme schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+5@{schema3\+\_\+5}}
+\index{schema3\+\_\+5@{schema3\+\_\+5}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+5(int mat[10][10], char mot3[20])}{schema3_5(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+5 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a952bc49dc137302ae62f7f3c02ae5192}{}\label{schema_8c_a952bc49dc137302ae62f7f3c02ae5192}
+
+
+cinquieme schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+6@{schema3\+\_\+6}}
+\index{schema3\+\_\+6@{schema3\+\_\+6}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+6(int mat[10][10], char mot3[20])}{schema3_6(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+6 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_aca55e4a3c910e22d609bc4eba9df8276}{}\label{schema_8c_aca55e4a3c910e22d609bc4eba9df8276}
+
+
+sixieme schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema3\+\_\+7@{schema3\+\_\+7}}
+\index{schema3\+\_\+7@{schema3\+\_\+7}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema3\+\_\+7(int mat[10][10], char mot3[20])}{schema3_7(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema3\+\_\+7 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_ad7b48d92efe62619615345abfd32da15}{}\label{schema_8c_ad7b48d92efe62619615345abfd32da15}
+
+
+septieme schema de taille 3x3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+1@{schema4\+\_\+1}}
+\index{schema4\+\_\+1@{schema4\+\_\+1}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+1(int mat[10][10], char mot3[20])}{schema4_1(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+1 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a4e64dafd088e0348535b9fa9192162da}{}\label{schema_8c_a4e64dafd088e0348535b9fa9192162da}
+
+
+premier schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+2@{schema4\+\_\+2}}
+\index{schema4\+\_\+2@{schema4\+\_\+2}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+2(int mat[10][10], char mot3[20])}{schema4_2(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+2 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_aeedb49d9c14b8e2b89331f5f114871d8}{}\label{schema_8c_aeedb49d9c14b8e2b89331f5f114871d8}
+
+
+deuxieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+3@{schema4\+\_\+3}}
+\index{schema4\+\_\+3@{schema4\+\_\+3}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+3(int mat[10][10], char mot3[20])}{schema4_3(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+3 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_abbb7031b3dd5c92702f507c905721674}{}\label{schema_8c_abbb7031b3dd5c92702f507c905721674}
+
+
+troisieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+4@{schema4\+\_\+4}}
+\index{schema4\+\_\+4@{schema4\+\_\+4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+4(int mat[10][10], char mot3[20])}{schema4_4(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+4 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a8a7786655e5d4f923329a24f30fd5e8c}{}\label{schema_8c_a8a7786655e5d4f923329a24f30fd5e8c}
+
+
+quatrieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+5@{schema4\+\_\+5}}
+\index{schema4\+\_\+5@{schema4\+\_\+5}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+5(int mat[10][10], char mot3[20])}{schema4_5(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+5 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a4499f0ab1a66f5279d29695491f20b41}{}\label{schema_8c_a4499f0ab1a66f5279d29695491f20b41}
+
+
+cinquieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+6@{schema4\+\_\+6}}
+\index{schema4\+\_\+6@{schema4\+\_\+6}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+6(int mat[10][10], char mot3[20])}{schema4_6(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+6 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_afaf119bbe7ae0594f7990b86dae6ef57}{}\label{schema_8c_afaf119bbe7ae0594f7990b86dae6ef57}
+
+
+sixieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+7@{schema4\+\_\+7}}
+\index{schema4\+\_\+7@{schema4\+\_\+7}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+7(int mat[10][10], char mot3[20])}{schema4_7(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+7 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a5c8e17b41b11e5c2cf9568a2cba3e06e}{}\label{schema_8c_a5c8e17b41b11e5c2cf9568a2cba3e06e}
+
+
+septieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!schema4\+\_\+8@{schema4\+\_\+8}}
+\index{schema4\+\_\+8@{schema4\+\_\+8}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{schema4\+\_\+8(int mat[10][10], char mot3[20])}{schema4_8(int mat[10][10], char mot3[20])}}]{\setlength{\rightskip}{0pt plus 5cm}void schema4\+\_\+8 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char}]{mot3\mbox{[}20\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_aa1168d4846102b506226f202e1359b44}{}\label{schema_8c_aa1168d4846102b506226f202e1359b44}
+
+
+huitieme schema de taille 4x4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot3} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!tomber\+Niveau2@{tomber\+Niveau2}}
+\index{tomber\+Niveau2@{tomber\+Niveau2}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{tomber\+Niveau2(int mat[10][10], char $\ast$\+R)}{tomberNiveau2(int mat[10][10], char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ tomber\+Niveau2 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a4ff7e1f4ce9aee14c1b3edbba63a2333}{}\label{schema_8c_a4ff7e1f4ce9aee14c1b3edbba63a2333}
+
+
+Faire tomber les lettres si la case du dessous est vide pour une grille 3x3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em R} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne la chaîne concatenée 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!tomber\+Niveau3@{tomber\+Niveau3}}
+\index{tomber\+Niveau3@{tomber\+Niveau3}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{tomber\+Niveau3(int mat[10][10], char $\ast$\+R)}{tomberNiveau3(int mat[10][10], char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ tomber\+Niveau3 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_ab428b81e5016f699eea1aa7fd1d66656}{}\label{schema_8c_ab428b81e5016f699eea1aa7fd1d66656}
+
+
+Faire tomber les lettres si la case du dessous est vide pour une grille 4x4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em R} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne la chaîne concatenée 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!tomber\+Niveau4@{tomber\+Niveau4}}
+\index{tomber\+Niveau4@{tomber\+Niveau4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{tomber\+Niveau4(int mat[10][10], char $\ast$\+R)}{tomberNiveau4(int mat[10][10], char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ tomber\+Niveau4 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a601ed93ae70bb4fffa7555b6f3e6d7bb}{}\label{schema_8c_a601ed93ae70bb4fffa7555b6f3e6d7bb}
+
+
+Faire tomber les lettres si la case du dessous est vide pour une grille 5x5. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em R} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne la chaîne concatenée 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!Trouver\+Le\+Mot\+Niveau1@{Trouver\+Le\+Mot\+Niveau1}}
+\index{Trouver\+Le\+Mot\+Niveau1@{Trouver\+Le\+Mot\+Niveau1}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{Trouver\+Le\+Mot\+Niveau1(char reponse[20], int mat[10][10], char $\ast$\+R)}{TrouverLeMotNiveau1(char reponse[20], int mat[10][10], char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Trouver\+Le\+Mot\+Niveau1 (
+\begin{DoxyParamCaption}
+\item[{char}]{reponse\mbox{[}20\mbox{]}, }
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_acbf30ea5a11b0a58165aa459d32ffbb5}{}\label{schema_8c_acbf30ea5a11b0a58165aa459d32ffbb5}
+
+
+Compare le mot entré à la réponse sur une grille 2x2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reponse\mbox{[}20\mbox{]}} & Proposition / mot entré \\
+\hline
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em R} & La réponse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remplace la réponse par des espaces si la proposition est correcte 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!Trouver\+Le\+Mot\+Niveau2@{Trouver\+Le\+Mot\+Niveau2}}
+\index{Trouver\+Le\+Mot\+Niveau2@{Trouver\+Le\+Mot\+Niveau2}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{Trouver\+Le\+Mot\+Niveau2(char reponse[20], int mat[10][10], char $\ast$mot1, char $\ast$mot2, char $\ast$\+R)}{TrouverLeMotNiveau2(char reponse[20], int mat[10][10], char *mot1, char *mot2, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Trouver\+Le\+Mot\+Niveau2 (
+\begin{DoxyParamCaption}
+\item[{char}]{reponse\mbox{[}20\mbox{]}, }
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot1, }
+\item[{char $\ast$}]{mot2, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_aaaa583aeda237621a6df6b21a8435772}{}\label{schema_8c_aaaa583aeda237621a6df6b21a8435772}
+
+
+Compare le mot entré à la réponse sur une grille 3x3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reponse\mbox{[}20\mbox{]}} & Proposition / mot entré \\
+\hline
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot1} & Premier mot de la réponse \\
+\hline
+{\em mot2} & Deuxième mot de la réponse \\
+\hline
+{\em R} & Réponse / Chaîne concatenée des 2 mots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Renvoie le mot trouvé par des espaces si la proposition est correcte 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!Trouver\+Le\+Mot\+Niveau3@{Trouver\+Le\+Mot\+Niveau3}}
+\index{Trouver\+Le\+Mot\+Niveau3@{Trouver\+Le\+Mot\+Niveau3}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{Trouver\+Le\+Mot\+Niveau3(char reponse[20], int mat[10][10], char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$\+R)}{TrouverLeMotNiveau3(char reponse[20], int mat[10][10], char *mot1, char *mot2, char *mot3, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Trouver\+Le\+Mot\+Niveau3 (
+\begin{DoxyParamCaption}
+\item[{char}]{reponse\mbox{[}20\mbox{]}, }
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot1, }
+\item[{char $\ast$}]{mot2, }
+\item[{char $\ast$}]{mot3, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a53bef00f7d2251e011bc30d8faeedd6e}{}\label{schema_8c_a53bef00f7d2251e011bc30d8faeedd6e}
+
+
+Compare le mot entré à la réponse sur une grille 4x4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reponse\mbox{[}20\mbox{]}} & Proposition / mot entré \\
+\hline
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot1} & Premier mot de la réponse \\
+\hline
+{\em mot2} & Deuxième mot de la réponse \\
+\hline
+{\em mot3} & Troisième mot de la réponse \\
+\hline
+{\em R} & Réponse / Chaîne concatenée des 3 mots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Renvoie la chaîne de concatenée avec le mot trouvé remplacé par des espaces si la proposition est correcte 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!Trouver\+Le\+Mot\+Niveau4@{Trouver\+Le\+Mot\+Niveau4}}
+\index{Trouver\+Le\+Mot\+Niveau4@{Trouver\+Le\+Mot\+Niveau4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{Trouver\+Le\+Mot\+Niveau4(char reponse[20], int mat[10][10], char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$mot4, char $\ast$mot5, char $\ast$\+R)}{TrouverLeMotNiveau4(char reponse[20], int mat[10][10], char *mot1, char *mot2, char *mot3, char *mot4, char *mot5, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Trouver\+Le\+Mot\+Niveau4 (
+\begin{DoxyParamCaption}
+\item[{char}]{reponse\mbox{[}20\mbox{]}, }
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot1, }
+\item[{char $\ast$}]{mot2, }
+\item[{char $\ast$}]{mot3, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a35967c6e53eb86cb49bf048adb178906}{}\label{schema_8c_a35967c6e53eb86cb49bf048adb178906}
+
+
+Compare le mot entré à la réponse sur une grille 5x5. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reponse\mbox{[}20\mbox{]}} & Proposition / mot entré \\
+\hline
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot1} & Premier mot de la réponse \\
+\hline
+{\em mot2} & Deuxième mot de la réponse \\
+\hline
+{\em mot3} & Troisième mot de la réponse \\
+\hline
+{\em mot4} & Quatrième mot de la réponse \\
+\hline
+{\em mot5} & Cinquième mot de la réponse \\
+\hline
+{\em R} & Réponse / Chaîne concatenée des 5 mots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Renvoie la chaîne de concatenée avec le mot trouvé remplacé par des espaces si la proposition est correcte 
+\end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!upper\+\_\+string@{upper\+\_\+string}}
+\index{upper\+\_\+string@{upper\+\_\+string}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{upper\+\_\+string(char $\ast$s)}{upper_string(char *s)}}]{\setlength{\rightskip}{0pt plus 5cm}void upper\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a9f8b35d1879b287550dc9f3f02718adb}{}\label{schema_8c_a9f8b35d1879b287550dc9f3f02718adb}
+
+
+Transforme une chaîne de caractère en majuscule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Chaîne à transformer \\
+\hline
+\end{DoxyParams}

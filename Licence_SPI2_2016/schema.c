@@ -2380,7 +2380,7 @@ void Niveau()
 	int choix;
 	int continu=0;
 	int niveau=0;
-	int stage;
+	int stage=0; 
 	wb();
 	printf("Choisir une grille :\n");
 	printf("		 _________________________ \n");

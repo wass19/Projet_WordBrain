@@ -58,7 +58,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /info/etu/l2spi/spi2197/Documents/workspace/Projet/partie_wassim/Projet_WordBrain/Licence_SPI2_2016/
+OUTPUT_DIRECTORY       = /info/etu/l2spi/spi2193/Documents/git/Projet_WordBrain/Licence_SPI2_2016/
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
