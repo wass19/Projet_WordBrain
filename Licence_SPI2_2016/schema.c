@@ -1804,6 +1804,18 @@ void help(){
 }
 
 
+/**
+ * \fn void game_niveau2(int mat[10][10],char *mot4,char *R,int continu,int niveau,int stage)
+ * \brief Crée une partie avec une grille de 2x2
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot
+ * \param R Concatenation de tout les mots
+ * \param continu Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0.
+ * \param niveau Niveau de difficulté pour le mode continu
+ * \param stage Progression lorsqu'un niveau de difficulté est choisi
+ */
+
 void game_niveau2(int mat[10][10],char *mot4,char *R,int continu,int niveau,int stage){			//2X2
 	int bEspace=0;
 	int i=0;
@@ -1926,6 +1938,19 @@ void game_niveau2(int mat[10][10],char *mot4,char *R,int continu,int niveau,int 
 
 }
 
+/**
+ * \fn void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R,int continu,int niveau,int stage){
+ * \brief Crée une partie avec une grille de 3x3
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot
+ * \param mot5 Deuxieme mot
+ * \param R Concatenation de tout les mots
+ * \param continu Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0.
+ * \param niveau Niveau de difficulté pour le mode continu
+ * \param stage Progression lorsqu'un niveau de difficulté est choisi
+ */
+ 
 void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R,int continu,int niveau,int stage){		//3X3
 	int bEspace=0;
 	int i=0;
@@ -2066,6 +2091,20 @@ void game_niveau3(int mat[10][10],char *mot4, char *mot5,char *R,int continu,int
 	}
 }
 
+/**
+ * \fn void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,int continu,int niveau,int stage)
+ * \brief Crée une partie avec une grille de 4x4
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot
+ * \param mot5 Deuxieme mot
+ * \param mot6 Troisième mot
+ * \param R Concatenation de tout les mots
+ * \param continu Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0.
+ * \param niveau Niveau de difficulté pour le mode continu
+ * \param stage Progression lorsqu'un niveau de difficulté est choisi
+ */
+ 
 void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,int continu,int niveau,int stage){		//4X4
 	int bEspace=0;
 	int i=0;
@@ -2218,6 +2257,22 @@ void game_niveau4(int mat[10][10],char *mot4, char *mot5,char *mot6,char *R,int 
 	}
 }
 
+/**
+ * \fn void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R,int continu,int niveau,int stage)
+ * \brief Crée une partie avec une grille de 5x5
+ *
+ * \param mat[10][10] Matrice de 10x10 contenant le(s) mot(s)
+ * \param mot4 Premier mot
+ * \param mot5 Deuxieme mot
+ * \param mot6 Troisième mot
+ * \param mot7 Quatrième mot
+ * \param mot8 Cinquième mot
+ * \param R Concatenation de tout les mots
+ * \param continu Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0.
+ * \param niveau Niveau de difficulté pour le mode continu
+ * \param stage Progression lorsqu'un niveau de difficulté est choisi
+ */
+ 
 void game_niveau5(int mat[10][10],char *mot4, char *mot5,char *mot6,char *mot7,char *mot8,char *R,int continu,int niveau,int stage){		//5x5
 	int bEspace=0;
 	int i=0;
