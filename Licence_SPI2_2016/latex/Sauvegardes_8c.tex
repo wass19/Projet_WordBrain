@@ -1,0 +1,463 @@
+\hypertarget{Sauvegardes_8c}{}\section{Sauvegardes.\+c File Reference}
+\label{Sauvegardes_8c}\index{Sauvegardes.\+c@{Sauvegardes.\+c}}
+
+
+Charger une partie deja sauvegardée.  
+
+
+{\ttfamily \#include \char`\"{}Outil.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tas.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}schema.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for Sauvegardes.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries clear}~printf(\char`\"{}\textbackslash{}e\mbox{[}1;1\+H\textbackslash{}e\mbox{[}2\+J\char`\"{})\hypertarget{Sauvegardes_8c_a4d8dc9a7843467eb8f3d806c3b5a36f3}{}\label{Sauvegardes_8c_a4d8dc9a7843467eb8f3d806c3b5a36f3}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Sauvegardes_8c_a9cf579417e32ad86ed2e6ab753515035}{nombre\+\_\+ligne} (int ligne)
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de ligne du fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_acc1b5a1ac5f1bb41c9210f5676ceb80d}{stockage\+\_\+R} (char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} la chaîne concatenée. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_a88af0ab2b545fa18960a4ed0de8f1d02}{stockage\+\_\+premier} (char $\ast$premier)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le premier mot. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_af89e87502e1fc2007f13b5b095c537ab}{stockage\+\_\+deuxieme} (char $\ast$deuxieme)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le deuxième mot. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_a12a10027e53d451313c476d331988cf9}{stockage\+\_\+troisieme} (char $\ast$troisieme)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le troisième mot. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_ad0751a90fe83f2143027b61388f75997}{stockage\+\_\+quatrieme} (char $\ast$quatrieme)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le quatrième mot. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_a94f8c0e04fef06536c0566208f015630}{stockage\+\_\+cinquieme} (char $\ast$cinquieme)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le cinquième mot. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_ae9da3a6ca67f6144a750646c1827fef1}{stockage\+\_\+schema} (int schema)
+\begin{DoxyCompactList}\small\item\em Ecrit dans le fichier \char`\"{}schema.\+txt\char`\"{} le numéro du schéma. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Sauvegardes_8c_a2eb396a4696fef8f0dc4ccbb454302ec}{lecture\+\_\+premier} (char $\ast$premier, int ligne)
+\begin{DoxyCompactList}\small\item\em Lis le premier mot du fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Sauvegardes_8c_a33c91e5dc492633b88af23534061801b}{lecture\+\_\+deuxieme} (char $\ast$deuxieme, int ligne)
+\begin{DoxyCompactList}\small\item\em Lis le deuxieme mot du fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Sauvegardes_8c_a89c6c5224811f21ff00494256a25c947}{lecture\+\_\+troisieme} (char $\ast$troisieme, int ligne)
+\begin{DoxyCompactList}\small\item\em Lis le troisième mot du fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Sauvegardes_8c_a6cd7ae5529d6ac98bd530fb74d120420}{lecture\+\_\+quatrieme} (char $\ast$quatrieme, int ligne)
+\begin{DoxyCompactList}\small\item\em Lis le quatrième mot du fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Sauvegardes_8c_ad1cfac2bd0f3cb3bee9fa88103a42d47}{lecture\+\_\+cinquieme} (char $\ast$cinquieme, int ligne)
+\begin{DoxyCompactList}\small\item\em Lis le cinquieme mot du fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{Sauvegardes_8c_adf6a04b2c82937c90da389028f24bfa2}{lecture\+\_\+R} (char $\ast$R, int ligne)
+\begin{DoxyCompactList}\small\item\em Lis la chaine concatenée dans le fichier \char`\"{}chaine.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+int \hyperlink{Sauvegardes_8c_ad2bb3913ad03fe582124b3eafe1d337e}{lecture\+\_\+schema} ()
+\begin{DoxyCompactList}\small\item\em Lis le numéro du schema dans le fichier \char`\"{}schema.\+txt\char`\"{}. \end{DoxyCompactList}\item 
+void {\bfseries sauvegarde} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$R)\hypertarget{Sauvegardes_8c_a4623cbd3ea52d5d90e96f653314d7d26}{}\label{Sauvegardes_8c_a4623cbd3ea52d5d90e96f653314d7d26}
+
+\item 
+void \hyperlink{Sauvegardes_8c_afbee8dea084da7f7f34aaa2fcc664a46}{save\+\_\+niveau2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Charge une partie avec une grille 2x2. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_ac38fa3805c9b1559b02a3f6e4998ca85}{save\+\_\+niveau3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$premier, char $\ast$deuxieme, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Charge une partie avec une grille 3x3. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_a0f8d09b12626209db83355ea12ffbc78}{save\+\_\+niveau4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$premier, char $\ast$deuxieme, char $\ast$troisieme, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Charge une partie avec une grille 4x4. \end{DoxyCompactList}\item 
+void \hyperlink{Sauvegardes_8c_ad70ea361c25e3a4b271fdf09ab40647d}{save\+\_\+niveau5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$premier, char $\ast$deuxieme, char $\ast$troisieme, char $\ast$quatrieme, char $\ast$cinquieme, char $\ast$R)
+\begin{DoxyCompactList}\small\item\em Charge une partie avec une grille 5x5. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Charger une partie deja sauvegardée. 
+
+\begin{DoxyAuthor}{Author}
+O\+K\+T\+AY Samed / M\+E\+S\+S\+A\+G\+I\+ER Ouassim / L\+A\+R\+M\+I\+G\+N\+AT Thomas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 decembre 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+cinquieme@{lecture\+\_\+cinquieme}}
+\index{lecture\+\_\+cinquieme@{lecture\+\_\+cinquieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+cinquieme(char $\ast$cinquieme, int ligne)}{lecture_cinquieme(char *cinquieme, int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ lecture\+\_\+cinquieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{cinquieme, }
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_ad1cfac2bd0f3cb3bee9fa88103a42d47}{}\label{Sauvegardes_8c_ad1cfac2bd0f3cb3bee9fa88103a42d47}
+
+
+Lis le cinquieme mot du fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cinquieme} & Cinquième mot \\
+\hline
+{\em ligne} & Numéro de ligne du mot dans le fichier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le cinquième mot 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+deuxieme@{lecture\+\_\+deuxieme}}
+\index{lecture\+\_\+deuxieme@{lecture\+\_\+deuxieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+deuxieme(char $\ast$deuxieme, int ligne)}{lecture_deuxieme(char *deuxieme, int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ lecture\+\_\+deuxieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{deuxieme, }
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a33c91e5dc492633b88af23534061801b}{}\label{Sauvegardes_8c_a33c91e5dc492633b88af23534061801b}
+
+
+Lis le deuxieme mot du fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deuxieme} & Deuxième mot \\
+\hline
+{\em ligne} & Numéro de ligne du mot dans le fichier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le deuxième mot 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+premier@{lecture\+\_\+premier}}
+\index{lecture\+\_\+premier@{lecture\+\_\+premier}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+premier(char $\ast$premier, int ligne)}{lecture_premier(char *premier, int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ lecture\+\_\+premier (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{premier, }
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a2eb396a4696fef8f0dc4ccbb454302ec}{}\label{Sauvegardes_8c_a2eb396a4696fef8f0dc4ccbb454302ec}
+
+
+Lis le premier mot du fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em premier} & Premier mot \\
+\hline
+{\em ligne} & Numéro de ligne du mot dans le fichier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le premier mot 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+quatrieme@{lecture\+\_\+quatrieme}}
+\index{lecture\+\_\+quatrieme@{lecture\+\_\+quatrieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+quatrieme(char $\ast$quatrieme, int ligne)}{lecture_quatrieme(char *quatrieme, int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ lecture\+\_\+quatrieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{quatrieme, }
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a6cd7ae5529d6ac98bd530fb74d120420}{}\label{Sauvegardes_8c_a6cd7ae5529d6ac98bd530fb74d120420}
+
+
+Lis le quatrième mot du fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quatrieme} & Quatrième mot \\
+\hline
+{\em ligne} & Numéro de ligne du mot dans le fichier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le quatrième mot 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+R@{lecture\+\_\+R}}
+\index{lecture\+\_\+R@{lecture\+\_\+R}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+\+R(char $\ast$\+R, int ligne)}{lecture_R(char *R, int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ lecture\+\_\+R (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{R, }
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_adf6a04b2c82937c90da389028f24bfa2}{}\label{Sauvegardes_8c_adf6a04b2c82937c90da389028f24bfa2}
+
+
+Lis la chaine concatenée dans le fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Chaîne concatenée \\
+\hline
+{\em ligne} & Numéro de ligne du mot dans le fichier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne la chaine concatenée 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+schema@{lecture\+\_\+schema}}
+\index{lecture\+\_\+schema@{lecture\+\_\+schema}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+schema()}{lecture_schema()}}]{\setlength{\rightskip}{0pt plus 5cm}int lecture\+\_\+schema (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_ad2bb3913ad03fe582124b3eafe1d337e}{}\label{Sauvegardes_8c_ad2bb3913ad03fe582124b3eafe1d337e}
+
+
+Lis le numéro du schema dans le fichier \char`\"{}schema.\+txt\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+Retourne le numéro du schema 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!lecture\+\_\+troisieme@{lecture\+\_\+troisieme}}
+\index{lecture\+\_\+troisieme@{lecture\+\_\+troisieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{lecture\+\_\+troisieme(char $\ast$troisieme, int ligne)}{lecture_troisieme(char *troisieme, int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ lecture\+\_\+troisieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{troisieme, }
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a89c6c5224811f21ff00494256a25c947}{}\label{Sauvegardes_8c_a89c6c5224811f21ff00494256a25c947}
+
+
+Lis le troisième mot du fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em troisieme} & Troisième mot \\
+\hline
+{\em ligne} & Numéro de ligne du mot dans le fichier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne le troisième mot 
+\end{DoxyReturn}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!nombre\+\_\+ligne@{nombre\+\_\+ligne}}
+\index{nombre\+\_\+ligne@{nombre\+\_\+ligne}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{nombre\+\_\+ligne(int ligne)}{nombre_ligne(int ligne)}}]{\setlength{\rightskip}{0pt plus 5cm}int nombre\+\_\+ligne (
+\begin{DoxyParamCaption}
+\item[{int}]{ligne}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a9cf579417e32ad86ed2e6ab753515035}{}\label{Sauvegardes_8c_a9cf579417e32ad86ed2e6ab753515035}
+
+
+Retourne le nombre de ligne du fichier \char`\"{}chaine.\+txt\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & Nombre de lignes \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!save\+\_\+niveau2@{save\+\_\+niveau2}}
+\index{save\+\_\+niveau2@{save\+\_\+niveau2}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{save\+\_\+niveau2(int mat[10][10], char $\ast$mot4, char $\ast$\+R)}{save_niveau2(int mat[10][10], char *mot4, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}void save\+\_\+niveau2 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_afbee8dea084da7f7f34aaa2fcc664a46}{}\label{Sauvegardes_8c_afbee8dea084da7f7f34aaa2fcc664a46}
+
+
+Charge une partie avec une grille 2x2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!save\+\_\+niveau3@{save\+\_\+niveau3}}
+\index{save\+\_\+niveau3@{save\+\_\+niveau3}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{save\+\_\+niveau3(int mat[10][10], char $\ast$premier, char $\ast$deuxieme, char $\ast$\+R)}{save_niveau3(int mat[10][10], char *premier, char *deuxieme, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}void save\+\_\+niveau3 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{premier, }
+\item[{char $\ast$}]{deuxieme, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_ac38fa3805c9b1559b02a3f6e4998ca85}{}\label{Sauvegardes_8c_ac38fa3805c9b1559b02a3f6e4998ca85}
+
+
+Charge une partie avec une grille 3x3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em premier} & Premier mot \\
+\hline
+{\em deuxieme} & Deuxième mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!save\+\_\+niveau4@{save\+\_\+niveau4}}
+\index{save\+\_\+niveau4@{save\+\_\+niveau4}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{save\+\_\+niveau4(int mat[10][10], char $\ast$premier, char $\ast$deuxieme, char $\ast$troisieme, char $\ast$\+R)}{save_niveau4(int mat[10][10], char *premier, char *deuxieme, char *troisieme, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}void save\+\_\+niveau4 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{premier, }
+\item[{char $\ast$}]{deuxieme, }
+\item[{char $\ast$}]{troisieme, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a0f8d09b12626209db83355ea12ffbc78}{}\label{Sauvegardes_8c_a0f8d09b12626209db83355ea12ffbc78}
+
+
+Charge une partie avec une grille 4x4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em premier} & Premier mot \\
+\hline
+{\em deuxieme} & Deuxième mot \\
+\hline
+{\em troisieme} & Troisième mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!save\+\_\+niveau5@{save\+\_\+niveau5}}
+\index{save\+\_\+niveau5@{save\+\_\+niveau5}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{save\+\_\+niveau5(int mat[10][10], char $\ast$premier, char $\ast$deuxieme, char $\ast$troisieme, char $\ast$quatrieme, char $\ast$cinquieme, char $\ast$\+R)}{save_niveau5(int mat[10][10], char *premier, char *deuxieme, char *troisieme, char *quatrieme, char *cinquieme, char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}void save\+\_\+niveau5 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{premier, }
+\item[{char $\ast$}]{deuxieme, }
+\item[{char $\ast$}]{troisieme, }
+\item[{char $\ast$}]{quatrieme, }
+\item[{char $\ast$}]{cinquieme, }
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_ad70ea361c25e3a4b271fdf09ab40647d}{}\label{Sauvegardes_8c_ad70ea361c25e3a4b271fdf09ab40647d}
+
+
+Charge une partie avec une grille 5x5. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em premier} & Premier mot \\
+\hline
+{\em deuxieme} & Deuxième mot \\
+\hline
+{\em troisieme} & Troisième mot \\
+\hline
+{\em quatrieme} & Quatrième mot \\
+\hline
+{\em cinquieme} & Cinquième mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+cinquieme@{stockage\+\_\+cinquieme}}
+\index{stockage\+\_\+cinquieme@{stockage\+\_\+cinquieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+cinquieme(char $\ast$cinquieme)}{stockage_cinquieme(char *cinquieme)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+cinquieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{cinquieme}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a94f8c0e04fef06536c0566208f015630}{}\label{Sauvegardes_8c_a94f8c0e04fef06536c0566208f015630}
+
+
+Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le cinquième mot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cinquieme} & Cinquième mot \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+deuxieme@{stockage\+\_\+deuxieme}}
+\index{stockage\+\_\+deuxieme@{stockage\+\_\+deuxieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+deuxieme(char $\ast$deuxieme)}{stockage_deuxieme(char *deuxieme)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+deuxieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{deuxieme}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_af89e87502e1fc2007f13b5b095c537ab}{}\label{Sauvegardes_8c_af89e87502e1fc2007f13b5b095c537ab}
+
+
+Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le deuxième mot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deuxieme} & Deuxième mot \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+premier@{stockage\+\_\+premier}}
+\index{stockage\+\_\+premier@{stockage\+\_\+premier}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+premier(char $\ast$premier)}{stockage_premier(char *premier)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+premier (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{premier}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a88af0ab2b545fa18960a4ed0de8f1d02}{}\label{Sauvegardes_8c_a88af0ab2b545fa18960a4ed0de8f1d02}
+
+
+Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le premier mot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em premier} & Premier mot \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+quatrieme@{stockage\+\_\+quatrieme}}
+\index{stockage\+\_\+quatrieme@{stockage\+\_\+quatrieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+quatrieme(char $\ast$quatrieme)}{stockage_quatrieme(char *quatrieme)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+quatrieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{quatrieme}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_ad0751a90fe83f2143027b61388f75997}{}\label{Sauvegardes_8c_ad0751a90fe83f2143027b61388f75997}
+
+
+Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le quatrième mot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quatrieme} & Quatrième mot \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+R@{stockage\+\_\+R}}
+\index{stockage\+\_\+R@{stockage\+\_\+R}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+\+R(char $\ast$\+R)}{stockage_R(char *R)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+R (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_acc1b5a1ac5f1bb41c9210f5676ceb80d}{}\label{Sauvegardes_8c_acc1b5a1ac5f1bb41c9210f5676ceb80d}
+
+
+Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} la chaîne concatenée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & Chaîne concatenée \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+schema@{stockage\+\_\+schema}}
+\index{stockage\+\_\+schema@{stockage\+\_\+schema}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+schema(int schema)}{stockage_schema(int schema)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+schema (
+\begin{DoxyParamCaption}
+\item[{int}]{schema}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_ae9da3a6ca67f6144a750646c1827fef1}{}\label{Sauvegardes_8c_ae9da3a6ca67f6144a750646c1827fef1}
+
+
+Ecrit dans le fichier \char`\"{}schema.\+txt\char`\"{} le numéro du schéma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em schema} & Numéro du schéma \\
+\hline
+\end{DoxyParams}
+\index{Sauvegardes.\+c@{Sauvegardes.\+c}!stockage\+\_\+troisieme@{stockage\+\_\+troisieme}}
+\index{stockage\+\_\+troisieme@{stockage\+\_\+troisieme}!Sauvegardes.\+c@{Sauvegardes.\+c}}
+\subsubsection[{\texorpdfstring{stockage\+\_\+troisieme(char $\ast$troisieme)}{stockage_troisieme(char *troisieme)}}]{\setlength{\rightskip}{0pt plus 5cm}void stockage\+\_\+troisieme (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{troisieme}
+\end{DoxyParamCaption}
+)}\hypertarget{Sauvegardes_8c_a12a10027e53d451313c476d331988cf9}{}\label{Sauvegardes_8c_a12a10027e53d451313c476d331988cf9}
+
+
+Ecrit dans le fichier \char`\"{}chaine.\+txt\char`\"{} le troisième mot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em troisieme} & Troisième mot \\
+\hline
+\end{DoxyParams}

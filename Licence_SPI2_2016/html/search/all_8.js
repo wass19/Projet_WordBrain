@@ -1,26 +1,6 @@
 var searchData=
 [
-  ['schema_2ec',['schema.c',['../schema_8c.html',1,'']]],
-  ['schema2_5f1',['schema2_1',['../schema_8c.html#a51cdcc74e4fcb8c9e207100c99a59cd9',1,'schema.c']]],
-  ['schema2_5f3',['schema2_3',['../schema_8c.html#a6c92ef34365e9b07b846c41e84db2b26',1,'schema.c']]],
-  ['schema2_5f4',['schema2_4',['../schema_8c.html#afa83ac2a6cfb5355821329d34c3f597d',1,'schema.c']]],
-  ['schema2_5f5',['schema2_5',['../schema_8c.html#a4f6b8a3e97a571021a6aa56b729f8422',1,'schema.c']]],
-  ['schema2_5f6',['schema2_6',['../schema_8c.html#a02a38cd7d8e7f6730fdd9832cef14476',1,'schema.c']]],
-  ['schema2_5f7',['schema2_7',['../schema_8c.html#a9b3b45088a00580b72bc66415668d5dc',1,'schema.c']]],
-  ['schema2_5f8',['schema2_8',['../schema_8c.html#a81bab4f6b214678a9b05b2e95eab9d50',1,'schema.c']]],
-  ['schema3_5f1',['schema3_1',['../schema_8c.html#a5c6efe7b14c63a718aac145d3b2d804d',1,'schema.c']]],
-  ['schema3_5f2',['schema3_2',['../schema_8c.html#a2015ad85b3e903a24d52f7aded0ae6df',1,'schema.c']]],
-  ['schema3_5f3',['schema3_3',['../schema_8c.html#aca18a29e215b4e879a005c1a1af32622',1,'schema.c']]],
-  ['schema3_5f4',['schema3_4',['../schema_8c.html#a338f6c283494830d77ce648d102fe6aa',1,'schema.c']]],
-  ['schema3_5f5',['schema3_5',['../schema_8c.html#a952bc49dc137302ae62f7f3c02ae5192',1,'schema.c']]],
-  ['schema3_5f6',['schema3_6',['../schema_8c.html#aca55e4a3c910e22d609bc4eba9df8276',1,'schema.c']]],
-  ['schema3_5f7',['schema3_7',['../schema_8c.html#ad7b48d92efe62619615345abfd32da15',1,'schema.c']]],
-  ['schema4_5f1',['schema4_1',['../schema_8c.html#a4e64dafd088e0348535b9fa9192162da',1,'schema.c']]],
-  ['schema4_5f2',['schema4_2',['../schema_8c.html#aeedb49d9c14b8e2b89331f5f114871d8',1,'schema.c']]],
-  ['schema4_5f3',['schema4_3',['../schema_8c.html#abbb7031b3dd5c92702f507c905721674',1,'schema.c']]],
-  ['schema4_5f4',['schema4_4',['../schema_8c.html#a8a7786655e5d4f923329a24f30fd5e8c',1,'schema.c']]],
-  ['schema4_5f5',['schema4_5',['../schema_8c.html#a4499f0ab1a66f5279d29695491f20b41',1,'schema.c']]],
-  ['schema4_5f6',['schema4_6',['../schema_8c.html#afaf119bbe7ae0594f7990b86dae6ef57',1,'schema.c']]],
-  ['schema4_5f7',['schema4_7',['../schema_8c.html#a5c8e17b41b11e5c2cf9568a2cba3e06e',1,'schema.c']]],
-  ['schema4_5f8',['schema4_8',['../schema_8c.html#aa1168d4846102b506226f202e1359b44',1,'schema.c']]]
+  ['niveau',['Niveau',['../schema_8c.html#a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30',1,'schema.c']]],
+  ['niveaujeu',['NiveauJeu',['../Jouer_8c.html#a81701f92c517336ec7de6f92f08bc65b',1,'Jouer.c']]],
+  ['nombre_5fligne',['nombre_ligne',['../Sauvegardes_8c.html#a9cf579417e32ad86ed2e6ab753515035',1,'Sauvegardes.c']]]
 ];

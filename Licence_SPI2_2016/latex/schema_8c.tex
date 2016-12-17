@@ -6,7 +6,6 @@ Jouer librement avec choix de la taille de la grille.
 
 
 {\ttfamily \#include \char`\"{}schema.\+h\char`\"{}}\\*
-{\ttfamily \#include $<$unistd.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}Outil.\+h\char`\"{}}\\*
 Include dependency graph for schema.\+c\+:
 % FIG 0
@@ -119,18 +118,17 @@ int \hyperlink{schema_8c_a96f2719cc33fb39dc270c26dc1fa9bc8}{b\+Chaines\+Egales\+
 \begin{DoxyCompactList}\small\item\em Compare 1 chaîne de caractère avec 5 autres. \end{DoxyCompactList}\item 
 void \hyperlink{schema_8c_a9f8b35d1879b287550dc9f3f02718adb}{upper\+\_\+string} (char $\ast$s)
 \begin{DoxyCompactList}\small\item\em Transforme une chaîne de caractère en majuscule. \end{DoxyCompactList}\item 
-void {\bfseries game\+\_\+niveau2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}{}\label{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}
+void \hyperlink{schema_8c_a97ee70a8770dc30d06c744b24eb2fcfc}{help} ()\hypertarget{schema_8c_a97ee70a8770dc30d06c744b24eb2fcfc}{}\label{schema_8c_a97ee70a8770dc30d06c744b24eb2fcfc}
 
-\item 
-void {\bfseries game\+\_\+niveau3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_a46b74bdbc126e8b858108630965f9968}{}\label{schema_8c_a46b74bdbc126e8b858108630965f9968}
-
-\item 
-void {\bfseries game\+\_\+niveau4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}{}\label{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}
-
-\item 
-void {\bfseries game\+\_\+niveau5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$R, int continu, int niveau, int stage)\hypertarget{schema_8c_ae9823dea15fc36330e746378fefe460f}{}\label{schema_8c_ae9823dea15fc36330e746378fefe460f}
-
-\item 
+\begin{DoxyCompactList}\small\item\em Execute la commande \char`\"{}more\char`\"{} sur le terminal afin d\textquotesingle{}afficher les règles du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}{game\+\_\+niveau2} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$R, int continu, int niveau, int stage)
+\begin{DoxyCompactList}\small\item\em Crée une partie avec une grille de 2x2. \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a46b74bdbc126e8b858108630965f9968}{game\+\_\+niveau3} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$R, int continu, int niveau, int stage)
+\begin{DoxyCompactList}\small\item\em Crée une partie avec une grille de 3x3. \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}{game\+\_\+niveau4} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$R, int continu, int niveau, int stage)
+\begin{DoxyCompactList}\small\item\em Crée une partie avec une grille de 4x4. \end{DoxyCompactList}\item 
+void \hyperlink{schema_8c_ae9823dea15fc36330e746378fefe460f}{game\+\_\+niveau5} (int mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$R, int continu, int niveau, int stage)
+\begin{DoxyCompactList}\small\item\em Crée une partie avec une grille de 5x5. \end{DoxyCompactList}\item 
 void \hyperlink{schema_8c_a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30}{Niveau} ()\hypertarget{schema_8c_a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30}{}\label{schema_8c_a7a6d9d0e8a0c4ac6c08a2fe8f4ea8c30}
 
 \begin{DoxyCompactList}\small\item\em Menu qui permet de choisir entre les differentes grilles. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -171,7 +169,7 @@ Compare 2 chaîne de caractères.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+1 la chaîne s\+Texte1 est egale à la chaîne s\+Texte2. 
 \end{DoxyReturn}
 \index{schema.\+c@{schema.\+c}!b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres@{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres}}
 \index{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres@{b\+Chaines\+Egales\+Compare1\+Mots\+Avec5\+Autres}!schema.\+c@{schema.\+c}}
@@ -191,7 +189,7 @@ Compare 1 chaîne de caractère avec 5 autres.
 
 
 \begin{DoxyParams}{Parameters}
-{\em s\+Texte\+Acomparer} & Chaîne à comparer \\
+{\em Texte\+Acomparer} & Chaîne à comparer \\
 \hline
 {\em s\+Texte2} & Deuxième chaîne de caractère \\
 \hline
@@ -205,7 +203,7 @@ Compare 1 chaîne de caractère avec 5 autres.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+1 si une chaîne parmis les cinques est la même que la chaîne Texte\+Acomparer 
 \end{DoxyReturn}
 \index{schema.\+c@{schema.\+c}!bsansblanc@{bsansblanc}}
 \index{bsansblanc@{bsansblanc}!schema.\+c@{schema.\+c}}
@@ -302,6 +300,151 @@ Prend un mot de 7 lettres du fichier \char`\"{}mot7.\+txt\char`\"{}.
 \begin{DoxyReturn}{Returns}
 Retourne le mot choisit au hasard 
 \end{DoxyReturn}
+\index{schema.\+c@{schema.\+c}!game\+\_\+niveau2@{game\+\_\+niveau2}}
+\index{game\+\_\+niveau2@{game\+\_\+niveau2}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{game\+\_\+niveau2(int mat[10][10], char $\ast$mot4, char $\ast$\+R, int continu, int niveau, int stage)}{game_niveau2(int mat[10][10], char *mot4, char *R, int continu, int niveau, int stage)}}]{\setlength{\rightskip}{0pt plus 5cm}void game\+\_\+niveau2 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{R, }
+\item[{int}]{continu, }
+\item[{int}]{niveau, }
+\item[{int}]{stage}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}{}\label{schema_8c_a845f5e541cdb0fe5019d3e8d763647e6}
+
+
+Crée une partie avec une grille de 2x2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+{\em continu} & Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0. \\
+\hline
+{\em niveau} & Niveau de difficulté pour le mode continu \\
+\hline
+{\em stage} & Progression lorsqu\textquotesingle{}un niveau de difficulté est choisi \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!game\+\_\+niveau3@{game\+\_\+niveau3}}
+\index{game\+\_\+niveau3@{game\+\_\+niveau3}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{game\+\_\+niveau3(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$\+R, int continu, int niveau, int stage)}{game_niveau3(int mat[10][10], char *mot4, char *mot5, char *R, int continu, int niveau, int stage)}}]{\setlength{\rightskip}{0pt plus 5cm}void game\+\_\+niveau3 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{R, }
+\item[{int}]{continu, }
+\item[{int}]{niveau, }
+\item[{int}]{stage}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a46b74bdbc126e8b858108630965f9968}{}\label{schema_8c_a46b74bdbc126e8b858108630965f9968}
+
+
+Crée une partie avec une grille de 3x3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+{\em continu} & Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0. \\
+\hline
+{\em niveau} & Niveau de difficulté pour le mode continu \\
+\hline
+{\em stage} & Progression lorsqu\textquotesingle{}un niveau de difficulté est choisi \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!game\+\_\+niveau4@{game\+\_\+niveau4}}
+\index{game\+\_\+niveau4@{game\+\_\+niveau4}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{game\+\_\+niveau4(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$\+R, int continu, int niveau, int stage)}{game_niveau4(int mat[10][10], char *mot4, char *mot5, char *mot6, char *R, int continu, int niveau, int stage)}}]{\setlength{\rightskip}{0pt plus 5cm}void game\+\_\+niveau4 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{mot6, }
+\item[{char $\ast$}]{R, }
+\item[{int}]{continu, }
+\item[{int}]{niveau, }
+\item[{int}]{stage}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}{}\label{schema_8c_a2dd46d142dc779bd681e47e1eb85715d}
+
+
+Crée une partie avec une grille de 4x4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em mot6} & Troisième mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+{\em continu} & Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0. \\
+\hline
+{\em niveau} & Niveau de difficulté pour le mode continu \\
+\hline
+{\em stage} & Progression lorsqu\textquotesingle{}un niveau de difficulté est choisi \\
+\hline
+\end{DoxyParams}
+\index{schema.\+c@{schema.\+c}!game\+\_\+niveau5@{game\+\_\+niveau5}}
+\index{game\+\_\+niveau5@{game\+\_\+niveau5}!schema.\+c@{schema.\+c}}
+\subsubsection[{\texorpdfstring{game\+\_\+niveau5(int mat[10][10], char $\ast$mot4, char $\ast$mot5, char $\ast$mot6, char $\ast$mot7, char $\ast$mot8, char $\ast$\+R, int continu, int niveau, int stage)}{game_niveau5(int mat[10][10], char *mot4, char *mot5, char *mot6, char *mot7, char *mot8, char *R, int continu, int niveau, int stage)}}]{\setlength{\rightskip}{0pt plus 5cm}void game\+\_\+niveau5 (
+\begin{DoxyParamCaption}
+\item[{int}]{mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, }
+\item[{char $\ast$}]{mot4, }
+\item[{char $\ast$}]{mot5, }
+\item[{char $\ast$}]{mot6, }
+\item[{char $\ast$}]{mot7, }
+\item[{char $\ast$}]{mot8, }
+\item[{char $\ast$}]{R, }
+\item[{int}]{continu, }
+\item[{int}]{niveau, }
+\item[{int}]{stage}
+\end{DoxyParamCaption}
+)}\hypertarget{schema_8c_ae9823dea15fc36330e746378fefe460f}{}\label{schema_8c_ae9823dea15fc36330e746378fefe460f}
+
+
+Crée une partie avec une grille de 5x5. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}} & Matrice de 10x10 contenant le(s) mot(s) \\
+\hline
+{\em mot4} & Premier mot \\
+\hline
+{\em mot5} & Deuxieme mot \\
+\hline
+{\em mot6} & Troisième mot \\
+\hline
+{\em mot7} & Quatrième mot \\
+\hline
+{\em mot8} & Cinquième mot \\
+\hline
+{\em R} & Concatenation de tout les mots \\
+\hline
+{\em continu} & Vaut 1 si la fonction est lancé depuis le mode continu si non vaut 0. \\
+\hline
+{\em niveau} & Niveau de difficulté pour le mode continu \\
+\hline
+{\em stage} & Progression lorsqu\textquotesingle{}un niveau de difficulté est choisi \\
+\hline
+\end{DoxyParams}
 \index{schema.\+c@{schema.\+c}!Indice@{Indice}}
 \index{Indice@{Indice}!schema.\+c@{schema.\+c}}
 \subsubsection[{\texorpdfstring{Indice(char $\ast$\+R, char $\ast$mot1, char $\ast$mot2, char $\ast$mot3, char $\ast$mot4, char $\ast$mot5, int compteur)}{Indice(char *R, char *mot1, char *mot2, char *mot3, char *mot4, char *mot5, int compteur)}}]{\setlength{\rightskip}{0pt plus 5cm}void Indice (

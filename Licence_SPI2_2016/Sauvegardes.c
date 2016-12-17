@@ -5,12 +5,14 @@
 #define clear printf("\e[1;1H\e[2J")
 
 /**
-	* \file Sauvegarde.c
+	* \file Sauvegardes.c
 	* \brief Charger une partie deja sauvegardée
 	* \author OKTAY Samed / MESSAGIER Ouassim / LARMIGNAT Thomas
 	* \version 2.0
 	* \date 16 decembre 2016 
 	*/
+
+
 /**
  * \fn int nombre_ligne(int ligne)
  * \brief Retourne le nombre de ligne du fichier "chaine.txt"

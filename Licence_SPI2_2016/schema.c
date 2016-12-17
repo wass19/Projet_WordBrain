@@ -1726,7 +1726,7 @@ void Indice(char *R,char *mot1,char *mot2,char *mot3,char *mot4,char *mot5,int c
  *
  * \param sTexte1 première chaîne de caractère
  * \param sTexte2 Deuxième chaîne de caractère
- * \return 
+ * \return 1 la chaîne sTexte1 est egale à la chaîne sTexte2.
  */
  
  
@@ -1746,13 +1746,13 @@ int bChaineEgale(char *sTexte1,char *sTexte2){//strcmp(sTexte)
  * \fn int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6){
  * \brief Compare 1 chaîne de caractère avec 5 autres
  *
- * \param sTexteAcomparer Chaîne à comparer
+ * \param TexteAcomparer Chaîne à comparer
  * \param sTexte2 Deuxième chaîne de caractère
  * \param sTexte3 Troisième chaîne de caractère
  * \param sTexte4 Quatrième chaîne de caractère
  * \param sTexte5 Cinquième chaîne de caractère
  * \param sTexte6 Sixième chaîne de caractère
- * \return 
+ * \return 1 si une chaîne parmis les cinques est la même que la chaîne TexteAcomparer
  */
  
 int bChainesEgalesCompare1MotsAvec5Autres(char *TexteAcomparer,char *sTexte2,char *sTexte3,char *sTexte4,char *sTexte5,char *sTexte6){//strcmp(sTexte) 
